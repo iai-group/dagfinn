@@ -59,13 +59,13 @@ The second is the Rasa server with all defined channels:
 rasa run
 ```
 
-**NB!** In some cases you might see Cross-Origin Resource Sharing (CORS) error after launching the webchat. In that case restart the server with the command:
+**NB!** In some cases, you might see Cross-Origin Resource Sharing (CORS) error after launching the webchat. In that case restart the server with the command:
 
 ```
 rasa run --cors "*"
 ```
 
-# Running the command line application
+## Command line application
 
 You can start the command line version of the chatbot with the command:
 
@@ -79,11 +79,11 @@ If you want to debug the NLU component, i.e., explore recognized entities or cla
 rasa shell nlu
 ```
 
-# Running the webchat
+## Webchat
 
 TBD
 
-# Running on Furhat
+## Furhat
 
 TBD
 
