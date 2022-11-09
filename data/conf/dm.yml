@@ -1,0 +1,140 @@
+version: "3.0"
+
+rules:
+- rule: Activate Request Session Recommendation Form
+  steps:
+  - intent: ask_session_recommendation
+  - action: session_recommender_form
+  - active_loop: session_recommender_form
+
+- rule: Submit Request Session Recommendation Form
+  condition:
+  - active_loop: session_recommender_form
+  steps:
+  - action: session_recommender_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_recommend_session
+
+- rule: Activate Get Speaker Info Form
+  steps:
+  - intent: ask_speaker_name
+  - action: find_speaker_form
+  - active_loop: find_speaker_form
+
+- rule: Submit Get Speaker Info Form
+  condition:
+  - active_loop: find_speaker_form
+  steps:
+  - action: find_speaker_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_find_speaker
+
+- rule: Get the time of the next session
+  steps:
+  - intent: info_next_session
+  - action: action_info_next_session
+
+- rule: Get information about keynote speakers
+  steps:
+  - intent: keynote_speakers
+  - action: action_keynote_speakers
+
+- rule: Get schedule for conference day
+  steps:
+  - intent: get_conference_schedule
+  - action: action_find_schedule
+
+- rule: Get information about session
+  steps:
+  - intent: info_about_session
+  - action: action_find_session_info
+
+- rule: Get more info on keynote
+  steps:
+  - intent: keynote_info
+  - action: action_keynote_info
+
+
+stories:
+- story: Get session recommendation
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_session_recommendation
+  - action: session_recommender_form
+  - active_loop: session_recommender_form
+  - slot_was_set:
+    - requested_slot: session_topic
+  - slot_was_set:
+    - session_topic: recommender systems
+  - slot_was_set:
+    - requested_slot: session_new
+  - slot_was_set:
+    - session_new: False
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_recommend_session
+
+- story: User interrupts recommend session
+  steps:
+  - intent: ask_session_recommendation
+  - action: session_recommender_form
+  - active_loop: session_recommender_form
+  - intent: stop
+  - action: action_recommend_session
+  - action: action_deactivate_loop
+  - active_loop: null
+
+- story: Standard get speaker info
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_speaker_name
+  - action: find_speaker_form
+  - active_loop: find_speaker_form
+  - slot_was_set:
+    - requested_slot: speaker_name
+  - slot_was_set:
+    - speaker_name: Niloy Ganguly
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_find_speaker
+
+- story: User interrupts speaker form and doesnt want to continue
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_speaker_name
+  - action: find_speaker_form
+  - active_loop: find_speaker_form
+  - intent: stop
+  - action: utter_ask_continue
+  - or: 
+    - intent: stop
+    - intent: affirm
+  - action: action_deactivate_loop
+  - active_loop: null
+
+- story: User denies speaker form interruption
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_speaker_name
+  - action: find_speaker_form
+  - active_loop: find_speaker_form
+  - intent: stop
+  - action: utter_ask_continue
+  - intent: deny
+  - slot_was_set:
+    - requested_slot: speaker_name
+  - slot_was_set:
+    - speaker_name: Niloy Ganguly
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_find_speaker

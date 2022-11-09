@@ -1,0 +1,1597 @@
+version: "3.0"
+nlu:
+- intent: ask_restaurant_recommendation
+  examples: |
+    - I need to get some food.
+    - I am in need of food.
+    - I am hungry.
+    - Good places to eat?
+    - I am really hungry right now.
+    - I could really use some food right now.
+    - Do you have any recommendations for where to go eat?
+    - Some place to eat.
+    - Somewhere I can eat
+    - I am really hungry actually
+    - Yeah, can you tell me where to get some food?
+    - Yeah I need to eat
+    - I want to eat
+    - I want to eat food
+    - I need to get food
+    - I need to eat
+    - Quite hungry at the moment
+    - I would like to eat
+    - I would like to get something to eat
+    - I would like to know of some place I can eat
+- intent: ask_poi_recommendation
+  examples: |
+    - What do you recommend doing in town?
+    - Are there any interesting places to see in town?
+    - What is there to see in Stavanger?
+    - Tell me some cool places.
+    - What to see in Stavanger?
+    - You know of some interesting places in Stavanger?
+    - Tell me some cool touristy stuff to do.
+    - Cool places in town.
+    - I'm looking for things to see here
+    - Name some cool places
+    - Recommend me a place
+    - Any places you could recommend?
+    - cool places to see
+    - things to do in Stavanger
+    - things to see here
+    - What is there to do here?
+    - So what do you recommend?
+    - So what can you recommend me?
+    - What are your recommendations?
+    - Places to see
+    - things to do in Stavanger
+    - places to visit
+    - points of interest in Stavanger?
+    - any points of interest to see here?
+    - things to see around town
+    - tourist destinations
+- intent: inform_poi_category
+  examples: |
+    - Recommend me some [restaurants](poi_category)
+    - Any [museums](poi_category)?
+    - [Place to eat](poi_category).
+    - Are there any [convenience stores](poi_category) open now?
+    - Are there any [bars](poi_category) open now?
+    - Where can I find a [cafe](poi_category)?
+    - Are there any [pubs](poi_category) nearby?
+    - Are there any [movie theaters](poi_category) in town?
+    - What is the closest [grocery store](poi_category) from here?
+    - [Golf course](poi_category)
+    - [Grocery store](poi_category)
+    - A [bar](poi_category)
+    - [strip bar](poi_category)
+    - [strip club](poi_category)
+    - Are there any [nightclubs](poi_category) here?
+    - Are there any [strip bars](poi_category) in Stavanger?
+    - Are there any [grocery stores](poi_category) here?
+    - You know of any good [parks](poi_category)?
+    - Any good [parks](poi_category)?
+    - [Amusement park](poi_category)
+    - I want to go to the [pub](poi_category)
+    - Any cool [bars](poi_category)?
+    - Any good [bars](poi_category)?
+    - You know of any good [bars](poi_category)?
+    - what is the best rated [restaurant](poi_category)
+    - show me some cool [restaurants](poi_category)
+    - [hotels](poi_category)
+    - [cafes](poi_category)
+    - Can you recommend me a [hotel](poi_category)?
+    - Can you recommend a [pub](poi_category)?
+    - Can you recommend me some [bars](poi_category)?
+    - What [restaurants](poi_category) can you recommend me?
+    - Do you have a [restaurant](poi_category) to reccomend?
+    - Recommend me a [restaurant](poi_category).
+    - [airport](poi_category)
+    - I want to go to [cinema](poi_category)
+    - Any good [nightclubs](poi_category) here?
+    - [movie theater](poi_category)
+    - [Museums](poi_category) perhaps?
+    - So are there any [ice cream shops](poi_category) in town?
+    - Where is the [airport](poi_category)?
+- intent: inform_poi_tag
+  examples: |
+    - [African food]{"entity":"poi_tag", "role":"wanted"}
+    - [American food]{"entity":"poi_tag", "role":"wanted"}
+    - [Asian food]{"entity":"poi_tag", "role":"wanted"}
+    - [Chinese food]{"entity":"poi_tag", "role":"wanted"}
+    - [Ethiopian food]{"entity":"poi_tag", "role":"wanted"}
+    - [European food]{"entity":"poi_tag", "role":"wanted"}
+    - [French food]{"entity":"poi_tag", "role":"wanted"}
+    - [Greek food]{"entity":"poi_tag", "role":"wanted"}
+    - [Indian food]{"entity":"poi_tag", "role":"wanted"}
+    - [Italian food]{"entity":"poi_tag", "role":"wanted"}
+    - [Japanese food]{"entity":"poi_tag", "role":"wanted"}
+    - [Mexican food]{"entity":"poi_tag", "role":"wanted"}
+    - [Michelin star rated food]{"entity":"poi_tag", "role":"wanted"}
+    - [Middle-Eastern food]{"entity":"poi_tag", "role":"wanted"}
+    - [Pakistani food]{"entity":"poi_tag", "role":"wanted"}
+    - [Scandinavian food]{"entity":"poi_tag", "role":"wanted"}
+    - [Chinese]{"entity":"poi_tag", "role":"wanted"}
+    - [Ethiopian]{"entity":"poi_tag", "role":"wanted"}
+    - [European]{"entity":"poi_tag", "role":"wanted"}
+    - [French]{"entity":"poi_tag", "role":"wanted"}
+    - [Greek]{"entity":"poi_tag", "role":"wanted"}
+    - [Indian]{"entity":"poi_tag", "role":"wanted"}
+    - [Italian]{"entity":"poi_tag", "role":"wanted"}
+    - [Japanese]{"entity":"poi_tag", "role":"wanted"}
+    - [Mexican]{"entity":"poi_tag", "role":"wanted"}
+    - [Middle-Eastern]{"entity":"poi_tag", "role":"wanted"}
+    - [Turkish]{"entity":"poi_tag", "role":"wanted"}
+    - [alcohol]{"entity":"poi_tag", "role":"wanted"}
+    - [beef]{"entity":"poi_tag", "role":"wanted"}
+    - [beer]{"entity":"poi_tag", "role":"wanted"}
+    - [books]{"entity":"poi_tag", "role":"wanted"}
+    - [breakfast]{"entity":"poi_tag", "role":"wanted"}
+    - [burgers]{"entity":"poi_tag", "role":"wanted"}
+    - [burritos]{"entity":"poi_tag", "role":"wanted"}
+    - [byryani]{"entity":"poi_tag", "role":"wanted"}
+    - [candy]{"entity":"poi_tag", "role":"wanted"}
+    - [cappuccino]{"entity":"poi_tag", "role":"wanted"}
+    - [chocolate]{"entity":"poi_tag", "role":"wanted"}
+    - [coffee]{"entity":"poi_tag", "role":"wanted"}
+    - [cosy atmosphere]{"entity":"poi_tag", "role":"wanted"}
+    - [craft beer]{"entity":"poi_tag", "role":"wanted"}
+    - [curry]{"entity":"poi_tag", "role":"wanted"}
+    - [dessert]{"entity":"poi_tag", "role":"wanted"}
+    - [donuts]{"entity":"poi_tag", "role":"wanted"}
+    - [drinks]{"entity":"poi_tag", "role":"wanted"}
+    - [fast-food]{"entity":"poi_tag", "role":"wanted"}
+    - [fried rice]{"entity":"poi_tag", "role":"wanted"}
+    - [fries]{"entity":"poi_tag", "role":"wanted"}
+    - [fusion food]{"entity":"poi_tag", "role":"wanted"}
+    - [gluten-free food]{"entity":"poi_tag", "role":"wanted"}
+    - [groceries]{"entity":"poi_tag", "role":"wanted"}
+    - [gyros]{"entity":"poi_tag", "role":"wanted"}
+    - [hummus]{"entity":"poi_tag", "role":"wanted"}
+    - [ice coffee]{"entity":"poi_tag", "role":"wanted"}
+    - [ice cream]{"entity":"poi_tag", "role":"wanted"}
+    - [kebab]{"entity":"poi_tag", "role":"wanted"}
+    - [milkshakes]{"entity":"poi_tag", "role":"wanted"}
+    - [movies]{"entity":"poi_tag", "role":"wanted"}
+    - [muffins]{"entity":"poi_tag", "role":"wanted"}
+    - [naan]{"entity":"poi_tag", "role":"wanted"}
+    - [natural history]{"entity":"poi_tag", "role":"wanted"}
+    - [nature]{"entity":"poi_tag", "role":"wanted"}
+    - [noodles]{"entity":"poi_tag", "role":"wanted"}
+    - [outdoor seating]{"entity":"poi_tag", "role":"wanted"}
+    - [pastries]{"entity":"poi_tag", "role":"wanted"}
+    - [pizza]{"entity":"poi_tag", "role":"wanted"}
+    - [popcorn]{"entity":"poi_tag", "role":"wanted"}
+    - [rooms for rent]{"entity":"poi_tag", "role":"wanted"}
+    - [salad]{"entity":"poi_tag", "role":"wanted"}
+    - [sandwich]{"entity":"poi_tag", "role":"wanted"}
+    - [seafood]{"entity":"poi_tag", "role":"wanted"}
+    - [shopping]{"entity":"poi_tag", "role":"wanted"}
+    - [smoothies]{"entity":"poi_tag", "role":"wanted"}
+    - [soda]{"entity":"poi_tag", "role":"wanted"}
+    - [spicy food]{"entity":"poi_tag", "role":"wanted"}
+    - [spring rolls]{"entity":"poi_tag", "role":"wanted"}
+    - [sushi]{"entity":"poi_tag", "role":"wanted"}
+    - [tacos]{"entity":"poi_tag", "role":"wanted"}
+    - [takeaway]{"entity":"poi_tag", "role":"wanted"}
+    - [tea]{"entity":"poi_tag", "role":"wanted"}
+    - [treatment]{"entity":"poi_tag", "role":"wanted"}
+    - [vegan food]{"entity":"poi_tag", "role":"wanted"}
+    - [vegetarian]{"entity":"poi_tag", "role":"wanted"}
+    - [vegetarian food]{"entity":"poi_tag", "role":"wanted"}
+    - [wheelchair access]{"entity":"poi_tag", "role":"wanted"}
+    - [wine]{"entity":"poi_tag", "role":"wanted"}
+    - I want [African food]{"entity":"poi_tag", "role":"wanted"}
+    - I want [American food]{"entity":"poi_tag", "role":"wanted"}
+    - I want [Asian food]{"entity":"poi_tag", "role":"wanted"}
+    - I want [Chinese food]{"entity":"poi_tag", "role":"wanted"}
+    - I want [Ethiopian food]{"entity":"poi_tag", "role":"wanted"}
+    - I want [European food]{"entity":"poi_tag", "role":"wanted"}
+    - I want [French food]{"entity":"poi_tag", "role":"wanted"}
+    - I want [Greek food]{"entity":"poi_tag", "role":"wanted"}
+    - I want [Indian food]{"entity":"poi_tag", "role":"wanted"}
+    - I want [Italian food]{"entity":"poi_tag", "role":"wanted"}
+    - I want [Japanese food]{"entity":"poi_tag", "role":"wanted"}
+    - I want [Mexican food]{"entity":"poi_tag", "role":"wanted"}
+    - I want [Michelin star rated food]{"entity":"poi_tag", "role":"wanted"}
+    - I want [Middle-Eastern food]{"entity":"poi_tag", "role":"wanted"}
+    - I want [Pakistani food]{"entity":"poi_tag", "role":"wanted"}
+    - I want [Scandinavian food]{"entity":"poi_tag", "role":"wanted"}
+    - I want [Chinese]{"entity":"poi_tag", "role":"wanted"}
+    - I want [Ethiopian]{"entity":"poi_tag", "role":"wanted"}
+    - I want [European]{"entity":"poi_tag", "role":"wanted"}
+    - I want [French]{"entity":"poi_tag", "role":"wanted"}
+    - I want [Greek]{"entity":"poi_tag", "role":"wanted"}
+    - I want [Indian]{"entity":"poi_tag", "role":"wanted"}
+    - I want [Italian]{"entity":"poi_tag", "role":"wanted"}
+    - I want [Japanese]{"entity":"poi_tag", "role":"wanted"}
+    - I want [Mexican]{"entity":"poi_tag", "role":"wanted"}
+    - I want [Middle-Eastern]{"entity":"poi_tag", "role":"wanted"}
+    - I want [Turkish]{"entity":"poi_tag", "role":"wanted"}
+    - I want [alcohol]{"entity":"poi_tag", "role":"wanted"}
+    - I want [beef]{"entity":"poi_tag", "role":"wanted"}
+    - I want [beer]{"entity":"poi_tag", "role":"wanted"}
+    - I want [books]{"entity":"poi_tag", "role":"wanted"}
+    - I want [breakfast]{"entity":"poi_tag", "role":"wanted"}
+    - I want [burgers]{"entity":"poi_tag", "role":"wanted"}
+    - I want [burritos]{"entity":"poi_tag", "role":"wanted"}
+    - I want [byryani]{"entity":"poi_tag", "role":"wanted"}
+    - I want [candy]{"entity":"poi_tag", "role":"wanted"}
+    - I want [cappuccino]{"entity":"poi_tag", "role":"wanted"}
+    - I want [chocolate]{"entity":"poi_tag", "role":"wanted"}
+    - I want [coffee]{"entity":"poi_tag", "role":"wanted"}
+    - I want [cosy atmosphere]{"entity":"poi_tag", "role":"wanted"}
+    - I want [craft beer]{"entity":"poi_tag", "role":"wanted"}
+    - I want [curry]{"entity":"poi_tag", "role":"wanted"}
+    - I want [dessert]{"entity":"poi_tag", "role":"wanted"}
+    - I want [donuts]{"entity":"poi_tag", "role":"wanted"}
+    - I want [drinks]{"entity":"poi_tag", "role":"wanted"}
+    - I want [fast-food]{"entity":"poi_tag", "role":"wanted"}
+    - I want [fried rice]{"entity":"poi_tag", "role":"wanted"}
+    - I want [fries]{"entity":"poi_tag", "role":"wanted"}
+    - I want [fusion food]{"entity":"poi_tag", "role":"wanted"}
+    - I want [gluten-free food]{"entity":"poi_tag", "role":"wanted"}
+    - I want [groceries]{"entity":"poi_tag", "role":"wanted"}
+    - I want [gyros]{"entity":"poi_tag", "role":"wanted"}
+    - I want [hummus]{"entity":"poi_tag", "role":"wanted"}
+    - I want [ice coffee]{"entity":"poi_tag", "role":"wanted"}
+    - I want [ice cream]{"entity":"poi_tag", "role":"wanted"}
+    - I want [kebab]{"entity":"poi_tag", "role":"wanted"}
+    - I want [milkshakes]{"entity":"poi_tag", "role":"wanted"}
+    - I want [movies]{"entity":"poi_tag", "role":"wanted"}
+    - I want [muffins]{"entity":"poi_tag", "role":"wanted"}
+    - I want [naan]{"entity":"poi_tag", "role":"wanted"}
+    - I want [natural history]{"entity":"poi_tag", "role":"wanted"}
+    - I want [nature]{"entity":"poi_tag", "role":"wanted"}
+    - I want [noodles]{"entity":"poi_tag", "role":"wanted"}
+    - I want [outdoor seating]{"entity":"poi_tag", "role":"wanted"}
+    - I want [pastries]{"entity":"poi_tag", "role":"wanted"}
+    - I want [pizza]{"entity":"poi_tag", "role":"wanted"}
+    - I want [popcorn]{"entity":"poi_tag", "role":"wanted"}
+    - I want [rooms for rent]{"entity":"poi_tag", "role":"wanted"}
+    - I want [salad]{"entity":"poi_tag", "role":"wanted"}
+    - I want [sandwich]{"entity":"poi_tag", "role":"wanted"}
+    - I want [seafood]{"entity":"poi_tag", "role":"wanted"}
+    - I want [shopping]{"entity":"poi_tag", "role":"wanted"}
+    - I want [smoothies]{"entity":"poi_tag", "role":"wanted"}
+    - I want [soda]{"entity":"poi_tag", "role":"wanted"}
+    - I want [spicy food]{"entity":"poi_tag", "role":"wanted"}
+    - I want [spring rolls]{"entity":"poi_tag", "role":"wanted"}
+    - I want [sushi]{"entity":"poi_tag", "role":"wanted"}
+    - I want [tacos]{"entity":"poi_tag", "role":"wanted"}
+    - I want [takeaway]{"entity":"poi_tag", "role":"wanted"}
+    - I want [tea]{"entity":"poi_tag", "role":"wanted"}
+    - I want [treatment]{"entity":"poi_tag", "role":"wanted"}
+    - I want [vegan food]{"entity":"poi_tag", "role":"wanted"}
+    - I want [vegetarian]{"entity":"poi_tag", "role":"wanted"}
+    - I want [vegetarian food]{"entity":"poi_tag", "role":"wanted"}
+    - I want [wheelchair access]{"entity":"poi_tag", "role":"wanted"}
+    - I want [wine]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [African food]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [American food]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [Asian food]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [Chinese food]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [Ethiopian food]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [European food]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [French food]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [Greek food]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [Indian food]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [Italian food]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [Japanese food]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [Mexican food]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [Michelin star rated food]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [Middle-Eastern food]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [Pakistani food]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [Scandinavian food]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [Chinese]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [Ethiopian]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [French]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [Greek]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [Indian]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [Italian]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [Japanese]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [Mexican]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [Middle-Eastern]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [Turkish]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [alcohol]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [beef]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [beer]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [books]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [breakfast]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [burgers]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [burritos]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [byryani]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [candy]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [cappuccino]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [chocolate]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [coffee]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [cosy atmosphere]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [craft beer]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [curry]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [dessert]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [donuts]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [drinks]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [fast-food]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [fried rice]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [fries]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [fusion food]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [gluten-free food]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [groceries]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [gyros]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [hummus]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [ice coffee]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [ice cream]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [kebab]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [milkshakes]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [movies]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [muffins]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [naan]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [natural history]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [nature]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [noodles]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [outdoor seating]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [pastries]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [pizza]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [popcorn]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [rooms for rent]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [salad]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [sandwich]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [seafood]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [shopping]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [smoothies]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [soda]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [spicy food]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [spring rolls]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [sushi]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [tacos]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [takeaway]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [tea]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [treatment]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [vegan food]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [vegetarian]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [vegetarian food]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [wheelchair access]{"entity":"poi_tag", "role":"wanted"}
+    - I want some [wine]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [African food]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [American food]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [Asian food]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [Chinese food]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [Ethiopian food]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [European food]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [French food]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [Greek food]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [Indian food]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [Italian food]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [Japanese food]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [Mexican food]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [Michelin star rated food]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [Middle-Eastern food]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [Pakistani food]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [Scandinavian food]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [drinks]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [beef]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [beer]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [books]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [breakfast]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [burgers]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [burritos]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [byryani]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [candy]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [cappuccino]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [chocolate]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [coffee]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [cosy atmosphere]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [craft beer]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [curry]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [dessert]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [donuts]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [drinks]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [fast-food]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [fried rice]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [fries]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [fusion food]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [gluten-free food]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [groceries]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [gyros]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [hummus]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [ice coffee]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [ice cream]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [kebab]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [milkshakes]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [movies]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [muffins]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [naan]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [natural history]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [nature]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [noodles]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [outdoor seating]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [pastries]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [pizza]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [popcorn]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [rooms for rent]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [salad]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [sandwich]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [seafood]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [shopping]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [smoothies]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [soda]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [spicy food]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [spring rolls]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [sushi]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [tacos]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [takeaway]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [tea]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [treatment]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [vegan food]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [vegetarian]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [vegetarian food]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [wheelchair access]{"entity":"poi_tag", "role":"wanted"}
+    - I need to get some [wine]{"entity":"poi_tag", "role":"wanted"}
+    - Where can I buy [African food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [American food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [Asian food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [Chinese food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [Ethiopian food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [European food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [French food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [Greek food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [Indian food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [Italian food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [Japanese food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [Mexican food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [Michelin star rated food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [Middle-Eastern food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [Pakistani food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [Scandinavian food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [Chinese]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [Ethiopian]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [European]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [French]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [Greek]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [Indian]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [Italian]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [Japanese]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [Mexican]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [Middle-Eastern]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [Turkish]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [alcohol]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [beef]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [beer]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [books]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [breakfast]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [burgers]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [burritos]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [byryani]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [candy]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [cappuccino]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [chocolate]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [coffee]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [cosy atmosphere]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [craft beer]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [curry]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [dessert]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [donuts]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [drinks]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [fast-food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [fried rice]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [fries]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [fusion food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [gluten-free food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [groceries]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [gyros]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [hummus]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [ice coffee]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [ice cream]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [kebab]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [milkshakes]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [movies]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [muffins]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [naan]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [natural history]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [nature]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [noodles]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [outdoor seating]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [pastries]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [pizza]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [popcorn]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [rooms for rent]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [salad]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [sandwich]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [seafood]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [smoothies]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [soda]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [spicy food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [spring rolls]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [sushi]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [tacos]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [takeaway]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [tea]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [treatment]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [vegan food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [vegetarian]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [vegetarian food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [wheelchair access]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I buy [wine]{"entity":"poi_tag", "role":"wanted"}?
+    - I don't want [African food]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [American food]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [Asian food]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [Chinese food]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [Ethiopian food]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [European food]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [French food]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [Greek food]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [Indian food]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [Italian food]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [Japanese food]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [Mexican food]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [Michelin star rated food]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [Middle-Eastern food]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [Pakistani food]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [Scandinavian food]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [Chinese]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [Ethiopian]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [European]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [French]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [Greek]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [Indian]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [Italian]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [Japanese]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [Mexican]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [Middle-Eastern]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [Turkish]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [alcohol]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [beef]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [beer]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [books]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [breakfast]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [burgers]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [burritos]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [byryani]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [candy]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [cappuccino]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [chocolate]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [coffee]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [cosy atmosphere]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [craft beer]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [curry]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [dessert]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [donuts]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [drinks]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [fast-food]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [fried rice]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [fries]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [fusion food]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [gluten-free food]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [groceries]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [gyros]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [hummus]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [ice coffee]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [ice cream]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [kebab]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [milkshakes]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [movies]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [muffins]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [naan]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [natural history]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [nature]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [noodles]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [outdoor seating]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [pastries]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [pizza]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [popcorn]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [rooms for rent]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [salad]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [sandwich]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [seafood]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want to go [shopping]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [smoothies]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [soda]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [spicy food]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [spring rolls]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [sushi]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [tacos]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [takeaway]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [tea]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [treatment]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [vegan food]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [vegetarian]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [vegetarian food]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [wheelchair access]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [wine]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [African food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [American food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [Asian food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [Chinese food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [Ethiopian food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [European food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [French food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [Greek food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [Indian food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [Italian food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [Japanese food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [Mexican food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [Michelin star rated food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [Middle-Eastern food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [Pakistani food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [Scandinavian food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [Chinese]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [Ethiopian]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [European]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [French]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [Greek]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [Indian]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [Italian]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [Japanese]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [Mexican]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [Middle-Eastern]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [Turkish]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [alcohol]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [beef]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [beer]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [books]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [breakfast]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [burgers]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [burritos]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [byryani]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [candy]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [cappuccino]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [chocolate]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [coffee]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [cosy atmosphere]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [craft beer]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [curry]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [dessert]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [donuts]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [drinks]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [fast-food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [fried rice]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [fries]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [fusion food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [gluten-free food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [groceries]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [gyros]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [hummus]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [ice coffee]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [ice cream]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [kebab]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [milkshakes]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [movies]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [muffins]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [naan]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [natural history]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [nature]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [noodles]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [outdoor seating]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [pastries]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [pizza]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [popcorn]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [rooms for rent]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [salad]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [sandwich]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [seafood]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want to go [shopping]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [smoothies]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [soda]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [spicy food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [spring rolls]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [sushi]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [tacos]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [takeaway]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [tea]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [treatment]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [vegan food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [vegetarian]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [vegetarian food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [wheelchair access]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [wine]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [African food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [American food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [Asian food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [Chinese food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [Ethiopian food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [European food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [French food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [Greek food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [Indian food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [Italian food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [Japanese food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [Mexican food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [Michelin star rated food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [Middle-Eastern food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [Pakistani food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [Scandinavian food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [Chinese]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [Ethiopian]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [European]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [French]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [Greek]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [Indian]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [Italian]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [Japanese]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [Mexican]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [Middle-Eastern]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [Turkish]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [alcohol]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [beef]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [beer]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [books]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [breakfast]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [burgers]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [burritos]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [byryani]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [candy]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [cappuccino]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [chocolate]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [coffee]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [cosy atmosphere]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [craft beer]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [curry]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [dessert]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [donuts]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [drinks]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [fast-food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [fried rice]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [fries]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [fusion food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [gluten-free food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [groceries]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [gyros]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [hummus]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [ice coffee]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [ice cream]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [kebab]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [milkshakes]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [movies]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [muffins]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [naan]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [natural history]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [nature]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [noodles]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [outdoor seating]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [pastries]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [pizza]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [popcorn]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [rooms for rent]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [salad]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [sandwich]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [seafood]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [shopping]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [smoothies]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [soda]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [spicy food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [spring rolls]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [sushi]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [tacos]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [takeaway]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [tea]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [treatment]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [vegan food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [vegetarian]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [vegetarian food]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [wheelchair access]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not like [wine]{"entity":"poi_tag", "role":"unwanted"}
+    - Where can I get [African food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [American food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [Asian food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [Chinese food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [Ethiopian food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [European food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [French food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [Greek food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [Indian food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [Italian food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [Japanese food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [Mexican food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [Michelin star rated food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [Middle-Eastern food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [Pakistani food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [Scandinavian food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [Chinese]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [Ethiopian]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [European]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [French]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [Greek]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [Indian]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [Italian]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [Japanese]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [Mexican]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [Middle-Eastern]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [Turkish]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [alcohol]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [beef]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [beer]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [books]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [breakfast]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [burgers]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [burritos]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [byryani]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [candy]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [cappuccino]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [chocolate]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [coffee]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [cosy atmosphere]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [craft beer]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [curry]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [dessert]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [donuts]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [drinks]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [fast-food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [fried rice]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [fries]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [fusion food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [gluten-free food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [groceries]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [gyros]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [hummus]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [ice coffee]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [ice cream]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [kebab]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [milkshakes]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [movies]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [muffins]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [naan]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [natural history]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [nature]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [noodles]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [outdoor seating]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [pastries]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [pizza]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [popcorn]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [rooms for rent]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [salad]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [sandwich]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [seafood]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [shopping]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [smoothies]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [soda]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [spicy food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [spring rolls]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [sushi]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [tacos]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [takeaway]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [tea]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [treatment]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [vegan food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [vegetarian]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [vegetarian food]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [wheelchair access]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [wine]{"entity":"poi_tag", "role":"wanted"}?
+    - I like [African food]{"entity":"poi_tag", "role":"wanted"}
+    - I like [American food]{"entity":"poi_tag", "role":"wanted"}
+    - I like [Asian food]{"entity":"poi_tag", "role":"wanted"}
+    - I like [Chinese food]{"entity":"poi_tag", "role":"wanted"}
+    - I like [Ethiopian food]{"entity":"poi_tag", "role":"wanted"}
+    - I like [European food]{"entity":"poi_tag", "role":"wanted"}
+    - I like [French food]{"entity":"poi_tag", "role":"wanted"}
+    - I like [Greek food]{"entity":"poi_tag", "role":"wanted"}
+    - I like [Indian food]{"entity":"poi_tag", "role":"wanted"}
+    - I like [Italian food]{"entity":"poi_tag", "role":"wanted"}
+    - I like [Japanese food]{"entity":"poi_tag", "role":"wanted"}
+    - I like [Mexican food]{"entity":"poi_tag", "role":"wanted"}
+    - I like [Michelin star rated food]{"entity":"poi_tag", "role":"wanted"}
+    - I like [Middle-Eastern food]{"entity":"poi_tag", "role":"wanted"}
+    - I like [Pakistani food]{"entity":"poi_tag", "role":"wanted"}
+    - I like [Scandinavian food]{"entity":"poi_tag", "role":"wanted"}
+    - I like [Chinese]{"entity":"poi_tag", "role":"wanted"}
+    - I like [Ethiopian]{"entity":"poi_tag", "role":"wanted"}
+    - I like [European]{"entity":"poi_tag", "role":"wanted"}
+    - I like [French]{"entity":"poi_tag", "role":"wanted"}
+    - I like [Greek]{"entity":"poi_tag", "role":"wanted"}
+    - I like [Indian]{"entity":"poi_tag", "role":"wanted"}
+    - I like [Italian]{"entity":"poi_tag", "role":"wanted"}
+    - I like [Japanese]{"entity":"poi_tag", "role":"wanted"}
+    - I like [Mexican]{"entity":"poi_tag", "role":"wanted"}
+    - I like [Middle-Eastern]{"entity":"poi_tag", "role":"wanted"}
+    - I like [Turkish]{"entity":"poi_tag", "role":"wanted"}
+    - I like [alcohol]{"entity":"poi_tag", "role":"wanted"}
+    - I like [beef]{"entity":"poi_tag", "role":"wanted"}
+    - I like [beer]{"entity":"poi_tag", "role":"wanted"}
+    - I like [books]{"entity":"poi_tag", "role":"wanted"}
+    - I like [breakfast]{"entity":"poi_tag", "role":"wanted"}
+    - I like [burgers]{"entity":"poi_tag", "role":"wanted"}
+    - I like [burritos]{"entity":"poi_tag", "role":"wanted"}
+    - I like [byryani]{"entity":"poi_tag", "role":"wanted"}
+    - I like [candy]{"entity":"poi_tag", "role":"wanted"}
+    - I like [cappuccino]{"entity":"poi_tag", "role":"wanted"}
+    - I like [chocolate]{"entity":"poi_tag", "role":"wanted"}
+    - I like [coffee]{"entity":"poi_tag", "role":"wanted"}
+    - I like [cosy atmosphere]{"entity":"poi_tag", "role":"wanted"}
+    - I like [craft beer]{"entity":"poi_tag", "role":"wanted"}
+    - I like [curry]{"entity":"poi_tag", "role":"wanted"}
+    - I like [dessert]{"entity":"poi_tag", "role":"wanted"}
+    - I like [donuts]{"entity":"poi_tag", "role":"wanted"}
+    - I like [drinks]{"entity":"poi_tag", "role":"wanted"}
+    - I like [fast-food]{"entity":"poi_tag", "role":"wanted"}
+    - I like [fried rice]{"entity":"poi_tag", "role":"wanted"}
+    - I like [fries]{"entity":"poi_tag", "role":"wanted"}
+    - I like [fusion food]{"entity":"poi_tag", "role":"wanted"}
+    - I like [gluten-free food]{"entity":"poi_tag", "role":"wanted"}
+    - I like [groceries]{"entity":"poi_tag", "role":"wanted"}
+    - I like [gyros]{"entity":"poi_tag", "role":"wanted"}
+    - I like [hummus]{"entity":"poi_tag", "role":"wanted"}
+    - I like [ice coffee]{"entity":"poi_tag", "role":"wanted"}
+    - I like [ice cream]{"entity":"poi_tag", "role":"wanted"}
+    - I like [kebab]{"entity":"poi_tag", "role":"wanted"}
+    - I like [milkshakes]{"entity":"poi_tag", "role":"wanted"}
+    - I like [movies]{"entity":"poi_tag", "role":"wanted"}
+    - I like [muffins]{"entity":"poi_tag", "role":"wanted"}
+    - I like [naan]{"entity":"poi_tag", "role":"wanted"}
+    - I like [natural history]{"entity":"poi_tag", "role":"wanted"}
+    - I like [nature]{"entity":"poi_tag", "role":"wanted"}
+    - I like [noodles]{"entity":"poi_tag", "role":"wanted"}
+    - I like [outdoor seating]{"entity":"poi_tag", "role":"wanted"}
+    - I like [pastries]{"entity":"poi_tag", "role":"wanted"}
+    - I like [pizza]{"entity":"poi_tag", "role":"wanted"}
+    - I like [popcorn]{"entity":"poi_tag", "role":"wanted"}
+    - I like [rooms for rent]{"entity":"poi_tag", "role":"wanted"}
+    - I like [salad]{"entity":"poi_tag", "role":"wanted"}
+    - I like [sandwich]{"entity":"poi_tag", "role":"wanted"}
+    - I like [seafood]{"entity":"poi_tag", "role":"wanted"}
+    - I like [shopping]{"entity":"poi_tag", "role":"wanted"}
+    - I like [smoothies]{"entity":"poi_tag", "role":"wanted"}
+    - I like [soda]{"entity":"poi_tag", "role":"wanted"}
+    - I like [spicy food]{"entity":"poi_tag", "role":"wanted"}
+    - I like [spring rolls]{"entity":"poi_tag", "role":"wanted"}
+    - I like [sushi]{"entity":"poi_tag", "role":"wanted"}
+    - I like [tacos]{"entity":"poi_tag", "role":"wanted"}
+    - I like [takeaway]{"entity":"poi_tag", "role":"wanted"}
+    - I like [tea]{"entity":"poi_tag", "role":"wanted"}
+    - I like [treatment]{"entity":"poi_tag", "role":"wanted"}
+    - I like [vegan food]{"entity":"poi_tag", "role":"wanted"}
+    - I like [vegetarian]{"entity":"poi_tag", "role":"wanted"}
+    - I like [vegetarian food]{"entity":"poi_tag", "role":"wanted"}
+    - I like [wheelchair access]{"entity":"poi_tag", "role":"wanted"}
+    - I like [wine]{"entity":"poi_tag", "role":"wanted"}
+    - I want [African food]{"entity":"poi_tag", "role":"wanted"} and not [African food]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [American food]{"entity":"poi_tag", "role":"wanted"} and not [American food]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [Asian food]{"entity":"poi_tag", "role":"wanted"} and not [Asian food]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [Chinese food]{"entity":"poi_tag", "role":"wanted"} and not [Chinese food]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [Ethiopian food]{"entity":"poi_tag", "role":"wanted"} and not [Ethiopian food]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [European food]{"entity":"poi_tag", "role":"wanted"} and not [European food]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [French food]{"entity":"poi_tag", "role":"wanted"} and not [French food]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [Greek food]{"entity":"poi_tag", "role":"wanted"} and not [Greek food]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [Indian food]{"entity":"poi_tag", "role":"wanted"} and not [Indian food]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [Italian food]{"entity":"poi_tag", "role":"wanted"} and not [Italian food]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [Japanese food]{"entity":"poi_tag", "role":"wanted"} and not [Japanese food]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [Mexican food]{"entity":"poi_tag", "role":"wanted"} and not [Mexican food]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [Michelin star rated food]{"entity":"poi_tag", "role":"wanted"} and not [Michelin star rated food]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [Middle-Eastern food]{"entity":"poi_tag", "role":"wanted"} and not [Middle-Eastern food]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [Pakistani food]{"entity":"poi_tag", "role":"wanted"} and not [Pakistani food]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [Scandinavian food]{"entity":"poi_tag", "role":"wanted"} and not [Scandinavian food]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [Chinese]{"entity":"poi_tag", "role":"wanted"} and not [Chinese]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [Ethiopian]{"entity":"poi_tag", "role":"wanted"} and not [Ethiopian]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [European]{"entity":"poi_tag", "role":"wanted"} and not [European]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [French]{"entity":"poi_tag", "role":"wanted"} and not [French]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [Greek]{"entity":"poi_tag", "role":"wanted"} and not [Greek]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [Indian]{"entity":"poi_tag", "role":"wanted"} and not [Indian]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [Italian]{"entity":"poi_tag", "role":"wanted"} and not [Italian]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [Japanese]{"entity":"poi_tag", "role":"wanted"} and not [Japanese]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [Mexican]{"entity":"poi_tag", "role":"wanted"} and not [Mexican]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [Middle-Eastern]{"entity":"poi_tag", "role":"wanted"} and not [Middle-Eastern]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [Turkish]{"entity":"poi_tag", "role":"wanted"} and not [Turkish]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [alcohol]{"entity":"poi_tag", "role":"wanted"} and not [alcohol]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [beef]{"entity":"poi_tag", "role":"wanted"} and not [beef]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [beer]{"entity":"poi_tag", "role":"wanted"} and not [beer]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [books]{"entity":"poi_tag", "role":"wanted"} and not [books]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [breakfast]{"entity":"poi_tag", "role":"wanted"} and not [breakfast]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [burgers]{"entity":"poi_tag", "role":"wanted"} and not [burgers]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [burritos]{"entity":"poi_tag", "role":"wanted"} and not [burritos]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [byryani]{"entity":"poi_tag", "role":"wanted"} and not [byryani]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [candy]{"entity":"poi_tag", "role":"wanted"} and not [candy]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [cappuccino]{"entity":"poi_tag", "role":"wanted"} and not [cappuccino]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [chocolate]{"entity":"poi_tag", "role":"wanted"} and not [chocolate]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [coffee]{"entity":"poi_tag", "role":"wanted"} and not [coffee]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [cosy atmosphere]{"entity":"poi_tag", "role":"wanted"} and not [cosy atmosphere]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [craft beer]{"entity":"poi_tag", "role":"wanted"} and not [craft beer]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [curry]{"entity":"poi_tag", "role":"wanted"} and not [curry]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [dessert]{"entity":"poi_tag", "role":"wanted"} and not [dessert]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [donuts]{"entity":"poi_tag", "role":"wanted"} and not [donuts]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [drinks]{"entity":"poi_tag", "role":"wanted"} and not [drinks]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [fast-food]{"entity":"poi_tag", "role":"wanted"} and not [fast-food]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [fried rice]{"entity":"poi_tag", "role":"wanted"} and not [fried rice]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [fries]{"entity":"poi_tag", "role":"wanted"} and not [fries]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [fusion food]{"entity":"poi_tag", "role":"wanted"} and not [fusion food]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [gluten-free food]{"entity":"poi_tag", "role":"wanted"} and not [gluten-free food]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [groceries]{"entity":"poi_tag", "role":"wanted"} and not [groceries]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [gyros]{"entity":"poi_tag", "role":"wanted"} and not [gyros]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [hummus]{"entity":"poi_tag", "role":"wanted"} and not [hummus]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [ice coffee]{"entity":"poi_tag", "role":"wanted"} and not [ice coffee]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [ice cream]{"entity":"poi_tag", "role":"wanted"} and not [ice cream]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [kebab]{"entity":"poi_tag", "role":"wanted"} and not [kebab]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [milkshakes]{"entity":"poi_tag", "role":"wanted"} and not [milkshakes]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [movies]{"entity":"poi_tag", "role":"wanted"} and not [movies]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [muffins]{"entity":"poi_tag", "role":"wanted"} and not [muffins]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [naan]{"entity":"poi_tag", "role":"wanted"} and not [naan]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [natural history]{"entity":"poi_tag", "role":"wanted"} and not [natural history]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [nature]{"entity":"poi_tag", "role":"wanted"} and not [nature]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [noodles]{"entity":"poi_tag", "role":"wanted"} and not [noodles]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [outdoor seating]{"entity":"poi_tag", "role":"wanted"} and not [outdoor seating]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [pastries]{"entity":"poi_tag", "role":"wanted"} and not [pastries]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [pizza]{"entity":"poi_tag", "role":"wanted"} and not [pizza]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [popcorn]{"entity":"poi_tag", "role":"wanted"} and not [popcorn]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [rooms for rent]{"entity":"poi_tag", "role":"wanted"} and not [rooms for rent]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [salad]{"entity":"poi_tag", "role":"wanted"} and not [salad]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [sandwich]{"entity":"poi_tag", "role":"wanted"} and not [sandwich]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [seafood]{"entity":"poi_tag", "role":"wanted"} and not [seafood]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [shopping]{"entity":"poi_tag", "role":"wanted"} and not [shopping]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [smoothies]{"entity":"poi_tag", "role":"wanted"} and not [smoothies]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [soda]{"entity":"poi_tag", "role":"wanted"} and not [soda]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [spicy food]{"entity":"poi_tag", "role":"wanted"} and not [spicy food]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [spring rolls]{"entity":"poi_tag", "role":"wanted"} and not [spring rolls]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [sushi]{"entity":"poi_tag", "role":"wanted"} and not [sushi]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [tacos]{"entity":"poi_tag", "role":"wanted"} and not [tacos]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [takeaway]{"entity":"poi_tag", "role":"wanted"} and not [takeaway]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [tea]{"entity":"poi_tag", "role":"wanted"} and not [tea]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [treatment]{"entity":"poi_tag", "role":"wanted"} and not [treatment]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [vegan food]{"entity":"poi_tag", "role":"wanted"} and not [vegan food]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [vegetarian]{"entity":"poi_tag", "role":"wanted"} and not [vegetarian]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [vegetarian food]{"entity":"poi_tag", "role":"wanted"} and not [vegetarian food]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [wheelchair access]{"entity":"poi_tag", "role":"wanted"} and not [wheelchair access]{"entity":"poi_tag", "role":"unwanted"} 
+    - I want [wine]{"entity":"poi_tag", "role":"wanted"} and not [wine]{"entity":"poi_tag", "role":"unwanted"} 
+    - I don't want [African food]{"entity":"poi_tag", "role":"unwanted"} I want [French food]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [American food]{"entity":"poi_tag", "role":"unwanted"} I want [Africann food]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [Asian food]{"entity":"poi_tag", "role":"unwanted"} I want [American food]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [Chinese food]{"entity":"poi_tag", "role":"unwanted"} I want [Indian food]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [Ethiopian food]{"entity":"poi_tag", "role":"unwanted"} I want [Japanese food]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [European food]{"entity":"poi_tag", "role":"unwanted"} I want [Scandinavian food]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [French food]{"entity":"poi_tag", "role":"unwanted"} I want [American food]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [Greek food]{"entity":"poi_tag", "role":"unwanted"} I want [Greek food]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [Indian food]{"entity":"poi_tag", "role":"unwanted"} I want [Indian food]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [Italian food]{"entity":"poi_tag", "role":"unwanted"} I want [Italian food]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [Japanese food]{"entity":"poi_tag", "role":"unwanted"} I want [Japanese food]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [Mexican food]{"entity":"poi_tag", "role":"unwanted"} I want [Mexican food]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [Michelin star rated food]{"entity":"poi_tag", "role":"unwanted"} I want [Michelin star rated food]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [Middle-Eastern food]{"entity":"poi_tag", "role":"unwanted"} I want [Middle-Eastern food]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [Pakistani food]{"entity":"poi_tag", "role":"unwanted"} I want [Pakistani food]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [Scandinavian food]{"entity":"poi_tag", "role":"unwanted"} I want [Scandinavian food]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [Chinese]{"entity":"poi_tag", "role":"unwanted"} I want [Chinese]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [Ethiopian]{"entity":"poi_tag", "role":"unwanted"} I want [Ethiopian]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [European]{"entity":"poi_tag", "role":"unwanted"} I want [European]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [French]{"entity":"poi_tag", "role":"unwanted"} I want [French]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [Greek]{"entity":"poi_tag", "role":"unwanted"} I want [Greek]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [Indian]{"entity":"poi_tag", "role":"unwanted"} I want [Indian]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [Italian]{"entity":"poi_tag", "role":"unwanted"} I want [Italian]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [Japanese]{"entity":"poi_tag", "role":"unwanted"} I want [Japanese]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [Mexican]{"entity":"poi_tag", "role":"unwanted"} I want [Mexican]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [Middle-Eastern]{"entity":"poi_tag", "role":"unwanted"} I want [Middle-Eastern]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [Turkish]{"entity":"poi_tag", "role":"unwanted"} I want [Turkish]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [alcohol]{"entity":"poi_tag", "role":"unwanted"} I want [alcohol]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [beef]{"entity":"poi_tag", "role":"unwanted"} I want [beef]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [beer]{"entity":"poi_tag", "role":"unwanted"} I want [beer]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [books]{"entity":"poi_tag", "role":"unwanted"} I want [books]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [breakfast]{"entity":"poi_tag", "role":"unwanted"} I want [breakfast]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [burgers]{"entity":"poi_tag", "role":"unwanted"} I want [burgers]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [burritos]{"entity":"poi_tag", "role":"unwanted"} I want [burritos]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [byryani]{"entity":"poi_tag", "role":"unwanted"} I want [byryani]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [candy]{"entity":"poi_tag", "role":"unwanted"} I want [candy]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [cappuccino]{"entity":"poi_tag", "role":"unwanted"} I want [cappuccino]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [chocolate]{"entity":"poi_tag", "role":"unwanted"} I want [chocolate]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [coffee]{"entity":"poi_tag", "role":"unwanted"} I want [coffee]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [cosy atmosphere]{"entity":"poi_tag", "role":"unwanted"} I want [cosy atmosphere]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [craft beer]{"entity":"poi_tag", "role":"unwanted"} I want [craft beer]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [curry]{"entity":"poi_tag", "role":"unwanted"} I want [curry]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [dessert]{"entity":"poi_tag", "role":"unwanted"} I want [dessert]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [donuts]{"entity":"poi_tag", "role":"unwanted"} I want [donuts]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [drinks]{"entity":"poi_tag", "role":"unwanted"} I want [drinks]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [fast-food]{"entity":"poi_tag", "role":"unwanted"} I want [fast-food]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [fried rice]{"entity":"poi_tag", "role":"unwanted"} I want [fried rice]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [fries]{"entity":"poi_tag", "role":"unwanted"} I want [fries]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [fusion food]{"entity":"poi_tag", "role":"unwanted"} I want [fusion food]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [gluten-free food]{"entity":"poi_tag", "role":"unwanted"} I want [gluten-free food]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [groceries]{"entity":"poi_tag", "role":"unwanted"} I want [groceries]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [gyros]{"entity":"poi_tag", "role":"unwanted"} I want [gyros]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [hummus]{"entity":"poi_tag", "role":"unwanted"} I want [hummus]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [ice coffee]{"entity":"poi_tag", "role":"unwanted"} I want [ice coffee]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [ice cream]{"entity":"poi_tag", "role":"unwanted"} I want [ice cream]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [kebab]{"entity":"poi_tag", "role":"unwanted"} I want [kebab]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [milkshakes]{"entity":"poi_tag", "role":"unwanted"} I want [milkshakes]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [movies]{"entity":"poi_tag", "role":"unwanted"} I want [movies]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [muffins]{"entity":"poi_tag", "role":"unwanted"} I want [muffins]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [naan]{"entity":"poi_tag", "role":"unwanted"} I want [naan]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [natural history]{"entity":"poi_tag", "role":"unwanted"} I want [natural history]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [nature]{"entity":"poi_tag", "role":"unwanted"} I want [nature]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [noodles]{"entity":"poi_tag", "role":"unwanted"} I want [noodles]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [outdoor seating]{"entity":"poi_tag", "role":"unwanted"} I want [outdoor seating]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [pastries]{"entity":"poi_tag", "role":"unwanted"} I want [pastries]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [pizza]{"entity":"poi_tag", "role":"unwanted"} I want [pizza]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [popcorn]{"entity":"poi_tag", "role":"unwanted"} I want [popcorn]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [rooms for rent]{"entity":"poi_tag", "role":"unwanted"} I want [rooms for rent]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [salad]{"entity":"poi_tag", "role":"unwanted"} I want [salad]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [sandwich]{"entity":"poi_tag", "role":"unwanted"} I want [sandwich]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [seafood]{"entity":"poi_tag", "role":"unwanted"} I want [seafood]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [shopping]{"entity":"poi_tag", "role":"unwanted"} I want [shopping]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [smoothies]{"entity":"poi_tag", "role":"unwanted"} I want [smoothies]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [soda]{"entity":"poi_tag", "role":"unwanted"} I want [soda]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [spicy food]{"entity":"poi_tag", "role":"unwanted"} I want [spicy food]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [spring rolls]{"entity":"poi_tag", "role":"unwanted"} I want [spring rolls]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [sushi]{"entity":"poi_tag", "role":"unwanted"} I want [sushi]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [tacos]{"entity":"poi_tag", "role":"unwanted"} I want [tacos]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [takeaway]{"entity":"poi_tag", "role":"unwanted"} I want [takeaway]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [tea]{"entity":"poi_tag", "role":"unwanted"} I want [tea]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [treatment]{"entity":"poi_tag", "role":"unwanted"} I want [treatment]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [vegan food]{"entity":"poi_tag", "role":"unwanted"} I want [vegan food]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [vegetarian]{"entity":"poi_tag", "role":"unwanted"} I want [vegetarian]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [vegetarian food]{"entity":"poi_tag", "role":"unwanted"} I want [vegetarian food]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [wheelchair access]{"entity":"poi_tag", "role":"unwanted"} I want [wheelchair access]{"entity":"poi_tag", "role":"wanted"} 
+    - I don't want [wine]{"entity":"poi_tag", "role":"unwanted"} I want [wine]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [African food]{"entity":"poi_tag", "role":"unwanted"} I want [African food]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [American food]{"entity":"poi_tag", "role":"unwanted"} I want [American food]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [Asian food]{"entity":"poi_tag", "role":"unwanted"} I want [Asian food]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [Chinese food]{"entity":"poi_tag", "role":"unwanted"} I want [Chinese food]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [Ethiopian food]{"entity":"poi_tag", "role":"unwanted"} I want [Ethiopian food]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [European food]{"entity":"poi_tag", "role":"unwanted"} I want [European food]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [French food]{"entity":"poi_tag", "role":"unwanted"} I want [French food]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [Greek food]{"entity":"poi_tag", "role":"unwanted"} I want [Greek food]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [Indian food]{"entity":"poi_tag", "role":"unwanted"} I want [Indian food]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [Italian food]{"entity":"poi_tag", "role":"unwanted"} I want [Italian food]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [Japanese food]{"entity":"poi_tag", "role":"unwanted"} I want [Japanese food]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [Mexican food]{"entity":"poi_tag", "role":"unwanted"} I want [Mexican food]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [Michelin star rated food]{"entity":"poi_tag", "role":"unwanted"} I want [Michelin star rated food]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [Middle-Eastern food]{"entity":"poi_tag", "role":"unwanted"} I want [Middle-Eastern food]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [Pakistani food]{"entity":"poi_tag", "role":"unwanted"} I want [Pakistani food]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [Scandinavian food]{"entity":"poi_tag", "role":"unwanted"} I want [Scandinavian food]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [Chinese]{"entity":"poi_tag", "role":"unwanted"} I want [Chinese]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [Ethiopian]{"entity":"poi_tag", "role":"unwanted"} I want [Ethiopian]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [European]{"entity":"poi_tag", "role":"unwanted"} I want [European]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [French]{"entity":"poi_tag", "role":"unwanted"} I want [French]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [Greek]{"entity":"poi_tag", "role":"unwanted"} I want [Greek]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [Indian]{"entity":"poi_tag", "role":"unwanted"} I want [Indian]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [Italian]{"entity":"poi_tag", "role":"unwanted"} I want [Italian]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [Japanese]{"entity":"poi_tag", "role":"unwanted"} I want [Japanese]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [Mexican]{"entity":"poi_tag", "role":"unwanted"} I want [Mexican]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [Middle-Eastern]{"entity":"poi_tag", "role":"unwanted"} I want [Middle-Eastern]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [Turkish]{"entity":"poi_tag", "role":"unwanted"} I want [Turkish]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [alcohol]{"entity":"poi_tag", "role":"unwanted"} I want [alcohol]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [beef]{"entity":"poi_tag", "role":"unwanted"} I want [beef]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [beer]{"entity":"poi_tag", "role":"unwanted"} I want [beer]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [books]{"entity":"poi_tag", "role":"unwanted"} I want [books]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [breakfast]{"entity":"poi_tag", "role":"unwanted"} I want [breakfast]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [burgers]{"entity":"poi_tag", "role":"unwanted"} I want [burgers]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [burritos]{"entity":"poi_tag", "role":"unwanted"} I want [burritos]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [byryani]{"entity":"poi_tag", "role":"unwanted"} I want [byryani]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [candy]{"entity":"poi_tag", "role":"unwanted"} I want [candy]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [cappuccino]{"entity":"poi_tag", "role":"unwanted"} I want [cappuccino]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [chocolate]{"entity":"poi_tag", "role":"unwanted"} I want [chocolate]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [coffee]{"entity":"poi_tag", "role":"unwanted"} I want [coffee]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [cosy atmosphere]{"entity":"poi_tag", "role":"unwanted"} I want [cosy atmosphere]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [craft beer]{"entity":"poi_tag", "role":"unwanted"} I want [craft beer]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [curry]{"entity":"poi_tag", "role":"unwanted"} I want [curry]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [dessert]{"entity":"poi_tag", "role":"unwanted"} I want [dessert]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [donuts]{"entity":"poi_tag", "role":"unwanted"} I want [donuts]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [drinks]{"entity":"poi_tag", "role":"unwanted"} I want [drinks]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [fast-food]{"entity":"poi_tag", "role":"unwanted"} I want [fast-food]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [fried rice]{"entity":"poi_tag", "role":"unwanted"} I want [fried rice]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [fries]{"entity":"poi_tag", "role":"unwanted"} I want [fries]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [fusion food]{"entity":"poi_tag", "role":"unwanted"} I want [fusion food]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [gluten-free food]{"entity":"poi_tag", "role":"unwanted"} I want [gluten-free food]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [groceries]{"entity":"poi_tag", "role":"unwanted"} I want [groceries]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [gyros]{"entity":"poi_tag", "role":"unwanted"} I want [gyros]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [hummus]{"entity":"poi_tag", "role":"unwanted"} I want [hummus]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [ice coffee]{"entity":"poi_tag", "role":"unwanted"} I want [ice coffee]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [ice cream]{"entity":"poi_tag", "role":"unwanted"} I want [ice cream]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [kebab]{"entity":"poi_tag", "role":"unwanted"} I want [kebab]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [milkshakes]{"entity":"poi_tag", "role":"unwanted"} I want [milkshakes]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [movies]{"entity":"poi_tag", "role":"unwanted"} I want [movies]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [muffins]{"entity":"poi_tag", "role":"unwanted"} I want [muffins]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [naan]{"entity":"poi_tag", "role":"unwanted"} I want [naan]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [natural history]{"entity":"poi_tag", "role":"unwanted"} I want [natural history]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [nature]{"entity":"poi_tag", "role":"unwanted"} I want [nature]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [noodles]{"entity":"poi_tag", "role":"unwanted"} I want [noodles]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [outdoor seating]{"entity":"poi_tag", "role":"unwanted"} I want [outdoor seating]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [pastries]{"entity":"poi_tag", "role":"unwanted"} I want [pastries]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [pizza]{"entity":"poi_tag", "role":"unwanted"} I want [pizza]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [popcorn]{"entity":"poi_tag", "role":"unwanted"} I want [popcorn]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [rooms for rent]{"entity":"poi_tag", "role":"unwanted"} I want [rooms for rent]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [salad]{"entity":"poi_tag", "role":"unwanted"} I want [salad]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [sandwich]{"entity":"poi_tag", "role":"unwanted"} I want [sandwich]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [seafood]{"entity":"poi_tag", "role":"unwanted"} I want [seafood]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [shopping]{"entity":"poi_tag", "role":"unwanted"} I want [shopping]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [smoothies]{"entity":"poi_tag", "role":"unwanted"} I want [smoothies]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [soda]{"entity":"poi_tag", "role":"unwanted"} I want [soda]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [spicy food]{"entity":"poi_tag", "role":"unwanted"} I want [spicy food]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [spring rolls]{"entity":"poi_tag", "role":"unwanted"} I want [spring rolls]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [sushi]{"entity":"poi_tag", "role":"unwanted"} I want [sushi]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [tacos]{"entity":"poi_tag", "role":"unwanted"} I want [tacos]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [takeaway]{"entity":"poi_tag", "role":"unwanted"} I want [takeaway]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [tea]{"entity":"poi_tag", "role":"unwanted"} I want [tea]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [treatment]{"entity":"poi_tag", "role":"unwanted"} I want [treatment]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [vegan food]{"entity":"poi_tag", "role":"unwanted"} I want [vegan food]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [vegetarian]{"entity":"poi_tag", "role":"unwanted"} I want [vegetarian]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [vegetarian food]{"entity":"poi_tag", "role":"unwanted"} I want [vegetarian food]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [wheelchair access]{"entity":"poi_tag", "role":"unwanted"} I want [wheelchair access]{"entity":"poi_tag", "role":"wanted"} 
+    - I do not want [wine]{"entity":"poi_tag", "role":"unwanted"} I want [wine]{"entity":"poi_tag", "role":"wanted"} 
+    - Any place that sells [African food]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [American food]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [Asian food]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [Chinese food]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [Ethiopian food]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [European food]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [French food]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [Greek food]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [Indian food]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [Italian food]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [Japanese food]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [Mexican food]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [Michelin star rated food]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [Middle-Eastern food]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [Pakistani food]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [Scandinavian food]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [Chinese]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [Ethiopian]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [European]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [French]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [Greek]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [Indian]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [Italian]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [Japanese]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [Mexican]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [Middle-Eastern]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [Turkish]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [alcohol]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [beef]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [beer]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [books]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [breakfast]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [burgers]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [burritos]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [byryani]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [candy]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [cappuccino]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [chocolate]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [coffee]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [cosy atmosphere]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [craft beer]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [curry]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [dessert]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [donuts]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [drinks]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [fast-food]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [fried rice]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [fries]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [fusion food]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [gluten-free food]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [groceries]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [gyros]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [hummus]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [ice coffee]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [ice cream]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [kebab]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [milkshakes]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [movies]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [muffins]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [naan]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [natural history]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [nature]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [noodles]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [outdoor seating]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [pastries]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [pizza]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [popcorn]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [rooms for rent]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [salad]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [sandwich]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [seafood]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [shopping]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [smoothies]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [soda]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [spicy food]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [spring rolls]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [sushi]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [tacos]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [takeaway]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [tea]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [treatment]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [vegan food]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [vegetarian]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [vegetarian food]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [wheelchair access]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place that sells [wine]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I grab a cup of [coffee]{"entity":"poi_tag", "role":"wanted"}?
+    - A [vegetarian]{"entity":"poi_tag", "role":"wanted"} place?
+    - A [coffee]{"entity":"poi_tag", "role":"wanted"} shop.
+    - What places offers [drinks]{"entity":"poi_tag", "role":"wanted"}?
+    - Are there any places that offers [wine]{"entity":"poi_tag", "role":"wanted"}?
+    - [Noodles]{"entity":"poi_tag", "role":"wanted"}
+    - A [beer]{"entity":"poi_tag", "role":"wanted"}
+    - I want to watch a [movie]{"entity":"poi_tag", "role":"wanted"}
+    - I want [sushi]{"entity":"poi_tag", "role":"wanted"} and am [vegan]{"entity":"poi_tag", "role":"wanted"}
+    - Not [hamburgers]{"entity":"poi_tag", "role":"unwanted"}
+    - Where can I get [Indian food]{"entity":"poi_tag", "role":"wanted"}?
+    - [Sweet potato fries]{"entity":"poi_tag", "role":"wanted"}
+    - Somewhere that sells [tea]{"entity":"poi_tag", "role":"wanted"}
+    - [Italian]{"entity":"poi_tag", "role":"wanted"} [restaurant](poi_category)
+    - A [restaurant](poi_category) that has [vegetarian food]{"entity":"poi_tag", "role":"wanted"}
+    - Are there any [Michelin star]{"entity":"poi_tag", "role":"wanted"} [restaurants](poi_category) in town?
+    - What about a place that has [Norwegian food]{"entity":"poi_tag", "role":"wanted"}?
+    - Any place with [Italian food]{"entity":"poi_tag", "role":"wanted"}?
+    - I don't like [Chinese]{"entity":"poi_tag", "role":"unwanted"}.
+    - Do they have [wifi]{"entity":"poi_tag", "role":"wanted"}?
+    - I do not like [vegan food]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [Indian food]{"entity":"poi_tag", "role":"unwanted"}
+    - I hate [fast food]{"entity":"poi_tag", "role":"unwanted"}
+    - I am not a [vegetarian]{"entity":"poi_tag", "role":"unwanted"}
+    - I am not [vegan]{"entity":"poi_tag", "role":"unwanted"}
+    - I do not want [vegan]{"entity":"poi_tag", "role":"unwanted"} and [vegetarian]{"entity":"poi_tag", "role":"unwanted"}.
+    - Don't actually want [pizza]{"entity":"poi_tag", "role":"unwanted"} right now.
+    - I dislike [alchohol]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want to [drink]{"entity":"poi_tag", "role":"unwanted"}.
+    - I don't [drink]{"entity":"poi_tag", "role":"unwanted"}
+    - Any places selling [burgers]{"entity":"poi_tag", "role":"wanted"}
+    - Don't really like [burgers]{"entity":"poi_tag", "role":"unwanted"} that much
+    - No, I do not want [tea]{"entity":"poi_tag", "role":"unwanted"}
+    - Don't like [hamburger]{"entity":"poi_tag", "role":"unwanted"}
+    - I love [kebab]{"entity":"poi_tag", "role":"wanted"}
+    - I want [Asian food]{"entity":"poi_tag", "role":"wanted"}
+    - I would like [pizza]{"entity":"poi_tag", "role":"wanted"}
+    - Where can I buy [groceries]{"entity":"poi_tag", "role":"wanted"}?
+    - Where can I get [cosy atmosphere]{"entity":"poi_tag", "role":"wanted"}?
+    - [history]{"entity":"poi_tag", "role":"wanted"}
+    - I want [Italian food]{"entity":"poi_tag", "role":"wanted"} without [meat]{"entity":"poi_tag", "role":"unwanted"}
+    - I want [Italian food]{"entity":"poi_tag", "role":"wanted"} but I don't want [pizza]{"entity":"poi_tag", "role":"unwanted"}
+    - I want to have [sushi]{"entity":"poi_tag", "role":"wanted"}
+    - Some [pizza]{"entity":"poi_tag", "role":"wanted"} would be nice
+    - [Middle Eastern food]{"entity":"poi_tag", "role":"wanted"} would be great
+    - I like [noodles]{"entity":"poi_tag", "role":"wanted"}
+    - Not [sushi]{"entity":"poi_tag", "role":"unwanted"}
+    - not [Indian]{"entity":"poi_tag", "role":"unwanted"}
+    - not [Italian]{"entity":"poi_tag", "role":"unwanted"}
+    - not [ice cream]{"entity":"poi_tag", "role":"unwanted"}
+    - not [vegan]{"entity":"poi_tag", "role":"unwanted"}
+    - [spaghetti]{"entity":"poi_tag", "role":"wanted"} is good
+    - Any places that sell both [vegan]{"entity":"poi_tag", "role":"wanted"} and [Italian]{"entity":"poi_tag", "role":"wanted"}?
+    - I really like [burgers]{"entity":"poi_tag", "role":"wanted"}
+    - I really don't like [burgers]{"entity":"poi_tag", "role":"unwanted"}
+    - big fan of [Indian]{"entity":"poi_tag", "role":"wanted"}
+    - not a big fan of [Indian]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [Korean food]{"entity":"poi_tag", "role":"unwanted"}
+    - I would like [Mexican food]{"entity":"poi_tag", "role":"wanted"} but without [meat]{"entity":"poi_tag", "role":"unwanted"}
+    - I don't want [Italian]{"entity":"poi_tag", "role":"unwanted"} but I do want [vegan]{"entity":"poi_tag", "role":"wanted"}
+    - Not interested in [bowling]{"entity":"poi_tag", "role":"unwanted"}
+    - I either want [sushi]{"entity":"poi_tag", "role":"wanted"} or [noodles]{"entity":"poi_tag", "role":"wanted"}
+    - I want neither [sushi]{"entity":"poi_tag", "role":"unwanted"} nor [noodles]{"entity":"poi_tag", "role":"unwanted"}
+    - I do like a good [hamburger]{"entity":"poi_tag", "role":"wanted"}
+    - I prefer without [gluten]{"entity":"poi_tag", "role":"unwanted"}
+    - I want to have [sushi]{"entity":"poi_tag", "role":"wanted"}
+    - Where can I get [beer]{"entity":"poi_tag", "role":"wanted"}?
+    - I want [vegan]{"entity":"poi_tag", "role":"wanted"} [Indian food]{"entity":"poi_tag", "role":"wanted"}
+    - I do not want [sushi]{"entity":"poi_tag", "role":"unwanted"}
+    - but not with [gluten]{"entity":"poi_tag", "role":"unwanted"}
+    - Do they have [gluten-free]{"entity":"poi_tag", "role":"wanted"}?
+    - I want [free wifi]{"entity":"poi_tag", "role":"wanted"}
+    - but without [gluten]{"entity":"poi_tag", "role":"unwanted"}
+    - where can I get [donuts]{"entity":"poi_tag", "role":"wanted"}?
+    - I want to eat [vegan food]{"entity":"poi_tag", "role":"wanted"} like [springrolls]{"entity":"poi_tag", "role":"wanted"}
+    - any [dough nut]{"entity":"poi_tag", "role":"wanted"} shops around?
+    - I want [vegan food]{"entity":"poi_tag", "role":"wanted"} but I don't want [vegetarian food]{"entity":"poi_tag", "role":"unwanted"}
+    - [Seafood]{"entity":"poi_tag", "role":"wanted"}
+    - I want to lean about the [local history]{"entity":"poi_tag", "role":"wanted"}
+    - I would like something [gluten free]{"entity":"poi_tag", "role":"wanted"}
+    - You know of any good [Indian]{"entity":"poi_tag", "role":"wanted"} [restaurants](poi_category)?
+    - I would like to eat [burger]{"entity":"poi_tag", "role":"wanted"} without [meat]{"entity":"poi_tag", "role":"unwanted"}
+    - I want [hamburger]{"entity":"poi_tag", "role":"wanted"} but not with [meat]{"entity":"poi_tag", "role":"unwanted"}
+    - I am a [vegetarian]{"entity":"poi_tag", "role":"wanted"}
+    - not [sushi]{"entity":"poi_tag", "role":"unwanted"}
+    - I really want to have some [doughnuts]{"entity":"poi_tag", "role":"wanted"} now
+- intent: inform_dislike_poi
+  examples: |
+    - Is there some place else?
+    - No I don't like that place
+    - Can you recommend me another place?
+    - Do you have anything else to recommend?
+    - I don't like this place very much
+    - Not this place.
+    - Are there any other [restauarnts](poi_category)?
+    - Any other places?
+    - Any more places?
+- intent: ask_cheap_poi
+  examples: |
+    - It's a bit expensive, can you recommend me anything cheaper?
+    - It's too expensive
+    - That is a bit expensive
+    - Too expensive
+    - You got anything cheaper?
+    - Can you recommend me anything cheaper?
+    - you know of any affordable [restaurants](poi_category)?
+    - I can not afford that
+    - You know of anything cheaper?
+    - What about a cheap place?
+    - Cheaper food?
+    - Where can I get a [beer]{"entity":"poi_tag", "role":"wanted"} for cheap?
+    - Anywehere cheaper?
+    - I don't want to pay that much
+    - I can not afford that
+    - It's a bit on the expensive side
+    - I want a cheaper place
+    - I want somewhere cheaper
+    - It's a bit pricey
+- intent: ask_does_poi_have
+  examples: |
+    - Do they have [African food]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [American food]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [Asian food]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [Chinese food]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [Ethiopian food]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [European food]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [French food]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [Greek food]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [Indian food]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [Italian food]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [Japanese food]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [Mexican food]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [Michelin star rated food]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [Middle-Eastern food]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [Pakistani food]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [Scandinavian food]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [Chinese]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they offer [Ethiopian]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [European]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [French]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [Greek]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [Indian]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [Italian]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [Japanese]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [Mexican]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [Middle-Eastern]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [Turkish]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [alcohol]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [beef]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [beer]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [books]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [breakfast]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [burgers]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they sell [burritos]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [byryani]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [candy]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [cappuccino]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [chocolate]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [coffee]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [cosy atmosphere]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [craft beer]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [curry]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [dessert]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [donuts]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [drinks]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [fast-food]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they offer [fried rice]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [fries]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [fusion food]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [gluten-free food]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [groceries]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [gyros]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [hummus]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [ice coffee]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they sell [ice cream]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [kebab]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [milkshakes]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [movies]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [muffins]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [naan]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [natural history]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [nature]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [noodles]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [outdoor seating]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [pastries]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [pizza]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [popcorn]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [rooms for rent]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [salad]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [sandwich]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [seafood]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [smoothies]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [soda]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [spicy food]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [spring rolls]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [sushi]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [tacos]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [takeaway]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they sell [tea]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [treatment]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [vegan food]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [vegetarian]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [vegetarian food]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [wheelchair access]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [wine]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they have [hamburgers]{"entity":"poi_tag", "role":"wanted"}?
+    - Does this place have [noodles]{"entity":"poi_tag", "role":"wanted"}?
+    - Can I get [pizza]{"entity":"poi_tag", "role":"wanted"} there?
+    - Do they serve [alcohol]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they sell [bagels]{"entity":"poi_tag", "role":"wanted"}?
+    - Do they offer any [entertainment]{"entity":"poi_tag", "role":"wanted"}?
+    - Will I be able to buy a [beer]{"entity":"poi_tag", "role":"wanted"} there?
+    - Are they selling [wine]{"entity":"poi_tag", "role":"wanted"}?
+    - What about [ice cream]{"entity":"poi_tag", "role":"wanted"}, do they have it there?
+    - Do they have [outdoor seating]{"entity":"poi_tag", "role":"wanted"}?
+    - Can I get [sushi]{"entity":"poi_tag", "role":"wanted"} there?
+    - Do they offer [ice cream]{"entity":"poi_tag", "role":"wanted"}?
+    - Can you get [springrolls]{"entity":"poi_tag", "role":"wanted"} there?
+    - But do they have [vegan]{"entity":"poi_tag", "role":"wanted"}?
+    - But are they selling [vegan]{"entity":"poi_tag", "role":"wanted"}?
+    - And will I be able to buy [ice cream]{"entity":"poi_tag", "role":"wanted"} there?
+    - Are they offering [free wifi]{"entity":"poi_tag", "role":"wanted"}?
+    - What about [drinks]{"entity":"poi_tag", "role":"wanted"} do they have that?
+    - Do they have [donuts]{"entity":"poi_tag", "role":"wanted"}
+    - Do they have [pizza]{"entity":"poi_tag", "role":"wanted"}
+    - Do they also have [beer]{"entity":"poi_tag", "role":"wanted"}?
+    - Can I [dance]{"entity":"poi_tag", "role":"wanted"} there?
+    - Can I [bowl]{"entity":"poi_tag", "role":"wanted"} there?
+- intent: ask_poi_transport
+  examples: |
+    - How do I get there?
+    - How do I get to there?
+    - What are my options for travelling there?
+    - And how do I get transported there?
+    - What about transport?
+    - And how can I get there
+    - What transport options are there?
+    - What is the best way to get there?
+    - How do I travel to there?
+    - Can you show me the way to the [airport](poi_category)?
+    - How do I travel there?
+    - And how do I get there?
+    - What is the fastest way there?
+    - How can I get there?
+    - How do I get to the [airport](poi_category)?
+    - How can I travel to the [airport](poi_category)?
+    - What public transport is available here?
+    - Best mode of transport there?
+    - How do you recommend I get there?
+    - How do I get to the [hospital](poi_category)?
+    - Fastest way to get there?
+    - Alright how do I get there?
+- intent: inform_transport_preference
+  examples: |
+    - [Bus](transport_preference)
+    - by [taxi](transport_preference)
+    - I'll take a [cab](transport_preference)
+    - By [bus](transport_preference)
+    - [Bus](transport_preference) please.
+    - I want to go by [bus](transport_preference)
+    - [Taxi](transport_preference)
+    - [Taxi](transport_preference) to [airport](poi_category)
+    - Is there a [bus](transport_preference) going there?
+    - Any [buses](transport_preference) heading there?
+    - What [bus](transport_preference) number goes there?
+    - Are there [taxis](transport_preference) going to there?
+    - Am I able to take the [bus](transport_preference) there?
+    - Am I able to take a [taxi](transport_preference) there?
+    - Are there any [buses](transport_preference) going there?
+    - What [bus](transport_preference) should I take?
+    - Can I call a [taxi](transport_preference)?
+    - What's the [taxi](transport_preference) phone number?
+    - I need a [taxi](transport_preference)
+    - Cheapest [taxi](transport_preference) in Stavanger?
+    - How much does a [taxi](transport_preference) in Stavanger cost?
+    - What is the [bus](transport_preference) price here?
+    - Where do I get a [bus](transport_preference) ticket?
+    - Am I able to [walk](transport_preference) there
+    - Can I take a [cab] there?
+    - Get me a [taxicab](transport_preference) to the airport
+    - Is it within [walking](transport_preference) distance?
+    - How long does it take to [walk](transport_preference) there?
+    - Can I [cycle](transport_preference) there?
+    - Can I get there [on foot](transport_preference)?
+    - Are there any [buses](transport_preference) that could take me there?
+    - Are there electrical [scooters](transport_preference) nearby?
+    - Is there a [metro](transport_preference) here?
+    - Can you call me a [taxi](transport_preference)?
+    - By [boat](transport_preference)
+    - By [ship](transport_preference)
+    - Can I travel by [boat](transport_preference)?
+    - I want to travel by [ship](transport_preference)
+    - Where can I travel by [boat](transport_preference)
+    - Can I ride a [bicycle](transport_preference) there?
+    - Are you able to get me a [cab](transport_preference)?
+    - [Bus](transport_preference) to the [airport](poi_category)?
+    - Any [buses](transport_preference) that go to the [air port](poi_category)
+    - Where is the nearest [bus](transport_preference) stop?
+    - Is it long to [walk](transport_preference)?
+    - By [walking](transport_preference)
+    - By [air baloon](transport_preference)
+    - Travel by [air baloon](transport_preference)
+    - I prefer to [walk](transport_preference)
+    - [train](transport_preference) to airport
+    - [Bus](transport_preference) to [hospital](poi_category)
+    - What is the closest [bus](transport_preference) stop?
+    - Closest [bus](transport_preference) stop
+    - can I [walk](transport_preference)?
+

@@ -1,0 +1,9 @@
+version: "3.0"
+
+responses:
+  utter_red:
+  - text: "You chose red"
+
+  utter_blue:
+  - text: "You chose blue"
+

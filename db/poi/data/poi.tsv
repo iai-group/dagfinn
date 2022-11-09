@@ -1,0 +1,45 @@
+	name	category	rating	price	address	busStop	distanceFromBusStop	website	googleMapsID
+0	Lysefjord	Valleys	4.5				0	http://www.rodne.no/sightseeing-en/from-stavanger	
+1	Gamle Stavanger	Historic Sites	4.5				0	/UserReview-g190511-d1575650-Gamle_Stavanger-Stavanger_Stavanger_Municipality_Rogaland_Western_Norway.html	
+2	Flor og Fjære	Points of Interest & Landmarks • Gardens	4.5		Skagenkaien 35-37, Stavanger 4006 Norway		0	http://www.florogfjare.no	
+3	Norwegian Petroleum Museum	Science Museums	4.5		Kjeringholmen 1A, Stavanger 4006 Norway		0	http://www.norskolje.museum.no/	
+4	Norwegian Canning Museum	Speciality Museums • Children's Museums • History Museums	4.5		Andasmauet 15, Stavanger 4005 Norway		0	http://iddismuseum.no/iddis-kaf%C3%A9-brasseri	
+5	Swords in Rock	Monuments & Statues	4.0		Mollebukta, Stavanger 4042 Norway		0	http://www.stavanger-web.com/touristinfo/swords_in_rock.htm	
+6	Ovre Holmegate	Neighborhoods	4.5		Ovre Holmegate, Stavanger 4006 Norway		0	http://www.facebook.com/FargegatenStavanger	
+7	Stavanger Tourist Information Office	Visitor Centers	4.0		Strandkaien 61, Stavanger 4005 Norway		0	http://www.regionstavanger-ryfylke.com/	
+8	Museum of Archaeology (Arkeologisk Museum)	History Museums	4.0		Peder Klowsgate 30A., Stavanger 4002 Norway		0	http://beta.uis.no/en/arkeologisk-museum	
+9	Iron Age Farm	Farms	4.0		Ullandhaugveien 165, Stavanger 4021 Norway		0	http://www.jernaldergarden.no	
+10	Stavanger Cathedral	Religious Sites • Churches & Cathedrals	4.0		Haakon Viis gate 2, Stavanger 4005 Norway		0	http://www.stavangerdomkirke.no	
+11	Viking House	Speciality Museums • History Museums	4.5		Strandkaien 44, Stavanger 4005 Norway		0	http://www.vikinghouse.no/	
+12	Kebana	Middle Eastern • Pakistani • Restaurant	3.5	6	Madlaveien 7, Stavanger 4008 Norway		0	http://kebana.no/	
+13	Restaurant SOL	European • Healthy • Scandinavian • Restaurant	5.0	3	Hetlandsgata 6, Stavanger 4012 Norway		0	http://www.restaurantsoel.no	
+14	Gadja	African • Ethiopian • Vegetarian Friendly • Restaurant	4.5	3	Broedregata 6, Stavanger 4013 Norway		0	http://gadja.no/	
+15	Eg & Du	International • Scandinavian • Norwegian • Restaurant	4.5	3	Eiganesveien 1, Stavanger 4008 Norway		0	http://egogdu.no/	
+16	RE- NAA	International • European • Scandinavian • Restaurant	4.5	4	Nordbøgata 8, Stavanger 4006 Norway		0	http://www.restaurantrenaa.no/renaa/	
+17	Noodle Noodle Lai	Fusion • Hong Kong • Beer restaurants • Restaurant	4.5	3	Kirkegata 41, Stavanger 4013 Norway		0	http://www.noodlenoodle.no	
+18	Mano Pizza	Italian • Pizza • Neapolitan • Restaurant	4.5	3	Pedersgata 8, Stavanger 4013 Norway		0	http://mano.pizza/	
+19	Mogul India	Indian • Asian • Vegetarian Friendly • Restaurant	4.5	3	Verksgata 9, Stavanger 4013 Norway		0	http://www.mogulindiarestaurant.com/	
+20	Dognvill Burger	American • Bar • Vegetarian Friendly	4.5	3	Skagen 13, Stavanger 4006 Norway		0	http://dognvillburger.no/meny/	
+21	Rice & Noodles	Chinese • Fast Food • Asian • Restaurant	4.5	1	Lagaardsveien 5c, Stavanger 4010 Norway		0	http://www.riceandnoodles.no	
+22	Fisketorget	Seafood • European • Soups • Restaurant	4.5	3	Strandkaien 37, Stavanger 4005 Norway		0	http://fisketorget-stavanger.no/	
+23	Tango restaurant	International • European • Scandinavian • Restaurant	4.5	4	Nedre Strandgate 25, Stavanger 4005 Norway		0	http://www.tango-bk.no	
+24	Firelake Grill House & Cocktail Bar	Steakhouse • International • European • Restaurant	4.5	3	Olav V S Gate 3, Stavanger 4002 Norway		0	https://www.radissonhotels.com/en-us/hotels/radisson-blu-stavanger-atlantic/restaurant-bar?facilitatorId=GLOBALSEO&cid=a:se+b:yex+c:emea+i:localFire+e:rdb+d:nob+f:en-US+t:fnb+h:NOSVGATL	
+25	Mano Pizza	Italian • Pizza • Neapolitan • Restaurant	4.5	3	Pedersgata 8, Stavanger 4013 Norway		0	http://mano.pizza/	
+26	Far East	Chinese • Fast Food • Sushi • Restaurant	4.5	1	Nytorget 8, Stavanger 4013 Norway		0	http://www.feast.no/	
+27	Zouq Restaurant & Take Away	Indian • Asian • Grill • Restaurant	4.5	3	Pedersgata 12, Stavanger 4013 Norway		0	http://zouq.no/	
+28	Daran Thai Restaurant	Asian • Thai • Diner • Restaurant	4.5	3	Loekkeveien 44 1st Floor, Stavanger 4008 Norway		0	http://daranthai.no/	
+29	Italo	Italian • Mediterranean • European • Restaurant	4.5	3	Smedgata 9, Stavanger 4013 Norway		0	http://www.italo.no	
+30	Bellies	European • Contemporary • Healthy • Restaurant	5.0	3	Støperigata 6 By pedersagata 130, Stavanger 4014 Norway		0	http://www.bellies.no	
+31	Sabi Omakase	Japanese • Seafood • Sushi • Restaurant	5.0	4	Pedersgata 38a, Stavanger 4013 Norway		0	http://omakase.no/	
+32	Renaa Matbaren	International • European • Scandinavian • Restaurant	4.0	3	Breitorget 6 Oevre etasje, Stavanger 4006 Norway		0	http://www.restaurantrenaa.no/matbaren.htm	
+33	Pasha Restaurant	Turkish • Grill • Vegetarian Friendly • Restaurant	4.5	1	Verksgata 1D, Stavanger 4013 Norway		0	http://www.pasharestaurant.no/	
+34	Nora’s Kitchen	Indian • Asian • Pakistani • Restaurant	4.5	1	Pedersgata 10, Stavanger 4013 Norway		0	https://www.noraskitchen.no/	
+35	Jai Hind Indian Restaurant	Indian • Asian • Vegetarian Friendly • Restaurant	4.5	3	Soelvberggata 7, Stavanger 4006 Norway		0	http://jaihind.no/stavanger	
+36	Desi Deli Restaurant	Indian • Asian • Middle Eastern • Restaurant	5.0	3	Oestervaagkaien 15, Stavanger 4006 Norway		0	http://www.desideli.no	
+37	Panzanella Pizzeria	Italian • Pizza • Restaurant	5.0	3	Pedersgata 55, Stavanger 4013 Norway		0	http://www.panzanella.no/	
+38	China Town Stavanger	Chinese • Asian • Fusion • Restaurant	4.0	3	Skagen 14 2. Etg, Stavanger 4006 Norway		0	http://ctown.no/	
+39	Pjolter & Punsj	Norwegian • Restaurant	5.0	3	Bakkegata 16, Stavanger 4006 Norway		0	https://www.facebook.com/Pjolterogpunsj/	
+40	Bevaremegvel Bar & Restaurant	International • European • Scandinavian • Restaurant	4.0	3	Skagen 12, Stavanger 4006 Norway		0	http://www.herlige-stavanger.no/bevaremegvel	
+41	Phileas Fogg	American • Bar • European	3.5	3	Skagen 27, Stavanger 4006 Norway		0	http://phileasfogg.no/	
+42	Kitchen & Table Stavanger	European • Scandinavian • Norwegian • Restaurant	4.0	3	Arne Rettedals gate 14, Stavanger 4008 Norway		0	http://www.kitchenandtable.no/restaurants/stavanger/	
+43	Villa 22 Trattoria & Bar	Italian • Bar • Pizza	3.5	3	Skagen 22, Stavanger 4006 Norway		0	http://Www.villa22.no	

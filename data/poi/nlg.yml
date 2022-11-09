@@ -1,0 +1,134 @@
+version: "3.0"
+responses:
+  utter_recommend_poi_by_category:
+  - text: "{name} is an excellent choice."
+  - text: "{name} has a reputation for being a really good place."
+
+  utter_recommend_cheap_poi_by_category:
+  - text: "I found this highly rated cheap place called {name}."
+  - text: "{name} is an inexpensive yet highly rated."
+
+  utter_recommend_poi_by_likes:
+  - text: "{name} is an excellent place offering {likes}."
+  - text: "I found this top-rated place which offers {likes}."
+  - text: "{name} is supposed to be really good."
+
+  utter_recommend_cheap_poi_by_likes:
+  - text: "{name} is the cheapest place I could find offering {likes}."
+
+  utter_recommend_poi_by_likes_and_dislikes:
+  - text: "I found this place offering {likes} and not {dislikes}."
+  - text: "{name} is highly rated and offers {likes} and not {dislikes}."
+
+  utter_recommend_cheap_poi_by_likes_and_dislikes:
+  - text: "{name} is the cheapest place I could find offering {likes} and not {dislikes}."
+  - text: "{name} is the least expensive place I can think of which offers {likes} and not {dislikes}."
+
+  utter_yes_poi_has_tags:
+  - text: "Yes, it does seem that {name} offers {likes}."
+  - text: "According to my sources, yes. {name} does offer {likes}."
+
+  utter_poi_does_not_have_tags:
+  - text: "I am not sure. I see no mentions of {likes} for {name}."
+  - text: "I see no mentions of {likes} for {name}."
+
+  utter_but_this_poi_does_have:
+  - text: "But I do highly recommend {name} which offers {likes}."
+  - text: "Perhaps you would like {name}. It offers {likes}."
+
+  utter_no_poi_has:
+  - text: "I can not recall any places mentioning {likes}."
+
+  utter_ask_transport_preference:
+  - text: "Would you like to travel by bus or taxi?"
+
+  utter_recommend_taxi:
+  - text: "Stavanger Taxi is one option. They costs around 160 kroner plus 10 kroner per minute. Learn more by scanning the QR code."
+    image: "https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=https://www.stavanger-taxi.no/"
+  - text: "You could try Rogaland Taxi. It will cost you around 160 kroner plus 10 kroner per minute. Learn more by scanning the QR code."
+    image: "https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=https://www.rogaland-taxi.no/"
+
+  utter_general_bus_information:
+  - text: "All you need to know about buses and bus routes can be found by scanning the QR-code."
+    image: "https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=https://www.kolumbus.no/en/travelplanner/"
+
+  utter_answer_other_transport_preferences:
+  - text: "There are many ways to get around town. I can recommend you buses and taxis."
+  - text: "There are multiple transport options. I can recommend you buses and taxis."
+
+  utter_direct_bus_route:
+  - text: >
+      You can find a bus stop within walking distance from the hotel, called {start}.
+      Take bus number {bus} from there to the stop called {destination}.
+      Finally, you will have to walk for {distance} meters in order to reach {name}.
+  
+  utter_layover_bus_route:
+  - text: >
+      There is a bus stop within walking distance from the hotel called {start}.
+      You can take bus number {bus0} from there to the stop called {dest0}.
+      Then head over to the bus stop called {layover} and take bus {bus1} to {dest1}.
+      Finally, you will have to walk for {distance} meters in order to reach {name}.
+  
+  utter_route_to_airport:
+  - text: >
+      There is a bus stop close to the university called UiS ved Kjølv Egelands hus A.
+      You can take the line 7 to Sola, stop at Joabakken A and take the bus FB40 to reach the airport.
+      It's about a 22 minute journey.
+      Scan the QR code to access the travel planner.
+    image: "https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=https://www.kolumbus.no/en/travelplanner/"
+
+  utter_route_to_hospital:
+  - text: >
+      There is a bus stop close to the university called UiS ved Kjølv Egelands hus B.
+      You can take bus X60 to the stop SUS B from there to reach the hospital.
+      It's about a 11 minute journey.
+      Scan the QR code to access the travel planner.
+    image: "https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=https://www.kolumbus.no/en/travelplanner/"
+  
+  utter_see_more_bus_info:
+  - text: "For more information on bus routes scan the QR-code."
+    image: "https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=https://www.kolumbus.no/en/travelplanner/"
+
+  utter_walking_distance:
+    - text: "{name} is within walking distance of this hotel. About {distance} meters."
+  
+  utter_suggest_bus:
+    - text: "If you don't mind walking long distances, then go ahead. Otherwise I suggest taking a bus."
+
+  utter_no_poi_found:
+  - text: "I could not find any locations matching your preferences I am afraid."
+
+  utter_what_kind_of_poi:
+  - text: "Were you looking for anything in particular?"
+  - text: "Do you have anything specific in mind?"
+  - text: "What kind of place interests you?"
+
+  utter_provide_further_details:
+  - text: "Did you have anything particular in mind?"
+  - text: "Were you thinking of anything in particular?"
+  - text: "Perhaps you were thinking of something specific?"
+  - text: "Is there something in particular you are looking for?"
+
+  utter_take_your_time:
+  - text: "Let me know if you thought of anything."
+  - text: "Take your time."
+
+  utter_answer_to_no_more_details:
+  - text: "Okay. Shout out if you need anything."
+  - text: "Alright then."
+
+  utter_what_kind_of_restaurant:
+  - text: "What kind of food do you like?"
+  - text: "What do you want to eat?"
+  - text: "Any idea what you want to eat?"
+
+  utter_general_poi_recommendation:
+  - text: "I do recommend the Norwegian Oil Museum. It highlights the history of Norway as a petroleum exporting country. Scan the QR-code to learn more."
+    image: "https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=https://norskolje.museum.no/en/"
+  - text: "You could try Mosvannet: a city park that's particularily beautiful this time of year."
+    image: "https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=https://www.visitnorway.com/places-to-go/fjord-norway/the-stavanger-region/listings-stavanger/mosvatnet-v%C3%A5landskogen/1860/"
+  
+  utter_encourage_walking:
+  - text: "Stavanger is a great city for walking. Particularly around Mosvannet which is close to here."
+  - text: "Walking around Stavanger is a pure joy. I wished I had legs so I could get to experience it."
+

@@ -1,0 +1,298 @@
+version: "3.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - stop
+  - out_of_scope
+  - uncertainty
+  - unimportantance
+  - misunderstanding
+  - insult
+  - thank
+  - inform
+  - lets_play
+  - ask_weather
+  - ask_time
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - faq
+  - nlu_fallback
+  - quiz
+  - red
+  - blue
+  - ask_session_recommendation
+  - give_session_recommendation
+  - info_next_session
+  - keynote_speakers
+  - ask_speaker_name
+  - give_speaker_name
+  - get_conference_schedule
+  - info_about_session
+  - keynote_info
+  - ask_restaurant_recommendation
+  - ask_poi_recommendation
+  - inform_poi_category
+  - inform_poi_tag
+  - inform_dislike_poi
+  - ask_does_poi_have
+  - ask_cheap_poi
+  - ask_poi_transport
+  - inform_transport_preference
+  - ask_capital
+  - request_joke
+  - ask_can_you_take_pictures
+  - consent_for_research
+  - inform_name_surname
+  - ask_read_qr_code
+  - request_name
+  - ask_number_students
+  - recognize_me
+
+slots:
+  choice:
+    type: categorical
+    values:
+      - rock
+      - paper
+      - scissors
+    mappings:
+    - type: from_entity
+      entity: choice
+
+  session_topic:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: session_topic
+
+  speaker_name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: speaker_name
+  
+  conference_day:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: conference_day
+
+  session_id:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      entity: session_id
+
+  session_new:
+    type: bool
+    influence_conversation: true
+    mappings:
+    - type: from_intent
+      value: False
+      intent: affirm
+    - type: from_intent
+      value: True
+      intent: deny
+    - type: from_intent
+      value: True
+      intent: stop
+
+  session_number:
+    type: float
+    initial_value: 0
+    min_value: 0
+    max_value: 4
+    mappings:
+    - type: custom
+      action: validate_session_recommender_form
+  
+  session_type:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: session_type
+  
+  keynote_number:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: keynote_number
+
+  poi_category:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: poi_category
+
+  liked_poi_tags:
+    type: list
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: poi_tag
+        role: wanted
+  
+  disliked_poi_tags:
+    type: list
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: poi_tag
+        role: unwanted
+  
+  recommended_poi:
+    type: any
+    mappings:
+    - type: custom
+
+  transport_preference:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: transport_preference
+
+  first_name:
+    type: text
+    influence_conversation: True
+    mappings:
+      - type: from_entity
+        entity: PERSON
+        conditions: 
+        - active_loop: name_form
+          requested_slot: first_name
+      - type: from_text
+        conditions: 
+        - active_loop: name_form
+          requested_slot: first_name
+
+  user_origin:
+    type: text
+    influence_conversation: True
+    mappings:
+      - type: from_entity
+        entity: GPE
+        conditions: 
+        - active_loop: name_form
+          requested_slot: user_origin
+
+  names_correct:
+    type: bool
+    influence_conversation: true
+    mappings:
+      - type: from_intent
+        value: True
+        intent: affirm
+        conditions: 
+        - active_loop: name_form
+          requested_slot: names_correct
+      - type: from_intent
+        value: False
+        intent: deny
+        conditions: 
+        - active_loop: name_form
+          requested_slot: names_correct
+
+  user_ID:
+    type: any
+    mappings:
+    - type: custom
+
+  known_user:
+    influence_conversation: true
+    type: bool
+    mappings:
+    - type: custom
+
+  first_name_speech:
+    influence_conversation: true
+    type: text
+    mappings:
+    - type: custom
+  
+  first_name_corrected:
+    influence_conversation: true
+    type: text
+    mappings:
+    - type: custom
+
+  first_time_greet:
+    influence_conversation: true
+    type: bool
+    mappings:
+    - type: custom
+
+entities:
+  - choice
+  - location
+  - GPE
+  - PERSON
+  - session_topic
+  - speaker_name
+  - conference_day
+  - session_id
+  - poi_category
+  - poi_tag:
+      - roles:
+        - wanted
+        - unwanted
+  - session_type
+  - keynote_number
+  - transport_preference
+
+actions:
+  - action_play_rps
+  - action_get_weather
+  - action_quiz
+  - action_recommend_session
+  - validate_session_recommender_form
+  - action_info_next_session
+  - action_keynote_speakers
+  - action_find_speaker
+  - action_find_schedule
+  - action_find_session_info
+  - action_keynote_info
+  - action_recommend_poi
+  - action_recommend_cheap_poi
+  - action_does_poi_have
+  - action_recommend_poi_transport
+  - action_get_time
+  - action_get_capital
+  - action_take_pictures
+  - action_read_qr_code
+  - action_write_to_db
+  - action_recognize_user
+  - validate_name_form
+
+
+forms:
+  session_recommender_form:
+    required_slots:
+      - session_topic
+      - session_new
+      - session_number
+  
+  find_speaker_form:
+    required_slots:
+      - speaker_name
+
+  name_form:
+    required_slots:
+      - first_name
+      - names_correct
+      - user_origin
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

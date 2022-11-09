@@ -1,0 +1,25 @@
+version: "3.0"
+
+stories:
+
+- story: play rock paper scissors
+  steps:
+  - intent: lets_play
+  - action: utter_rps_play
+  - intent: inform
+    entities:
+    - choice: "rock"
+  - action: action_play_rps
+  - action: utter_rps_play_again
+
+- story: play again
+  steps:
+  - action: utter_rps_play_again
+  - intent: affirm
+  - action: utter_rps_play
+
+- story: dont play again
+  steps:
+  - action: utter_rps_play_again
+  - intent: deny
+  - action: utter_change_topic

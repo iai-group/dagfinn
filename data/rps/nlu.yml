@@ -1,0 +1,16 @@
+version: "3.0"
+
+nlu:
+- intent: inform
+  examples: |
+    - [rock](choice)
+    - [paper](choice)
+    - [scissors](choice)
+
+- intent: lets_play
+  examples: |
+    - wanna play
+    - I wanna play
+    - lets play
+    - let's play
+    - lets play a game

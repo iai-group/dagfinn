@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <title>Dagfinn</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+</head>
+ 
+<body>   
+    <div id="chatwidget">
+    <script>
+    // CHANGE IP AND PORT HERE:
+    const IP = "10.192.201.21";
+    const PORT = "5005";
+    !(function () {
+        let e = document.createElement("script"),
+          t = document.head || document.getElementsByTagName("head")[0];
+        (e.src =
+          "https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.js"),
+          // Replace 1.x.x with the version that you want
+          (e.async = !0),
+          (e.onload = () => {
+            window.WebChat.default(
+              {
+                initPayload: '/greet',
+                customData: { language: "en" },
+                socketUrl: `http://${IP}:${PORT}`,
+                socketPath: '/socket.io',
+                showMessageDate: true,
+                title: "Dagfinn ",
+                subtitle: "The digital conference assistant",
+                inputTextFieldHint: "Type here..",
+				
+                // add other props here
+              },
+              null
+            );
+          }),
+          
+          t.insertBefore(e, t.firstChild);
+      })();
+      </script>
+ 
+    </div>
+
+    <style>
+     
+     
+    </style>
+ 
+ 
+</body>
+ 
+</html

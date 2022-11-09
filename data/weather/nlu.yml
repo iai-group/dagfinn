@@ -1,0 +1,21 @@
+version: "3.0"
+
+nlu:
+
+- intent: ask_weather
+  examples: |
+    - whats the weather like
+    - what about wheather
+    - whats the weather like in [Norway](GPE)
+    - whats the weather like in [Oslo](GPE)
+    - whats the weather like in [Moscow](GPE)
+    - whats the weather today
+    - what is the temperature
+    - is it nice outside
+    - should I take umbrella
+
+- synonym: Stavanger
+  examples: |
+    - Stavanger
+    - Sola
+    - Sandnes

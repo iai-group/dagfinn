@@ -1,0 +1,9 @@
+version: "3.0"
+
+rules:
+
+- rule: Get local weather
+  steps:
+  - intent: ask_weather
+  - action: action_get_weather
+  

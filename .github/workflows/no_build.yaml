@@ -1,0 +1,14 @@
+name: build
+
+on: 
+  pull_request:
+    paths-ignore:
+      - 'actions/**'
+      - 'addons/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: 'echo "No build required" '

@@ -1,0 +1,22 @@
+version: "3.0"
+nlu:
+  - intent: give_speaker_name  
+    examples: |
+      - [John Smith](speaker_name)
+      - [Alice Jones](speaker_name)
+      - [Ivica Kostric](speaker_name)
+      - [Krisztian Balog](speaker_name)
+      - [Tølløv Alexander Sveen Aresvik](speaker_name)
+      - [Nolwenn Bernard](speaker_name)
+      - [Eyvinn Thu Dørheim](speaker_name)
+      - [Pholit Hantula](speaker_name)
+      - [Sander Havn-Sørensen](speaker_name)
+      - [Rune Henriksen](speaker_name)
+      - [Hengameh Hosseini](speaker_name)
+      - [Ekaterina Khlybova](speaker_name)
+      - [Weronika Lajewska](speaker_name)
+      - [Sindre Ekrheim Mosand](speaker_name)
+      - [Narmin Orujova](speaker_name)
+      - [Bob Williams](speaker_name)
+      - [Jane Doe](speaker_name)
+      - [Mary Brown](speaker_name)

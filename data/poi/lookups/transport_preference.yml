@@ -1,0 +1,48 @@
+version: "3.0"
+nlu:
+- lookup: transport_preference
+  examples: |
+    - bus
+    - buses
+    - taxi
+    - taxis
+    - taxicab
+    - cab
+    - carriage
+    - cycle
+    - cycling
+    - walking
+    - walk
+    - on foot
+    - scooter
+    - rental
+    - helicopter
+
+- synonym: bus
+  examples: |
+    - buses
+    - Bus
+    - Buses
+    - bus ticket
+    - bus price
+    - bus stop
+- synonym: taxi
+  examples: |
+    - taxis
+    - Taxi
+    - Taxi
+    - cab
+    - cabs
+    - Cabs
+    - carriage
+    - ride
+    - tourist car
+    - taxicab
+    - Taxicab
+    - taxicabs
+- synonym: walk
+  examples: |
+    - walking
+    - Walk
+    - Walking
+    - on foot
