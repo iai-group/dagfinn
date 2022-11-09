@@ -81,7 +81,18 @@ rasa shell nlu
 
 ## Webchat
 
-TBD
+You can start a chat webserver as follows. If you do not use the default port to run the Rase server, you need to change the port in this [file](ui/furhat-screen/index.js). 
+
+```shell
+cd dagfinn/ui/furhatscreen
+python -m http.server
+```
+
+By default the server runs on port 8000. To change it start the server with the command:
+
+```shell
+python -m http.server PORT
+```
 
 ## Furhat
 
