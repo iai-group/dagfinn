@@ -16,8 +16,7 @@ import furhatos.event.EventSystem
 import java.util.regex.Pattern
 
 // CHANGE IP AND PORT HERE:
-val IP = "192.168.151.111"
-// val IP = "10.11.0.157"
+val IP = "localhost"
 val PORT = "5005"
 //-------------------------
 

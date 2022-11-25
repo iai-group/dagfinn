@@ -81,7 +81,7 @@ rasa shell nlu
 
 ## Webchat
 
-You can start a chat webserver as follows. If you do not use the default port to run the Rase server, you need to change the port in this [file](ui/furhat-screen/index.js). 
+You can start a chat webserver as follows. If you do not use the default port to run the Rasa server, you need to change the port in this [file](ui/furhat-screen/index.js). 
 
 ```shell
 cd dagfinn/ui/furhatscreen

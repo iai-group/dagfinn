@@ -1,6 +1,6 @@
 # Actions
 
-Below you can information related to the different actions with indications on what should be changed to fit your use case.
+Below you can find information related to the different actions with indications on what should be changed to fit your use case.
 
 ## Conference sessions
 

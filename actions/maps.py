@@ -4,6 +4,8 @@ from typing import Tuple
 import folium
 import osmnx as ox
 
+MAPS_OUTPUT_HTML_FILE = "ui/furhat-screen/assets/map/route.html"
+MAPS_HTML_FILEPATH = "assets/map/route.html"
 
 class DirectionMap:
     def __init__(self, conference_city: str) -> None:
@@ -62,5 +64,5 @@ class DirectionMap:
         start_marker.add_to(shortest_route_map)
         end_marker.add_to(shortest_route_map)
 
-        shortest_route_map.save("ui/furhat-screen/assets/map/route.html")
-        return "assets/map/route.html"
+        shortest_route_map.save(MAPS_OUTPUT_HTML_FILE)
+        return MAPS_HTML_FILEPATH
