@@ -1,0 +1,128 @@
+version: "3.0"
+nlu:
+- lookup: poi_category
+  examples: |
+    - restaurant
+    - restaurants
+    - place to eat
+    - park
+    - parks
+    - airport
+    - air port
+    - Sola airport
+    - cinema
+    - movie theaters
+    - cinemas
+    - grocery store
+    - convenient stores
+    - bar
+    - bars
+    - café
+    - cafe
+    - cafes
+    - hotel
+    - hotels
+    - museum
+    - museums
+    - nightclub
+    - nightclubs
+    - hospital
+    - place to eat
+    - ice cream shops
+    - candy store
+    - pub
+    - pubs
+    - dessert shop
+    - nightclub
+
+- synonym: hotel
+  examples: |
+    - hotels
+- synonym: restaurant
+  examples: |
+    - place to eat
+    - places to eat
+    - restaurants
+- synonym: nightclub
+  examples: |
+    - night club
+    - nightclubs
+    - clubs
+    - club
+- synonym: café
+  examples: |
+    - cafe
+    - cafes
+    - cafés
+- synonym: bar
+  examples: |
+    - bars
+    - the bar
+- synonym: museum
+  examples: |
+    - museums
+- synonym: park
+  examples: |
+    - parks
+    - ponds
+    - city parks
+    - town parks
+- synonym: cinema
+  examples: |
+    - movie theater
+    - movietheater
+    - the movies
+- synonym: hospital
+  examples: |
+    - hospitals
+- synonym: university
+  examples: |
+    - universities
+- synonym: shopping center
+  examples: |
+    - shopping mall
+    - shopping malls
+    - shopping centre
+    - shopping centers
+    - shopping centres
+- synonym: grocery store
+  examples: |
+    - general store
+    - general stores
+    - grocery stores
+    - supermarket
+    - supermarkets
+    - convenience store
+    - convenience stores
+- synonym: coffee shop
+  examples: |
+    - coffee shops
+    - coffee house
+    - coffe houses
+- synonym: desert shop
+  examples: |
+    - desert shops
+    - cake shop
+    - cake shops
+- synonym: library
+  examples: |
+    - libraries
+- synonym: pub
+  examples: |
+    - pubs
+    - the pub
+- synonym: candy store
+  examples: |
+    - candy stores
+    - candy shop
+    - candy shops
+- synonym: ice cream shop
+  examples: |
+    - ice cream shops
+- synonym: airport
+  examples: |
+    - Stavager airport
+    - Sola airport
+    - the airport
+    - the Sola airport
+    - air port

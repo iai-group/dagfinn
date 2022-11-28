@@ -1,0 +1,208 @@
+version: "3.0"
+nlu:
+- lookup: poi_tag
+  examples: |
+    - burgers
+    - take-away
+    - vegan food
+    - Italian food
+    - Tex-Mex
+    - drinks
+    - cocktails
+    - pizza
+    - candy
+    - Indian
+    - Chinese meals
+    - African food
+    - groceries
+    - craft beer
+    - wine
+    - shopping
+    - donuts
+    - wifi
+    - wheelchair access
+    - whiskey
+    - vegetarian
+    - bus tickets
+    - meat free
+    - cake
+    - local history
+    - springrolls
+    - books
+    - cosy atmosphere
+    - plant based
+    - medicine
+    - Michelin star
+    - Greek cusine
+    - dumplings
+    - vegetarian options
+    - vegan options
+    - bubble tea
+    - vegan friendly
+    - bowling
+    - ice cream
+    - chocolate
+    - outdoor seating
+    - beef
+    - salad
+
+- synonym: takeaway
+  examples: |
+    - take away
+    - ordering
+    - Foodora
+    - Wolt
+- synonym: coffee
+  examples: |
+    - cappuccino
+    - caffè latte
+    - latte
+    - espresso
+    - cup of coffee
+    - a cup of coffee
+    - shot of espresso
+- synonym: Italian
+  examples: |
+    - spaghetti
+    - pasta
+- synonym: tea
+  examples: |
+    - green tea
+    - white tea
+    - black tea
+    - red tea
+    - bubble tea
+    - cup of tea
+    - a cup of tea
+- synonym: burgers
+  examples: |
+    - burger
+    - hamburger
+    - hamburgers
+- synonym: donuts
+  examples: |
+    - donut
+- synonym: wine
+  examples: |
+    - white wine
+    - red wine
+    - champagne
+- synonym: beer
+  examples: |
+    - a beer
+    - cider
+    - ciders
+    - ale
+    - beers
+    - pint
+    - stout
+- synonym: craft beer
+  examples: |
+    - craft beers
+- synonym: drinks
+  examples: |
+    - drink
+    - a drink
+    - alcohol
+    - cocktail
+    - cocktails
+    - liquor
+    - whiskey
+    - scotch
+    - Jägermeister
+    - strong drink
+    - booze
+- synonym: vegan
+  examples: |
+    - vegan friendly
+    - vegan meals
+    - plant based
+    - plant-based
+    - vegan alternatives
+    - vegan options
+    - vegan option
+- synonym: vegetarian
+  examples: |
+    - vegetarian friendly
+    - non-meat
+    - meat-free
+    - meat free
+    - vegetarian meals
+    - vegetarian alternatives
+    - vegetarian options
+    - vegetarian option
+- synonym: gluten-free
+  examples: |
+    - gluten-free friendly
+    - gluten-free meals
+    - gluten-free alternatives
+    - gluten free
+    - gluten free food
+    - gluten free options
+    - without gluten
+    - food without gluten
+- synonym: cosy atmosphere
+  examples: |
+    - cosy
+    - cozy
+    - cozy atmosphere
+    - atmospheric
+- synonym: Mexican food
+  examples: |
+    - taco
+    - tacos
+    - guacamole
+    - Mexican cusine
+    - Mexican dishes
+- synonym: fries
+  examples: |
+    - sweet potato fries
+    - French fries
+    - chips
+- synonym: Michelin star rated food
+  examples: |
+    - Michelin star
+    - Michelin stars
+    - Michelin guide
+- synonym: pastries
+  examples: |
+    - cake
+    - pastry
+    - cakes
+- synonym: spring rolls
+  examples: |
+    - springrolls
+    - springroll
+    - spring roll
+- synonym: groceries
+  examples: |
+    - grocery
+    - various items
+- synonym: free Wi-Fi
+  examples: |
+    - wifi
+    - wi-fi
+    - why fai
+    - free wifi
+    - free wi-fi
+    - Wi-Fi
+    - WIFI
+- synonym: donuts
+  examples: |
+    - donut
+    - doughnut
+    - doughnuts
+    - dough nut
+    - dough nuts
+- synonym: Middle-Eastern
+  examples: |
+    - Middle Eastern
+    - middle eastern
+- synonym: dancing
+  examples: |
+    - dance
+    - to dance
+- synonym: groceries
+  examples: |
+    - grocery
+

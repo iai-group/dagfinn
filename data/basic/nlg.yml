@@ -1,0 +1,87 @@
+version: "3.0"
+
+responses:
+  utter_greet:
+  - text: "Hey 👋! How can I help you today?"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  # utter_out_of_scope/non_english:
+  # - text: "I only understand English, I'm sorry."
+
+  utter_out_of_scope:
+  - text: "I can't help you with that, I'm sorry."
+
+  utter_response_to_misunderstanding:
+  - text: "Could you rephrase it?"
+  - text: "It's hard to understand humans. Could you perhaps rephrase it?"
+  - text: "Human communication is so complex. Could you please reiterate?"
+  - text: "I have to practice human language more."
+  - text: "I have to practice your language more."
+  - text: Sorry, I didn't get that 🤷. Could you please rephrase?
+  - text: I didn't understand, could you rephrase that?
+  - text: I'm sorry, but I didn't understand you. Could you please rephrase what you just said?
+  - text: I'm afraid I didn't get what you just said. Could you rephrase that?
+  - text: I didn't quite get that, could you rephrase your message?
+  - text: Could you rephrase your message? I didn't get it, I'm sorry.
+  
+  utter_response_to_insult:
+  - text: "I still have room for improvement."
+  - text: "I aspire to be as good as you one day."
+
+  utter_response_to_thanks:
+  - text: "No need to thank me."
+  - text: "I am here to help."
+
+  utter_did_you_like_joke:
+  - text: "Do you think it was a funny one?"
+  - text: "Was it funny?"
+
+  utter_reply_to_dislike_joke:
+  - text: "Oooops, that was a favourite joke of my girlfriend."
+  - text: "Ouch, that hurts. Give me an example of a good joke?"
+  - text: "Well, tastes are different"
+
+  utter_do_you_want_more_joke:
+  - text: "Do you want one more?"
+  - text: "Would you like another one?"
+
+  utter_joke_1:
+  - text: "Why did the robot fall in love with the magnet? He couldn’t resist the magnetic attraction!"
+  - text: "How much did the robot spend at the shops? An arm and a leg!"
+  - text: "What are the famous last words of the gym teacher... - All spears to me!"
+  - text: "My wife says I am too competative. I told her I already knew that"
+
+  utter_joke_2:   
+  - text: "What did the traffic light say to the car? Do not look at me, I am about to change"
+  - text: "Why do seagulls fly over the sea? Because if they flew over a bay, they would be bagels."
+  - text: "Today at the bank an old lady asked me to help her balance... so I pushed her over"
+  - text: "What’s brown and sticky? A stick. Hahahaha"
+  
+  utter_iamabot:
+  - text: "I am an IAI demo bot, powered by Rasa."
+  - text: "My name is Dagfinn. I am a social robot, created to assist people."
+
+  utter_change_topic:
+  - text: "Okay, anything else I can help you with?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/t3nMb.jpeg"
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/gFM4rsy.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_nlu_fallback:
+  - text: "I'm sorry, I didn't quite get that."
+  - text: "I did not understand that."
+  - text: "I do not understand what you are saying."
+  - text: "Perhaps you could repeat that?"

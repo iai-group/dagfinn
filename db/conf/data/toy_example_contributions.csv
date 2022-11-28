@@ -1,0 +1,5 @@
+,session_name,title,authors,picture,bio,keywords
+0,Demonstrations,DAGFiNN: A Conversational Conference Assistant,"Ivica Kostric , Krisztian Balog , Tølløv Alexander Sveen Aresvik , Nolwenn Bernard , Eyvinn Thu Dørheim , Pholit Hantula , Sander Havn-Sørensen , Rune Henriksen , Hengameh Hosseini , Ekaterina Khlybova , Weronika Lajewska , Sindre Ekrheim Mosand , Narmin Orujova ",,,
+1,Keynote,Short Story: The Truth About recommender systems,John Smith,https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80,"John Smith is an Associate Professor at the University X, Department of Computer Science, where they lead the XYZ research group. Their main interests are recommender systems, deep learning, and information access.",
+2,Session 1,What Everybody Needs to Know about Machine Learning Evaluation,"Alice Jones, Bob Williams",,,evaluation|machine learning
+3,Session 2,We Don't Know Anyone Who Says "No" to This Type of Music Recommendation,"Jane Doe, Mary Brown",,,recommendation|reinforcement learning|music

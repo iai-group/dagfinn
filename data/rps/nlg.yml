@@ -1,0 +1,20 @@
+version: "3.0"
+
+responses:
+  utter_rps_play:
+  - text: "To play type 'rock', 'paper', or 'scissors'."
+
+  utter_rps_play_again:
+  - text: "Again?"
+
+  utter_rps_wrong_choice:
+  - text: "That is not a valid choice! Must have been a typo, try again."
+
+  utter_rps_user_wins:
+  - text: "Congrats, you won!"
+
+  utter_rps_bot_wins:
+  - text: "The computer won this round."
+
+  utter_rps_tie:
+  - text: "It was a tie!"

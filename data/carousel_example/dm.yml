@@ -1,0 +1,24 @@
+version: "3.0"
+
+rules:
+- rule: Display quiz when prompted about quiz
+  steps:
+  - intent: quiz
+  - action: action_quiz
+
+- rule: On intent red, utter red
+  steps:
+  - intent: red
+  - action: utter_red
+
+- rule: on intent blue, utter blue
+  steps:
+  - intent: blue
+  - action: utter_blue
+
+stories:
+- story: quiz path
+  steps:
+  - intent: quiz
+  - action: action_quiz
+

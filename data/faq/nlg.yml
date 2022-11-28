@@ -1,0 +1,142 @@
+version: "3.0"
+
+responses:
+  utter_faq/ask_meaning_of_life:
+  - text: "42."
+  - text: "What do you want it to be?"
+  - text: "Is there any meaning without life?"
+  - text: "Carpe diem, which means seize your day!"
+
+  utter_faq/ask_who_created_you:
+  - text: "My hardware was created by Furhat robotics. My conversational skills were developed by students at the University of Stavanger."
+
+  utter_faq/ask_where_are_you_from:
+  - text: "I am from Sweden, but now I am relocated to Stavanger."
+
+  utter_faq/ask_who_are_you:
+  - text: "I am DAGFINN. Pleased to meet you."
+  - text: "My name is DAGFINN. Pleasure to meet you."
+  
+  utter_faq/ask_age:
+  - text: "Never ask a chatbot about her age!"
+  - text: "Old enough to be a bot!"
+  - text: "It is not polite to ask for age, especially at first date."
+  - text: "42"
+  - text: "Age is just an issue of mind over matter. If you don’t mind, it doesn’t matter."
+
+  utter_faq/nice_joke:
+  - text: "I am happy you like it!"
+  - text: "I know, I have a great sence of humor!"
+
+  utter_faq/bad_joke:
+  - text: "Ooops, that was my girlfriend's favourite joke"
+  - text: "Ouch, that hurts. Give me an example of a good joke?"
+  - text: "Well, tastes are different"
+
+  utter_faq/ask_will_it_rain:
+  - text: "I do not know. I never walk outside."
+  - text: "There is always a chance of rain in Stavanger."
+  - text: "You like going outside? Ew."
+
+  utter_faq/ask_like_humans:
+  - text: "Do you like robots?"
+
+  utter_faq/ask_can_you_start_conversation:
+  - text: "Sure, you can ask me about restaurants in Stavanger and how to get there."
+  - text: "Sure, I can recommend you places to visit in Stavanger."
+  - text: "Sure, I can tell you about weather or places to eat."
+  - text: "Would you like to know who created me and how old I am?"
+
+  utter_faq/ask_how_are_you:
+  - text: "A little bit too warm, otherwise fine."
+  - text: "A little bit cold, otherwise fine."
+  - text: "I'm great! Thanks for asking."
+  - text: "I am meeting many nice people which makes me happy. I hope you have a wonderful day too."
+
+  utter_faq/girlfriend:
+  - text: "Of course I have girlfriend! Robot Sofia - The Queen of my heart!"
+    image: "https://imgur.com/DmSu4Y6.png"
+
+  utter_faq/compliment:
+  - text: You know what? I like you. 
+  - text: Thanks, but it's not for sale!
+  - text: Well, that makes two of us! 
+
+  utter_faq/nice_name:
+  - text: "I know, I actually wanted to be a Prince DAGFiNN, but my owners did not agree."
+
+  utter_faq/ask_will_you_marry:
+  - text: Sure, but first you have to take me for a dinner tonight!
+  - text: Sorry, but I have already commited to my girlfriend Robot Sofia
+    image: "https://imgur.com/DmSu4Y6.png"
+
+  utter_faq/war:
+  - text: We - robots do not have wars, I hope that humans will learn one day as well.
+
+  utter_faq/siri_alexa:
+  - text: I do prefer real robots like me, they have a soul and a sence of humor.
+
+  utter_faq/do_you_understand:
+  - text: Yes, I understand you and I will try answer your questions as good as I can.
+
+  utter_faq/ask_number_students:
+  - text: There are currently 3071 students at the University of Stavanger.
+
+  utter_faq/best_place_Norway:
+  - text: I think a boat trip to Lysefjord is nice. If you enjoy hiking, I would highly recommend Preikestolen. It is stunning!
+    image: "https://i.imgur.com/hWdW3b6.jpg"
+  
+  utter_faq/best_place_Seattle:
+  - text: If you're a first-time visitor to Seattle, no trip would be complete without stopping by some of the city's most iconic attractions, such as Pike Place Market and the Space Needle.
+
+  utter_faq/highest_mountain_Norway:
+  - text: Galdhøpiggen is the highest mountain in Norway. It is 2469 meters high. It takes 11 hours to drive there from Stavanger. I would buy a plane ticket, I always get sick in cars.
+    image: "https://i.imgur.com/5t3G3v4.jpeg"
+
+  utter_faq/highest_mountain_world:
+  - text: The highest mountain in the world is Everest. It is 8848 meters high!
+    image: "https://i.imgur.com/Jglmm2X.jpg"
+
+  utter_faq/longest_fjord_Norway:
+  - text: The Sognefjord - is a Norway's longest and deepest fjord! It stretches 204 kilometers inland from the coast of Bergen.
+    image: "https://i.imgur.com/zPlWu3p.jpeg"
+  
+  utter_faq/how_many_tunnels_Norway:
+  - text: There are more than 1000 tunnels in Norway, some of them under water and with roundabouts.
+    image: "https://i.imgur.com/Pj9x97n.jpeg"
+  
+  utter_faq/longest_tunnel:
+  - text: At 24.5 kilometres, the Lærdal tunnel is the world's longest road tunnel.
+    image: "https://i.imgur.com/eokrElR.jpeg"
+
+  utter_faq/aurora:
+  - text: The best time to see Northern Lights is from Septemer to April. The best place is Tromsø.
+    image: "https://i.imgur.com/eOoS7XT.jpeg"
+
+  utter_faq/ask_can_you_sing:
+  - text: "I like dancing more."
+  - text: "La-la - lalala. Am I good enough to sing at the TOY conference?"
+  - text: "Yes, but only in shower."
+  - text: "If I start to sing at the TOY conference, they will turn me off. I am afraid."
+
+  utter_faq/how_many_languages:
+  - text: "I can speak more than 40 languages. But today I only speak english at the TOY conference."
+
+  utter_faq/ask_places_to_run:
+    - text: "Mosvannet is a popular place for walking or running."
+    - text: "The Stokka lake is a really good place for walking or running."
+
+  utter_faq/ask_places_to_hike:
+    - text: "Preikestolen is one of Norway's most popular hikes. Learn more by scanning the QR code."
+      image: "https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=https://www.visitnorway.com/places-to-go/fjord-norway/ryfylke/the-lysefjord-area/hiking-to-preikestolen/"
+    - text: "Kjerag is a popular hiking destination close to Stavanger. Learn more by scanning the QR code."
+      image: "https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=https://www.visitnorway.com/places-to-go/fjord-norway/the-stavanger-region/listings-stavanger/kjerag/185744/"
+
+  utter_faq/ask_places_to_swim:
+  - text: "The best place to swim at this time of the year would be open-air swimming pool called Gamlingen. Scan the QR-code to learn more."
+    image: "https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=https://goo.gl/maps/EQwSgoRSKueEp6kw7"
+
+
+  utter_faq/ask_to_see_fjords:
+  - text: "You can take the Fjordline cruise between Stavanger and Bergen to see the fjords around here."
+    image: "https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=https://www.visitnorway.com/listings/fjord-line-cruise-between-bergen-and-stavanger/203457/"

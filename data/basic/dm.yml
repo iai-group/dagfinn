@@ -1,0 +1,119 @@
+version: "3.0"
+
+rules:
+
+- rule: Get capital
+  steps:
+  - intent: ask_capital
+  - action: action_get_capital
+
+- rule: Greet when greeted
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_nlu_fallback
+
+- rule: Handling out of scope intent
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+
+- rule: Telling current time
+  steps:
+  - intent: ask_time
+  - action: action_get_time
+
+stories:
+- story: tell me a joke path 1
+  steps:
+  - intent: request_joke
+  - action: utter_joke_1
+  - action: utter_did_you_like_joke
+  - intent: affirm
+  - action: utter_do_you_want_more_joke
+  - intent: affirm
+  - action: utter_joke_2
+
+- story: tell me a joke path 2
+  steps:
+  - intent: request_joke
+  - action: utter_joke_1
+  - action: utter_did_you_like_joke
+  - intent: affirm
+  - action: utter_do_you_want_more_joke
+  - intent: deny
+  - action: utter_change_topic
+
+- story: tell me a joke path 3
+  steps:
+  - intent: request_joke
+  - action: utter_joke_1
+  - action: utter_did_you_like_joke
+  - intent: deny
+  - action: utter_reply_to_dislike_joke
+  - action: utter_do_you_want_more_joke
+  - intent: affirm
+  - action: utter_joke_2
+
+- story: tell me a joke path 4
+  steps:
+  - intent: request_joke
+  - action: utter_joke_1
+  - action: utter_did_you_like_joke
+  - intent: deny
+  - action: utter_reply_to_dislike_joke
+  - action: utter_do_you_want_more_joke
+  - intent: deny
+  - action: utter_change_topic
+  
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: acknowledge misunderstanding
+  steps:
+  - intent: misunderstanding
+  - action: utter_response_to_misunderstanding
+
+- story: respond to an insult
+  steps:
+  - intent: insult
+  - action: utter_response_to_insult
+
+- story: respond to an thanks
+  steps:
+  - intent: thank
+  - action: utter_response_to_thanks

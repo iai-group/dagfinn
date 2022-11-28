@@ -1,0 +1,64 @@
+
+version: "3.0"
+rules:
+- rule: looking for place offering tag
+  steps:
+  - intent: inform_poi_tag
+  - action: action_recommend_poi
+
+- rule: looking for category
+  steps:
+    - intent: inform_poi_category
+    - action: action_recommend_poi
+
+- rule: ask question about POI
+  steps:
+  - intent: ask_does_poi_have
+  - action: action_does_poi_have
+
+- rule: wants cheap place
+  steps:
+  - intent: ask_cheap_poi
+  - action: action_recommend_cheap_poi
+
+- rule: ask for travel advice
+  steps:
+  - intent: ask_poi_transport
+  - action: utter_ask_transport_preference
+
+- rule: states travel preference
+  steps:
+  - intent: inform_transport_preference
+  - action: action_recommend_poi_transport
+
+stories:
+- story: ask for general POI recommendation
+  steps:
+  - intent: ask_poi_recommendation
+  - action: utter_what_kind_of_poi
+
+- story: not sure of further details
+  steps:
+  - action: utter_provide_further_details
+  - intent: uncertainty
+  - action: utter_take_your_time
+
+- story: do not want to provide further details
+  steps:
+  - action: utter_provide_further_details
+  - intent: deny
+  - action: utter_answer_to_no_more_details
+
+- story: ask for restaurant recommendation
+  steps:
+  - intent: ask_restaurant_recommendation
+  - action: utter_what_kind_of_restaurant
+
+- story: not looking for particular poi
+  steps:
+  - action: utter_what_kind_of_poi
+  - or:
+    - intent: deny
+    - intent: uncertainty
+    - intent: unimportantance
+  - action: utter_general_poi_recommendation

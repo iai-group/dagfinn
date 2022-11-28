@@ -1,0 +1,14 @@
+version: "3.0"
+
+responses:
+  utter_ask_session_topic:
+  - text: "What topics are you interested in?"
+
+  utter_ask_speaker_name:
+  - text: "Which speaker are you interested in?"
+  
+  utter_ask_session_new:
+  - text: "Does this session seem interesting?"
+
+  utter_ask_continue:
+  - text: "Are you sure you want to stop?"

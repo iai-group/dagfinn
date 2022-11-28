@@ -1,0 +1,21 @@
+version: "3.0"
+
+nlu:
+- intent: quiz
+  examples: |
+    - quiz
+    - show quiz
+    - ask quiz
+    - quiz me
+    - quizmaster
+
+- intent: red
+  examples: |
+    - red
+ 
+
+- intent: blue
+  examples: |
+    - blue
+   
+

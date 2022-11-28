@@ -1,0 +1,264 @@
+version: "3.0"
+
+nlu:
+- intent: ask_session_recommendation
+  examples: |
+    - Can you recommend me a session to attend?
+    - Could you help me with choosing a session to attend?
+    - I need help with choosing a session.
+    - Pick a session for me.
+    - Choose a session for me.
+    - session recommendation
+    - pick me a session
+    - give me a session
+    - recommend me a session
+    - choose session
+    - pick session
+
+- intent: info_next_session
+  examples: |
+    - What is the next session about?
+    - What will the next session be about?
+    - What is the topic of the next session
+    - What is the title of the next session?
+    - next session topic
+    - next session about
+    - next session title
+    - about next session
+
+- intent: keynote_speakers
+  examples: |
+    - Who is hosting the keynote talks?
+    - What are the keynotes about?
+    - Information on the keynotes.
+    - Titles of the keynotes.
+    - Tell me about the keynotes.
+    - Please give me some information on the keynotes.
+    - I would like to know more about the keynotes.
+    - Who are the hosts of the keynotes?
+    - Who is speaking at the keynote talks?
+    - Who is presenting the keynotes?
+    - What are the names of the keynote speakers?
+    - Who are the keynote speakers of the conference?
+    - who keynote speakers
+    - who keynote hosts
+    - who hosting keynotes
+    - who keynote talks
+    - keynote speakers
+
+- intent: ask_speaker_name
+  examples: |
+    - Can you help me find info about a speaker?
+    - Give me info about a speaker.
+    - I need some info on a speaker.
+    - Speaker information
+    - speaker info
+    - give me speaker info
+
+
+- intent: get_conference_schedule
+  examples: |
+    - Can you give me the schedule for [Sunday](conference_day)?
+    - What is the schedule for [monday](conference_day)?
+    - What is planned for [tuesday](conference_day)?
+    - schedule for [wednesday](conference_day)
+    - [Thursday](conference_day) schedule
+    - [Sunday](conference_day) schedule
+    - [sunday](conference_day) schedule
+    - [sundays](conference_day) schedule
+    - [Monday](conference_day) schedule
+    - [monday](conference_day) schedule
+    - [mondays](conference_day) schedule
+    - [Tuesday](conference_day) schedule
+    - [tuesday](conference_day) schedule
+    - [Wednesday](conference_day) schedule
+    - [wednesday](conference_day) schedule
+    - [wednesdays](conference_day) schedule
+    - [Thursday](conference_day) schedule
+    - [thursday](conference_day) schedule
+    - [thursdays](conference_day) schedule
+    - [today](conference_day) schedule
+    - [Today](conference_day) schedule
+    - [todays](conference_day) schedule
+    - [tomorrows](conference_day) schedule
+    - [tomorrow](conference_day) schedule
+    - [Tomorrow](conference_day) schedule
+
+- intent: info_about_session
+  examples: |
+    - Can you give me information about [workshop](session_type)?
+    - Please give me some info on [tutorial](session_type).
+    - What can you tell me about [paper session 1](session_type)?
+    - Give me info on [paper session 2](session_type).
+    - info about [paper session 3](session_type)
+    - [paper session 4](session_type) info
+    - [paper session 5](session_type) info
+    - [paper session 6](session_type) info
+    - [paper session 7](session_type) info
+    - [reproducibility 1](session_type) info
+    - [reproducibility 2](session_type) info
+    - [rep 1](session_type) info
+    - [rep 2](session_type)
+    - [paper session 8](session_type)
+    - [poster session 1](session_type)
+    - [poster session 2](session_type)
+    - [poster session 3](session_type)
+    - [poster session one](session_type)
+    - [poster session two](session_type)
+    - [poster session three](session_type)
+    - [workshop 1](session_type)
+    - [workshop 2](session_type)
+    - [workshop 3](session_type)
+    - [workshop 4](session_type)
+    - [workshop 5](session_type)
+    - [workshop one](session_type)
+    - [workshop two](session_type)
+    - [workshop three](session_type)
+    - [workshop four](session_type)
+    - [workshop five](session_type)
+    - [tutorial 1](session_type)
+    - [tutorial 2](session_type)
+    - [tutorial 3](session_type)
+    - [tutorial 4](session_type)
+    - [tutorial one](session_type)
+    - [tutorial two](session_type)
+    - [tutorial three](session_type)
+    - [tutorial four](session_type)
+
+- intent: keynote_info
+  examples: |
+    - Can you give me more info on [monday](conference_day) keynote?
+    - Tell me more about the keynote on [tuesday](conference_day).
+    - Give me more info on the keynote on [wednesday](conference_day).
+    - Info about [monday](conference_day) keynote.
+    - Tell me about [monday](conference_day) keynote.
+    - [tuesday](conference_day) keynote
+    - [today](conference_day) keynote
+    - [todays](conference_day) keynote
+    - [tomorrows](conference_day) keynote
+    - [tomorrow](conference_day) keynote
+    - [tomorrows](conference_day) keynote
+    - [thursdays](conference_day) keynote
+    - [Thursday](conference_day) keynote
+    - [Sunday](conference_day) keynote
+    - [sunday](conference_day) keynote
+    - [sundays](conference_day) keynote
+    - [Monday](conference_day) keynote
+    - [monday](conference_day) keynote
+    - [mondays](conference_day) keynote
+    - [Tuesday](conference_day) keynote
+    - [tuesday](conference_day) keynote
+    - [Wednesday](conference_day) keynote
+    - [wednesday](conference_day) keynote
+    - [wednesdays](conference_day) keynote
+    - [Thursday](conference_day) keynote
+    - [thursday](conference_day) keynote
+    - [thursdays](conference_day) keynote
+    - [today](conference_day) keynote
+    - [Today](conference_day) keynote
+    - [todays](conference_day) keynote
+    - [tomorrows](conference_day) keynote
+    - [tomorrow](conference_day) keynote
+    - [Tomorrow](conference_day) keynote
+    - Tell me about [keynote 1](keynote_number).
+    - Give me information on [keynote 2](keynote_number).
+    - What is [keynote 3](keynote_number) about?
+    - [keynote one](keynote_number)
+    - [keynote two](keynote_number)
+    - [keynote three](keynote_number)
+
+- lookup: conference_day
+  examples: |
+    - Sunday
+    - sunday
+    - sundays
+    - Monday
+    - monday
+    - mondays
+    - Tuesday
+    - tuesday
+    - Wednesday
+    - wednesday
+    - wednesdays
+    - Thursday
+    - thursday
+    - thursdays
+    - Friday
+    - friday
+    - Fridays
+    - today
+    - Today
+    - todays
+    - tomorrows
+    - tomorrow
+    - Tomorrow
+
+- lookup: session_type
+  examples: |
+    - workshop 1
+    - workshop 2
+    - workshop 3
+    - workshop 4
+    - workshop 5
+    - workshop one
+    - workshop two
+    - workshop three
+    - workshop four
+    - workshop five
+    - tutorial 1
+    - tutorial 2
+    - tutorial 3
+    - tutorial 4
+    - tutorial one
+    - tutorial two
+    - tutorial three
+    - tutorial four
+    - paper session 1
+    - paper session 2
+    - paper session 3
+    - paper session 4
+    - paper session 5
+    - paper session 6
+    - paper session 7
+    - paper session 8
+    - paper session 9
+    - paper session 10
+    - paper session 11
+    - paper session one
+    - paper session two
+    - paper session three
+    - paper session four
+    - paper session five
+    - paper session six
+    - paper session seven
+    - paper session eight
+    - paper session nine
+    - paper session ten
+    - paper session eleven
+    - reproducibility 1
+    - reproducibility 2
+    - reproducibility 3
+    - rep 1
+    - rep 2
+    - rep 3
+    - reproducibility one
+    - reproducibility two
+    - reproducibility three
+    - rep one
+    - rep two
+    - rep three
+    - poster session 1
+    - poster session 2
+    - poster session 3
+    - poster session one
+    - poster session two
+    - poster session three
+
+- lookup: keynote_number
+  examples: |
+    - keynote 1
+    - keynote 2
+    - keynote 3
+    - keynote one
+    - keynote two
+    - keynote three

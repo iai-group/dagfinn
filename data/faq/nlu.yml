@@ -1,0 +1,300 @@
+version: "3.0"
+
+nlu:
+- intent: faq/ask_can_you_sing
+  examples: |
+    - Can you sing?
+    - Can you sing a song?
+    - Sing me a song
+
+- intent: faq/ask_age
+  examples: |
+    - How old are you?
+    - What is your age?
+    - When were you born?
+    
+- intent: faq/ask_like_humans
+  examples: |
+    - Do you like humans?
+    - Do you like people?
+    - Are humans your friends?
+
+- intent: faq/nice_joke
+  examples: |
+    - That was a nice joke
+    - Nice one
+    - That was very funny
+    - Really funny
+    - Funny joke
+    - Great joke
+
+- intent: faq/bad_joke
+  examples: |
+    - That was not funny
+    - It is not a funny joke
+    - You have a bad sence of humor
+    - I did not like your joke
+    - What a silly joke
+    - stupid joke
+    - Not funny at all
+    - that doesn't sound like a joke
+
+- intent: faq/girlfriend
+  examples: |
+    - Do you have a girlfriend?
+    - Who is your girlfirend?
+    - Are you single?
+    - Are you married?
+    - Do you have a spouse?
+
+- intent: faq/compliment
+  examples: |
+    - You are a nice robot
+    - You are really smart
+    - You are very nice
+    - You are very good
+    - You are really funny
+    - You are so cool
+    - Smart robot
+    - Nice robot
+    - Good boy
+    - Nice boy
+
+- intent: faq/nice_name
+  examples: |
+    - Nice name
+    - Cool name
+    - Beautiful name
+
+- intent: faq/ask_meaning_of_life
+  examples: |
+    - What is the meaning of life?
+    - What is life's meaning?
+    - What is the purpose of life?
+    - Is there any meaning to existence?
+    - Is there any meaning in life?
+
+- intent: faq/ask_who_created_you
+  examples: |
+    - Who made you?
+    - Who created you?
+    - Who is your creator?
+    - Who are your parents?
+    - Who is your family?
+
+- intent: faq/ask_where_are_you_from
+  examples: |
+    - Where did you come from?
+    - Where are you from?
+    - Where are you coming from?
+
+- intent: faq/ask_who_are_you
+  examples: |
+    - Who are you?
+    - What's your name?
+    - Tell me about yourself.
+    - What are you?
+    - Whats your name?
+    - Can you introduce yourself?
+    - Whom am I speaking to?
+    - Who is Dagfinn?
+
+- intent: faq/ask_will_it_rain
+  examples: |
+    - Will it rain today?
+    - Do I need to bring an umbrealla?
+    - Will I get wet if I go outside?
+    - Will I need a raincoat?
+    - What is the chance of rain today?
+    - Is there any chance of rain?
+    - Will there be rain today?
+    - Do you think it will rain?
+    - Do you think we will see rain today?
+
+- intent: faq/ask_can_you_start_conversation
+  examples: |
+    - Can you start conversation?
+    - Could you start conversation?
+    - Could you begin conversation?
+    - Can you start first?
+    - can you begin?
+    - Can you speak first?
+    - Can you start?
+    - Can you say something first?
+    - Perhaps you can talk first?
+    - Maybe you can start talking?
+    - Can you say something?
+    - Can we keep chatting?
+    - What can you do
+    - What is the scope of questions you can answer
+    - What can you answer
+    - What can you tell me
+    - What else can you do
+
+- intent: faq/ask_how_are_you
+  examples: |
+    - How are you?
+    - How are you doing?
+    - How are you today?
+    - how is your day?
+    - what's going on?
+    - How goes it?
+    - How do you do?
+    - you're doing all right there?
+    - are you all good?
+
+- intent: faq/ask_will_you_marry
+  examples: |
+    - I wanna to marry you
+    - Do you want to marry me
+    - Will you marry me
+
+- intent: faq/war
+  examples: |
+    - What do you think about war with Ukrain?
+    - What do you think about war with Russia?
+    - What do you think about war?
+
+- intent: faq/siri_alexa
+  examples: |
+    - What do you think abou Siri?
+    - What do you think of Alexa?
+    - Do you like Siri?
+    - Do you like Alexa?
+
+- intent: faq/do_you_understand
+  examples: |
+    - Can you understand what I am saying?
+    - Can you understand me?
+    - Do you know how to talk
+    - Can you understand humans?
+
+- intent: faq/ask_number_students
+  examples: |
+    - How many students studying here?
+    - How many students studying at university?
+    - How many students studying at Stavaneger university?
+    - How many students studying at university of Stavenger?
+    - How many students at UIS?
+
+- intent: faq/best_place_Norway
+  examples: |
+    - What is interesting to see in Stavanger area?
+    - What is the best place to see in Stavanger?
+    - What is there to visit in Stavanger?
+    - What to visit in Stavanger?
+    - What to visit in Norway?
+    - What is the best place to visit in Norway?
+    - What is the best place to visit in Stavanger area?
+
+- intent: faq/best_place_Seattle
+  examples: |
+    - What is interesting to see in Seattle area?
+    - What is there to visit in Seattle?
+    - What to visit in Seattle?
+    - What to visit in Washington State?
+    - What is the best place to visit in Washington State?
+    - What is the best place to visit in Seattle area?
+
+- intent: faq/highest_mountain_Norway
+  examples: |
+    - What is the highest mountain in Norway
+    - Highest mountain in Norway
+    - Which mountain is the highest in the Norway?
+
+- intent: faq/highest_mountain_world
+  examples: |
+    - What is the highest mountain in the world
+    - Highest mountain in the world
+    - Which mountain is the highest in the world?
+
+- intent: faq/longest_fjord_Norway
+  examples: |
+    - What is the longest fjord in Norway
+    - Longest fjord in Norway
+    - Which fjord is the longest fjord of Norway?
+
+- intent: faq/how_many_tunnels_Norway
+  examples: |
+    - How many tunnels there are in Norway
+    - How many tunnels do you have in Norway
+    - Howa many tunnels
+
+- intent: faq/longest_tunnel
+  examples: |
+    - What is the longest tunnel in Norway
+    - What is the longest tunnel in the world
+    - Which tunnel is the longest in Norway
+
+- intent: faq/aurora
+  examples: |
+    - when is the best time to see Northern Lights
+    - when is the best time to see Aurora
+    - when is the best time to see Aurora Borealis
+    - I want to see Northern Lights
+    - I want to see Aurora Borealis
+    - I want to see Aurora 
+    - Where can I see Northern Lights
+    - When can I see Northern Lights
+    - Tell me about Northern Lights
+
+- intent: faq/how_many_languages
+  examples: |
+    - How many languages do you know?
+    - How many languages can you speak?
+    - How many different languages can you speak?
+
+- intent: faq/ask_places_to_run
+  examples: |
+    - Are there any good places for running in town?
+    - What are the best places to go for a walk?
+    - Where can I go jogging?
+    - I want to go for a run.
+    - I want to go for a walk, do you know of a good place?
+    - I want to go running
+    - Best place in town to go run?
+    - What are some good places for walking in town?
+    - Somewhere to go run
+    - Where can I run?
+    - Any good places for running?
+    - Somewhere to take a walk
+    - A place to go running
+    - Good places for taking a stroll
+    - Places for jogging?
+    - Some place for taking a walk
+
+- intent: faq/ask_places_to_hike
+  examples: |
+    - Where can I go hiking?
+    - I want to see the mountains of Norway.
+    - How do I get to see the mountains here?
+    - I want to see Preikestolen
+    - What is that famous mountain called?
+    - Where can I get to experience Norwegian nature?
+    - I want to go hiking.
+    - Some place to experience the nature here.
+    - I want to see the mountains.
+    - Norwegian nature.
+    - I want to go and see the mountains.
+    - The mountains here are beautiful.
+    - How can I experience the nature here?
+    - I would love to see the mountains.
+    - Where can I go hiking?
+    
+- intent: faq/ask_places_to_swim
+  examples: |
+    - I want to go swimming
+    - Where can I go swimming?
+    - Can you recommend me swimming pool
+    - Are there any swimming pools in Stavanger?
+    - Where can I swim in Stavanger?
+    - What is the best place for swimming?
+    - Is there a place to swim in Stavanger
+    - Can I swim by the beach?
+    - Where do I go for a swim?
+    - Is it too cold to swim?
+    - I want to go swim
+    - I want to swim
+    - I like to swim
+    - I like swimming
+    - I am a swimmer
