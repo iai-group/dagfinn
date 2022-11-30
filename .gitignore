@@ -148,3 +148,6 @@ logs/
 
 # zone identifiers
 *Zone.Identifier
+
+# documentation build files
+**/_build

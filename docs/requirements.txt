@@ -1,0 +1,9 @@
+sphinx<5.0;
+sphinx;
+sphinx_rtd_theme;
+sphinxcontrib-bibtex;
+nbsphinx;
+recommonmark;
+sphinx-markdown-tables;
+sphinx-autoapi
+myst-parser
