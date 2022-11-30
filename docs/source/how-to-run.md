@@ -16,7 +16,7 @@ and in
 >dagfinn\ui\furhat-skills\rasa\src\main\kotlin\furhatos\app\rasa\flow.interaction.kt
 
 ```
-const IP = "localhost"
+const IP = "10.192.201.55"     // or  "localhost"
 const PORT = "5005"
 ```
 
