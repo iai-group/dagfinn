@@ -24,7 +24,7 @@ jobs:
         run: |
           pip3 install -r docs/requirements.txt
       - name: Sphinx docs to GitHub Pages
-        uses: ./.github/actions/build_docs/
+        uses: ./.github/actions/publish_docs/
         with:
           branch: main
           dir_docs: docs/source
