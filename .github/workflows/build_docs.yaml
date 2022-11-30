@@ -22,7 +22,7 @@ jobs:
           python-version: 3.7.12
       - name: Installing the Documentation requirements
         run: |
-          pip3 install -r requirements/docs_requirements.txt
+          pip3 install -r docs/requirements.txt
       - name: Installing DialogueKit
         shell: bash -l {0}
         run: |

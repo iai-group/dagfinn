@@ -74,11 +74,11 @@ No interactivity on the furhatscreen, so no buttons.
 
 ### Furhatscreen
 
-![Frontend_quiz](assets/frontend_quiz.png)
+![Frontend_quiz](_static/frontend_quiz.png)
 
 
 ### Webchat
-![Webchat_quiz](assets/webchat_quiz.png)
+![Webchat_quiz](_static/webchat_quiz.png)
 
 ### Buttons
 utter_greet:

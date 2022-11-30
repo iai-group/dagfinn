@@ -1,7 +1,6 @@
-# How to run Webchat, furhat - virtual and physical - with screen
+# Usage
 
 
-## Step 1
 ## Setting the IP-address of the rasa-server
 Step 1 for everything is to enter the correct IP for the RASA server.
 Normally when testing, you will use 'localhost' as your address.
@@ -16,15 +15,15 @@ and in
 >dagfinn\ui\furhat-skills\rasa\src\main\kotlin\furhatos\app\rasa\flow.interaction.kt
 
 ```
-const IP = "10.192.201.55"     // or  "localhost"
+const IP = "localhost"
 const PORT = "5005"
 ```
 
 Remember to recompile after changing IP in `interaction.kt`
 
 See 
-[Making changes to the skill \ kotlin code](#making-changes-to-the-skill-|-kotlin-code)
-## Step 2
+[Making changes to the skill \ kotlin code](#making-changes-to-the-skill-kotlin-code)
+
 ## Starting RASA server(s)
 In every case run rasa servers first. Make sure you are standing in the base project folder.
 And that you are in the virtual environment (dagfinn)
@@ -46,7 +45,7 @@ In the second terminal you can start the Rasa server with all defined channels:
 ```
 rasa run --cors "*"
 ```
-## Step 3
+
 ## Running virtual furhat + furhatscreen
 In order to run the virtual furhat you need to have downloaded the furhat virtual launcher.
 Go to the following link, you need to LOGIN you access the site.
@@ -62,7 +61,6 @@ The name of the skillfile is:
 Now to virtual furhat should be running and connected to rasa.
 
 
-## Step 3 (alternative)
 ## Running physical furhat + furhatscreen
 Start the robot by pressing the on button, small button, not the big wheel button.
 In order to connect to the furhat, your laptop needs to be on the same network.
@@ -121,9 +119,9 @@ If you make any changes to the kotlin code, you have to recompile with gradlew s
 ## Troubleshooting
 Always Press Stop SDK, to make sure the SDK stops gracefully.
 View Console at the bottom of the screen to view the output from 
-![Launcher UI](assets/furhat_launcher.png)
+![Launcher UI](_static/furhat_launcher.png)
 
 
 
 The furhat can't find the rasa server, or is otherwise unable to reach the netowork.
-![Launcher UI connection error](assets/furhat_launcher_connection_error.png)
+![Launcher UI connection error](_static/furhat_launcher_connection_error.png)
