@@ -1,12 +1,12 @@
 # Installation
 
-The easiest way to install DAGFiNN and all of its dependencies is by using an anaconda distribution with the following commands:
+The easiest way to install DAGFiNN and all of its dependencies is by using pip:
 
 ```
-conda env update -f environment.yaml
-conda activate dagfinn
+python -m pip install --upgrade pip
+pip install -r requirements.txt
 
-python3 -m spacy download en_core_web_md
+python -m spacy download en_core_web_md
 ```
 
 **NB!** There is a [known issue](https://forum.rasa.com/t/problem-with-websockets/49570) with websockets and Rasa 3.0. If you get a server error on launching the webchat in the browser you might need to downgrade the sanic libraires. To do so, use the commands:

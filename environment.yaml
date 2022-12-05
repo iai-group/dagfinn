@@ -23,3 +23,8 @@ dependencies:
     - fuzzywuzzy
     - git+https://github.com/LIAAD/yake
     - countryinfo
+    - zmq
+    - face_recognition
+    - Levenshtein
+    - pyzbar
+    - folium
