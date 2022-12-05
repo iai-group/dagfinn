@@ -20,4 +20,4 @@ action_endpoint:
 tracker_store:
   type: SQL
   dialect: "sqlite"
-  db: "logs/conversations/example.db"
+  db: "logs/example.db"

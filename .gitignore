@@ -136,15 +136,16 @@ dmypy.json
 # trained models
 .rasa
 models/
-logs/
+cache/
 
+# history
+logs/**.db
 
 # gradle
 **/.gradle
 
 # MacOS
 **/.DS_Store
-
 
 # zone identifiers
 *Zone.Identifier
