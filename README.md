@@ -22,7 +22,7 @@ DAGFiNN is a conversational conference assistant that can be made available for 
 DAGFiNN is not (yet) a mature production-level system, but rather a research prototype. We welcome contributions on all levels (pull requests, suggestions for improvements, feature requests, etc.).
 # Installation
 
-The easiest way to install DAGFiNN and all of its dependencies is by using pip (the recommended python version is 3.9):
+The easiest way to install DAGFiNN and all of its dependencies is by using pip (the recommended python version is 3.8):
 
 ```
 python -m pip install --upgrade pip

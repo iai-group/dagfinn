@@ -1,6 +1,6 @@
 # Installation
 
-The easiest way to install DAGFiNN and all of its dependencies is by using pip (the recommended python version is 3.9):
+The easiest way to install DAGFiNN and all of its dependencies is by using pip (the recommended python version is 3.8):
 
 ```
 python -m pip install --upgrade pip
