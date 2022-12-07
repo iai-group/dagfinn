@@ -24,10 +24,10 @@ jobs:
         pip install -r requirements.txt
     - name: Lint with flake8
       run: |
-        pre-commit flake8
+        pre-commit run flake8 --all-file
     - name: Check black formatting
       run: |
-        pre-commit black
+        pre-commit run black --all-file
     - name: Run tests
       run: |
         pytest tests --cov=./ --cov-report=xml
