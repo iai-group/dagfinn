@@ -70,8 +70,8 @@ class ValidateSessionRecommenderForm(FormValidationAction):
         match = matches[index]
 
         db.cur.execute(
-            "SELECT presenter_name, Id, title FROM presentations WHERE \
-                                 keywords = ?",
+            "SELECT presenter_name, Id, title FROM presentations WHERE "
+            "keywords = ?",
             (match[0],),
         )
         session_info = db.cur.fetchall()
@@ -95,8 +95,8 @@ class ValidateSessionRecommenderForm(FormValidationAction):
             match = matches[index]
 
             db.cur.execute(
-                "SELECT presenter_name, Id, title FROM presentations WHERE \
-                                    keywords = ?",
+                "SELECT presenter_name, Id, title FROM presentations WHERE "
+                "keywords = ?",
                 (match[0],),
             )
 
@@ -129,7 +129,6 @@ class ValidateSessionRecommenderForm(FormValidationAction):
             return {"session_new": False, "session_number": 0}
 
         if tracker.get_intent_of_latest_message() == "deny":
-
             index = tracker.get_slot("session_number") + 1
 
             if index > 4:
@@ -189,10 +188,9 @@ class ActionGiveSpeakerName(Action):
         top = process.extract(text, names)
 
         for i in top:
-
             db.cur.execute(
-                "SELECT title, Id FROM presentations WHERE \
-                                presenter_name = ?",
+                "SELECT title, Id FROM presentations WHERE "
+                "presenter_name = ?",
                 (i[0],),
             )
 
@@ -357,8 +355,9 @@ class ActionKeynoteSpeakers(Action):
 
         if keynotes:
             dispatcher.utter_message(
-                text=f"There are {len(keynotes)} keynotes during the "
-                "conference.",
+                text=(
+                    f"There are {len(keynotes)} keynotes during the conference."
+                ),
             )
             response = ""
             for timeslot_id, presentation_id in keynotes:
@@ -436,13 +435,17 @@ class ActionKeynoteInfo(Action):
                 }
                 dispatcher.utter_message(attachment=message)
                 dispatcher.utter_message(
-                    text=f"The keynote is hosted by {speaker[0][0]} on "
-                    f"{timeslot}."
+                    text=(
+                        f"The keynote is hosted by {speaker[0][0]} on "
+                        f"{timeslot}."
+                    )
                 )
             else:
                 dispatcher.utter_message(
-                    text="Sorry I could not find the keynote you are referring "
-                    "to.",
+                    text=(
+                        "Sorry I could not find the keynote you are referring "
+                        "to."
+                    ),
                 )
         else:
             dispatcher.utter_message(
@@ -494,7 +497,8 @@ class ActionConferenceSchedule(Action):
                 },
             }
             dispatcher.utter_message(
-                attachment=message, text=f"Here is the schedule for the {date}."
+                attachment=message,
+                text=f"Here is the schedule for the {date}.",
             )
         else:
             dispatcher.utter_message(
@@ -623,7 +627,9 @@ def get_session_information(db) -> list:
                     continue
                 break
         elif curdate < date:
-            sessions = db.select_where("sessions", "*", f"timeslot_id = {i[0]}")
+            sessions = db.select_where(
+                "sessions", "*", f"timeslot_id = {i[0]}"
+            )
             if len(sessions) == 0:
                 continue
             break
@@ -634,7 +640,6 @@ def get_session_information(db) -> list:
 
 
 def recommend_session(phrase) -> list:
-
     """Matches entered phrase with keywords and recommends session.
 
     Returns:

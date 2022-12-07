@@ -18,7 +18,6 @@ class DBConnector:
         self.cur = self.con.cursor()
 
     def create_table(self, name: str, content: str) -> None:
-
         """Creates a table in the database.
 
         Args:

@@ -97,8 +97,10 @@ class TripAdvisorScraper:
                 EC.presence_of_element_located(
                     (
                         By.CSS_SELECTOR,
-                        "section.vwOfI.nlaXM > div > div > span > div > "
-                        "div:nth-child(2) > div.WoBiw > a:nth-child(1)",
+                        (
+                            "section.vwOfI.nlaXM > div > div > span > div > "
+                            "div:nth-child(2) > div.WoBiw > a:nth-child(1)"
+                        ),
                     )
                 )
             )

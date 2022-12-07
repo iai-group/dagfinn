@@ -4,7 +4,7 @@ import argparse
 from scripts.poi.tripadvisor_scraper import TripAdvisorScraper
 
 _DEFAULT_ATTRACTION_LINK = "https://www.tripadvisor.com/Attractions-g190511-Activities-Stavanger_Stavanger_Municipality_Rogaland_Western_Norway.html"  # noqa
-_DEFAULT_RESTAURANT_LINK = "https://www.tripadvisor.com/Restaurants-g190511-Stavanger_Stavanger_Municipality_Rogaland_Western_Norway.html" # noqa
+_DEFAULT_RESTAURANT_LINK = "https://www.tripadvisor.com/Restaurants-g190511-Stavanger_Stavanger_Municipality_Rogaland_Western_Norway.html"  # noqa
 _DEFAULT_OUTPUT_FILE = "db/data/poi.tsv"
 
 

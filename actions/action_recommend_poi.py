@@ -110,8 +110,8 @@ class POIResults:
                     self.likes.extend(replacement)
 
     def remove_duplicate_tags(self) -> None:
-        """Removes duplicates from liked and disliked POI tags. If the same tag is found
-        in both dislikes and likes it will be removed from dislikes.
+        """Removes duplicates from liked and disliked POI tags. If the same tag
+        is found in both dislikes and likes it will be removed from dislikes.
         """
         self.likes = list(dict.fromkeys(self.likes))
         self.dislikes = list(dict.fromkeys(self.dislikes))
@@ -161,9 +161,9 @@ class POIResults:
             origin = to_destination.get("origin")
             if origin not in self.BUS_STOPS_WITHIN_WALKING_DISTANCE:
                 prior_destination = self.LAYOVER_TO_ORIGIN_MAP.get(origin)
-                routes["to_layover"] = self.fetch_bus_routes(prior_destination)[
-                    0
-                ]
+                routes["to_layover"] = self.fetch_bus_routes(
+                    prior_destination
+                )[0]
         return routes
 
     def fetch_bus_routes(self, destination: Text) -> List:
@@ -437,7 +437,11 @@ class POIFunctions:
 
     @classmethod
     def fetch_match(
-        cls, category: Text, likes: List, dislikes: List, is_cheap: bool = False
+        cls,
+        category: Text,
+        likes: List,
+        dislikes: List,
+        is_cheap: bool = False,
     ) -> Dict:
         """Retrieves POI match from database using POI results class.
 
@@ -495,7 +499,8 @@ class POIFunctions:
 
     @classmethod
     def has_new_tags(cls, tracker: Tracker) -> bool:
-        """Checks if liked and disliked POI tags have changed since last recommendation.
+        """Checks if liked and disliked POI tags have changed since last
+        recommendation.
 
         Args:
             tracker: Class that maintains the state of a conversation.
@@ -1122,7 +1127,9 @@ class ActionRecommendPOITransport(Action):
                     response="utter_direct_bus_route",
                     start=routes.get("to_destination").get("origin"),
                     bus=routes.get("to_destination").get("number"),
-                    destination=routes.get("to_destination").get("destination"),
+                    destination=routes.get("to_destination").get(
+                        "destination"
+                    ),
                     distance=poi.get("distance"),
                     name=poi.get("name"),
                 )

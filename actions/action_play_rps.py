@@ -35,7 +35,7 @@ class ActionPlayRPS(Action):
         """
         user_choice = tracker.get_slot("choice")
         if user_choice not in CHOICES:
-            dispatcher.utter_message(response=("utter_rps_wrong_choice"))
+            dispatcher.utter_message(response="utter_rps_wrong_choice")
             return []
 
         dispatcher.utter_message(text=f"You chose {user_choice}")
