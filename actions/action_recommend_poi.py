@@ -110,8 +110,8 @@ class POIResults:
                     self.likes.extend(replacement)
 
     def remove_duplicate_tags(self) -> None:
-        """Removes duplicates from liked and disliked POI tags. If the same tag is found
-        in both dislikes and likes it will be removed from dislikes.
+        """Removes duplicates from liked and disliked POI tags. If the same tag
+        is found in both dislikes and likes it will be removed from dislikes.
         """
         self.likes = list(dict.fromkeys(self.likes))
         self.dislikes = list(dict.fromkeys(self.dislikes))
@@ -437,7 +437,11 @@ class POIFunctions:
 
     @classmethod
     def fetch_match(
-        cls, category: Text, likes: List, dislikes: List, is_cheap: bool = False
+        cls,
+        category: Text,
+        likes: List,
+        dislikes: List,
+        is_cheap: bool = False,
     ) -> Dict:
         """Retrieves POI match from database using POI results class.
 
@@ -495,7 +499,8 @@ class POIFunctions:
 
     @classmethod
     def has_new_tags(cls, tracker: Tracker) -> bool:
-        """Checks if liked and disliked POI tags have changed since last recommendation.
+        """Checks if liked and disliked POI tags have changed since last
+        recommendation.
 
         Args:
             tracker: Class that maintains the state of a conversation.

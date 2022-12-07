@@ -230,7 +230,6 @@ class Custom_socketIOInput(InputChannel):
         async def connect(
             sid: Text, environ: Dict, auth: Optional[Dict]
         ) -> bool:
-
             if self.jwt_key:
                 jwtPayload = None
                 if auth and auth.get("token"):

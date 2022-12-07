@@ -7,6 +7,7 @@ import osmnx as ox
 MAPS_OUTPUT_HTML_FILE = "ui/furhat-screen/assets/map/route.html"
 MAPS_HTML_FILEPATH = "assets/map/route.html"
 
+
 class DirectionMap:
     def __init__(self, conference_city: str) -> None:
         """Class using Open Street Map to display directions between 2 points.

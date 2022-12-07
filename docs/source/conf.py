@@ -21,8 +21,10 @@ sys.path.insert(0, os.path.abspath("../../"))
 
 project = "DAGFiNN"
 copyright = "2022, IAI group, University of Stavanger"
-author = "Ivica Kostric, Krisztian Balog, Nolwenn Bernard \
-        and Weronika Lajewska"
+author = (
+    "Ivica Kostric, Krisztian Balog, Nolwenn Bernard         and Weronika"
+    " Lajewska"
+)
 
 # The short X.Y version.
 version = "0.0.1"
