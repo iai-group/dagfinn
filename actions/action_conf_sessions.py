@@ -627,9 +627,7 @@ def get_session_information(db) -> list:
                     continue
                 break
         elif curdate < date:
-            sessions = db.select_where(
-                "sessions", "*", f"timeslot_id = {i[0]}"
-            )
+            sessions = db.select_where("sessions", "*", f"timeslot_id = {i[0]}")
             if len(sessions) == 0:
                 continue
             break

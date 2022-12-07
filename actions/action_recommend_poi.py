@@ -161,9 +161,9 @@ class POIResults:
             origin = to_destination.get("origin")
             if origin not in self.BUS_STOPS_WITHIN_WALKING_DISTANCE:
                 prior_destination = self.LAYOVER_TO_ORIGIN_MAP.get(origin)
-                routes["to_layover"] = self.fetch_bus_routes(
-                    prior_destination
-                )[0]
+                routes["to_layover"] = self.fetch_bus_routes(prior_destination)[
+                    0
+                ]
         return routes
 
     def fetch_bus_routes(self, destination: Text) -> List:
@@ -1127,9 +1127,7 @@ class ActionRecommendPOITransport(Action):
                     response="utter_direct_bus_route",
                     start=routes.get("to_destination").get("origin"),
                     bus=routes.get("to_destination").get("number"),
-                    destination=routes.get("to_destination").get(
-                        "destination"
-                    ),
+                    destination=routes.get("to_destination").get("destination"),
                     distance=poi.get("distance"),
                     name=poi.get("name"),
                 )
