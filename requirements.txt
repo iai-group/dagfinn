@@ -1,4 +1,4 @@
-black==22.3.0
+black==21.7b0 # Dependency issue: https://github.com/psf/black/issues/2520
 flake8
 pre-commit
 pytest
