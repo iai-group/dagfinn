@@ -1,0 +1,24 @@
+:py:mod:`actions`
+=================
+
+.. py:module:: actions
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   action_basics/index.rst
+   action_conf_sessions/index.rst
+   action_get_capital/index.rst
+   action_get_time/index.rst
+   action_get_weather/index.rst
+   action_play_rps/index.rst
+   action_quiz/index.rst
+   action_recommend_poi/index.rst
+   db_connector/index.rst
+   maps/index.rst
+
+

@@ -1,0 +1,41 @@
+:py:mod:`actions.action_basics`
+===============================
+
+.. py:module:: actions.action_basics
+
+.. autoapi-nested-parse::
+
+   This files contains custom action to get temperature at a certain location.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   actions.action_basics.ActionGetTime
+
+
+
+
+.. py:class:: ActionGetTime
+
+   Bases: :py:obj:`rasa_sdk.Action`
+
+   .. py:method:: name() -> Text
+
+
+   .. py:method:: run(dispatcher: rasa_sdk.executor.CollectingDispatcher, tracker: rasa_sdk.Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]
+
+      Returns
+
+      :param dispatcher: Class responsible for sending messages back to user.
+      :param tracker: Class that maintains the state of a conversation.
+      :param domain: Dictionary containing information stored in 'domain.yml'.
+
+
+

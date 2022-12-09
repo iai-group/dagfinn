@@ -1,0 +1,120 @@
+:py:mod:`actions.db_connector`
+==============================
+
+.. py:module:: actions.db_connector
+
+.. autoapi-nested-parse::
+
+   File contains:
+       - a class that connects to a database and methods to query it.
+       - a function to create a string of questionmarks.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   actions.db_connector.DBConnector
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   actions.db_connector.create_string
+
+
+
+.. py:class:: DBConnector(filename='dagfinn')
+
+   Connects to the database and allows queries.
+
+   :param filename: Name of the database file.
+
+   .. py:method:: create_table(name: str, content: str) -> None
+
+      Creates a table in the database.
+
+      :param name: The name of the table.
+      :param content: A string with the column names and types.
+
+
+   .. py:method:: delete_table(table: str) -> None
+
+      Deletes a table from the database.
+
+      :param table: Name of the table to be deleted.
+
+
+   .. py:method:: insert(table: DBConnector.insert.str, content: tuple) -> None
+
+      Inserts data into the given table. Ignores if row already exists.
+
+      :param table: The table the data will be inserted into.
+      :param content: A tuple of data to be inserted.
+
+
+   .. py:method:: insert_with_fields(table: DBConnector.insert_with_fields.str, content: dict) -> None
+
+      Inserts data in specific fields into the given table. Ignores if
+      row already exists.
+      :param table: The table the data will be inserted into.
+      :param content: A dictionary of data with keys being fields of the table
+
+
+   .. py:method:: delete(table: str, parameters: str) -> None
+
+      Deletes a row with certain parameters.
+
+      :param table: The table the row will be deleted from.
+      :param parameters: A string with the deletion requirements.
+
+
+   .. py:method:: update(table: str, change: str, parameters: str) -> None
+
+      Updates a row with the given parameters.
+
+      :param table: The table in which the row will be updated in.
+      :param change: The data to be changed.
+      :param parameters: The required data for the update.
+
+
+   .. py:method:: select(table: str, select: str) -> list
+
+      Selects columns from the database.
+
+      :param table: The table to select from.
+      :param select: The columns to select.
+
+      :returns: The columns from the database.
+
+
+   .. py:method:: select_where(table: str, column: str, where: str) -> list
+
+      Selects columns from the database with parameters.
+
+      :param table: The table to select from.
+      :param column: The columns to select.
+      :param where: The parameters to filter by, e.g Id > 2
+
+      :returns: The columns from the database.
+
+
+
+.. py:function:: create_string(amount: int) -> str
+
+   Creates a string with questionmarks.
+
+   :param amount: The amount of questionmarks or entries.
+
+   :returns: ?, ?, ?
+   :rtype: A string with questionmarks, for example
+
+
