@@ -8,13 +8,14 @@ DAGFiNN is a conversational conference assistant that can be made available for 
 
 # Features
 
-- Provide recommendations across multiple domains, have basic conversational capabilities, and personalization integrated into a single system.
-  - Currently, recommenders are built for point-of-interest (POI) and conference content
-- Support multiple user interfaces (UI)
-  - A Web chat and a Furhat robot with an optional external screen
-  - Use of rich responses customized to each user interface to effectively convey information.
-- Utilize multiple input modalities
-  - Furhat is a social robot with a microphone, speaker, and camera, which makes it possible to recognize users that interacted with the robot previously.
+  * Provide recommendations across multiple domains, have basic conversational capabilities, and personalization integrated into a single system.
+    - Currently, recommenders are built for point-of-interest (POI) and conference content
+
+  * Support multiple user interfaces (UI)
+    - A Web chat and a Furhat robot with an optional external screen
+    - Use of rich responses customized to each user interface to effectively convey information.
+  * Utilize multiple input modalities
+    - Furhat is a social robot with a microphone, speaker, and camera, which makes it possible to recognize users that interacted with the robot previously.
 
 # Disclaimer
 
@@ -24,7 +25,7 @@ DAGFiNN is not (yet) a mature production-level system, but rather a research pro
 
 The easiest way to install DAGFiNN and all of its dependencies is by using pip (the recommended python version is 3.8):
 
-```
+```shell
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 
@@ -33,7 +34,7 @@ python -m spacy download en_core_web_md
 
 **NB!** There is a [known issue](https://forum.rasa.com/t/problem-with-websockets/49570) with websockets and Rasa 3.0. If you get a server error on launching the webchat in the browser you might need to downgrade the sanic libraires. To do so, use the commands:
 
-```
+```shell
 pip install sanic==21.6.0
 pip install Sanic-Cors==1.0.0
 pip install sanic-routing==0.7.0
@@ -43,26 +44,26 @@ pip install sanic-routing==0.7.0
 
 DAGFiNN can be run in several ways. It can run on the Furhat robot, as a webchat, or as a command line application. Before starting and after every code change, the bot needs to be retrained. Use the command:
 
-```
+```shell
 rasa train
 ```
 
 To run DAGFiNN you will need to start two services.
 The first one is the _actions_ server. You can start it by typing:
 
-```
+```shell
 rasa run actions
 ```
 
 The second is the Rasa server with all defined channels:
 
-```
+```shell
 rasa run
 ```
 
 **NB!** In some cases, you might see Cross-Origin Resource Sharing (CORS) error after launching the webchat. In that case restart the server with the command:
 
-```
+```shell
 rasa run --cors "*"
 ```
 
@@ -70,13 +71,13 @@ rasa run --cors "*"
 
 You can start the command line version of the chatbot with the command:
 
-```
+```shell
 rasa shell
 ```
 
 If you want to debug the NLU component, i.e., explore recognized entities or classified intents, you can run:
 
-```
+```shell
 rasa shell nlu
 ```
 
@@ -97,7 +98,7 @@ python -m http.server PORT
 
 ## Furhat
 
-Furhat skill that facilitates the communication between the Rasa server and the Furhat robot is located [here](ui\furhat-skills). The skill should be configured by changing the IP to the Rasa server, compiled, and started. To compile the skill run:
+The Furhat skill that facilitates the communication between the Rasa server and the Furhat robot is located [here](ui\furhat-skills). The skill should be configured by changing the IP to the Rasa server, compiled, and started. To compile the skill run:
 
 ```shell
 cd ui/furhat-skills/rasa
@@ -116,7 +117,7 @@ The skill must be compiled if the server IP changes or any Furhat skill modifica
 
 If you are using this repository, please cite the following paper:
 
-```
+```bib
 @inproceedings{10.1145/3523227.3551467,
    author = {Kostric, Ivica and Balog, Krisztian and Aresvik, T\o{}ll\o{}v Alexander and Bernard, Nolwenn and D\o{}rheim, Eyvinn Thu and Hantula, Pholit and Havn-S\o{}rensen, Sander and Henriksen, Rune and Hosseini, Hengameh and Khlybova, Ekaterina and Lajewska, Weronika and Mosand, Sindre Ekrheim and Orujova, Narmin},
    title = {DAGFiNN: A Conversational Conference Assistant},
