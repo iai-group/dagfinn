@@ -128,3 +128,7 @@ If you are using this repository, please cite the following paper:
    series = {RecSys '22}
 }
 ```
+
+# Contact
+
+If you have any questions, please contact Ivica Kostric at ivica.kostric@uis.no or Krisztian Balog at krisztian.balog@uis.no.
