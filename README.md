@@ -98,7 +98,7 @@ python -m http.server PORT
 
 ## Furhat
 
-The Furhat skill that facilitates the communication between the Rasa server and the Furhat robot is located [here](ui\furhat-skills). The skill should be configured by changing the IP to the Rasa server, compiled, and started. To compile the skill run:
+The Furhat skill that facilitates the communication between the Rasa server and the Furhat robot is located [ui/furhat-skills](ui/furhat-skills). The skill should be configured by changing the IP to the Rasa server, compiled, and started. To compile the skill run:
 
 ```shell
 cd ui/furhat-skills/rasa
