@@ -1,0 +1,726 @@
+:py:mod:`actions.action_recommend_poi`
+======================================
+
+.. py:module:: actions.action_recommend_poi
+
+.. autoapi-nested-parse::
+
+   Custom actions related to point of interest recommendations.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   actions.action_recommend_poi.POIResults
+   actions.action_recommend_poi.POIFunctions
+   actions.action_recommend_poi.ActionRecommendPOI
+   actions.action_recommend_poi.ActionRecommendCheapPOI
+   actions.action_recommend_poi.ActionDoesPOIHave
+   actions.action_recommend_poi.ActionRecommendPOITransport
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   actions.action_recommend_poi.DB_NAME
+   actions.action_recommend_poi.CONFERENCE_ADDRESS
+   actions.action_recommend_poi.MAPS
+
+
+.. py:data:: DB_NAME
+   :value: 'poi'
+
+   
+
+.. py:data:: CONFERENCE_ADDRESS
+   :value: 'Kristine Bonnevies vei 22, 4021 Stavanger, Norway'
+
+   
+
+.. py:data:: MAPS
+
+   
+
+.. py:class:: POIResults(category: Text = '', likes: List = [], dislikes: List = [])
+
+   Object for browsing POI-related things in database.
+
+   :param category: POI category. Defaults to "restaurant".
+   :param likes: Liked POI tags. Defaults to [].
+   :param dislikes: Disliked POI tags. Defaults to [].
+
+   .. py:attribute:: DISLIKE_TO_LIKE_REPLACEMENT_MAP
+
+      
+
+   .. py:attribute:: BUS_STOPS_WITHIN_WALKING_DISTANCE
+      :value: ['Jernbaneveien', 'Jorenholmen', 'Kannik']
+
+      
+
+   .. py:attribute:: LAYOVER_TO_ORIGIN_MAP
+
+      
+
+   .. py:attribute:: SELECT_POI_BY_PID
+      :value: Multiline-String
+
+       .. raw:: html
+
+           <details><summary>Show Value</summary>
+
+       .. code-block:: python
+
+           """
+                       SELECT *
+                       FROM POI
+                       WHERE pid IN ({pids})
+                       ORDER BY {order}
+               """
+
+       .. raw:: html
+
+           </details>
+
+      
+
+   .. py:attribute:: SELECT_POI_BY_CATEGORY
+      :value: Multiline-String
+
+       .. raw:: html
+
+           <details><summary>Show Value</summary>
+
+       .. code-block:: python
+
+           """
+                       SELECT *
+                       FROM POI
+                       WHERE LOWER(category) LIKE '%{category}%'
+                       ORDER BY {order}
+               """
+
+       .. raw:: html
+
+           </details>
+
+      
+
+   .. py:attribute:: SELECT_PID_BY_TAG
+      :value: Multiline-String
+
+       .. raw:: html
+
+           <details><summary>Show Value</summary>
+
+       .. code-block:: python
+
+           """
+                       SELECT POI.pid
+                       FROM POI
+                       INNER JOIN POITag
+                       ON POI.pid = POITag.pid
+                       WHERE POITag.tag LIKE '%{}%'
+               """
+
+       .. raw:: html
+
+           </details>
+
+      
+
+   .. py:attribute:: SELECT_PID_BY_CATEGORY_AND_NOT_PID
+      :value: Multiline-String
+
+       .. raw:: html
+
+           <details><summary>Show Value</summary>
+
+       .. code-block:: python
+
+           """
+                       SELECT pid
+                       FROM POI
+                       WHERE LOWER(category) LIKE '%{category}%'
+                       AND pid NOT IN ({pids})
+               """
+
+       .. raw:: html
+
+           </details>
+
+      
+
+   .. py:attribute:: SELECT_TAG_BY_TAG
+      :value: Multiline-String
+
+       .. raw:: html
+
+           <details><summary>Show Value</summary>
+
+       .. code-block:: python
+
+           """
+                       SELECT tag
+                       FROM POITag
+                       WHERE tag LIKE '%{}%'
+               """
+
+       .. raw:: html
+
+           </details>
+
+      
+
+   .. py:attribute:: SELECT_BUS_ROUTE_BY_DESTINATION
+      :value: Multiline-String
+
+       .. raw:: html
+
+           <details><summary>Show Value</summary>
+
+       .. code-block:: python
+
+           """
+                       SELECT *
+                       FROM busRoute
+                       WHERE destination = '{}'
+                       ORDER BY duration ASC
+               """
+
+       .. raw:: html
+
+           </details>
+
+      
+
+   .. py:method:: initialization() -> None
+
+      Further initialization of fields.
+
+
+   .. py:method:: swap_dislikes_with_likes() -> None
+
+      Swaps certain disliked POI tags with more appropriate liked ones.
+
+
+   .. py:method:: remove_duplicate_tags() -> None
+
+      Removes duplicates from liked and disliked POI tags. If the same tag
+      is found in both dislikes and likes it will be removed from dislikes.
+
+
+   .. py:method:: get_poi_matches() -> List
+
+      Returns a list of POIs that matches likes, dislikes or category.
+
+      :returns: List of POIs.
+      :rtype: List
+
+
+   .. py:method:: get_cheap_poi_matches() -> List
+
+      Returns a list of POIs sorted by price that matches
+      likes, dislikes or category.
+
+      :returns: List of POIs.
+      :rtype: List
+
+
+   .. py:method:: get_full_bus_route(destination: Text) -> Dict
+
+      Gives dictionary of bus routes to reach some final bus stop.
+
+      :param destination: Name of bus top to be reached
+
+      :returns: Dictionary of bus route dictionary objects.
+      :rtype: Dict
+
+
+   .. py:method:: fetch_bus_routes(destination: Text) -> List
+
+      Fetches list of bus routes matching destination.
+
+      :param destination: Destination bus stop.
+
+      :returns: List of route dictionary objects to provided bus stops.
+      :rtype: List
+
+
+   .. py:method:: fetch_pois_by_category() -> List
+
+      Returns list of matching POIs based on category.
+
+      :returns: List of POI dictionary objects.
+      :rtype: List
+
+
+   .. py:method:: fetch_pois_by_likes() -> List
+
+      Gives list of POI objects based on likes.
+
+      :returns: List of POI dictionary objects.
+      :rtype: List
+
+
+   .. py:method:: fetch_pids_by_likes() -> List
+
+      Creates list of POIs containing all liked tags.
+
+      :returns: List of POI IDs.
+      :rtype: List
+
+
+   .. py:method:: fetch_pids_by_dislikes() -> List
+
+      Creates list of POIs containing any of the disliked tags.
+
+      :returns: List of POI IDs.
+      :rtype: List
+
+
+   .. py:method:: fetch_pois_by_dislikes() -> List
+
+      Gives list of POI objects without unwanted tags.
+
+      :returns: List of POI dictionary objects.
+      :rtype: List
+
+
+   .. py:method:: fetch_pois_by_likes_and_dislikes() -> List
+
+      Generates list of POI objects satisfying both likes and dislikes.
+
+      :returns: List of POI dictionary objects.
+      :rtype: List
+
+
+   .. py:method:: fetch_proper_tags(tags: List) -> List
+
+      Fetches list proper tag names from NLU generated ones.
+
+      :param tags: Tags extracted by NLU.
+
+      :returns: Proper tags from database.
+      :rtype: List
+
+
+   .. py:method:: fetch_by_sql(sql: Text, list: List = []) -> List
+
+      Fetches list from database based on SQL statement.
+
+      :param sql: SQL to be executed by SQLite.
+      :param list: List of arguments for SQL.
+
+      :returns: List of items.
+      :rtype: List
+
+
+   .. py:method:: fetch_pois_by_pids(pids: List) -> List
+
+      Given list of POI IDs, returns list of POI objects.
+
+      :param pids: List of POI IDs.
+
+      :returns: List of POI dictonary objects.
+      :rtype: List
+
+
+   .. py:method:: get_organized_poi_list(cur: List) -> List
+
+      Organizes SQL data into a list of POI dictionaries.
+
+      :param cur: Result from SQL query.
+
+      :returns: List of POI dictionary objects.
+      :rtype: List
+
+
+   .. py:method:: get_organized_bus_route_list(cur: List) -> List
+
+      Organizes SQL data into a list of bus route dictionaries.
+
+      :param cur: Result from SQL query.
+
+      :returns: List of bus route dictionary objects.
+      :rtype: List
+
+
+
+.. py:class:: POIFunctions
+
+   .. py:method:: get_match(tracker: rasa_sdk.Tracker, is_cheap: bool = False) -> Dict
+      :classmethod:
+
+      Retrieves POI match based on slots and other preferences.
+
+      :param tracker: Class that maintains the state of a conversation.
+      :param is_cheap: Prioririzes cheap places if set to true.
+
+      :returns: POI dictionary object.
+      :rtype: Dict
+
+
+   .. py:method:: get_matches_by_likes(tracker: rasa_sdk.Tracker) -> List
+      :classmethod:
+
+      Fetches all POI objects that has provided liked POI tags.
+
+      :param tracker: Class that maintains the state of a conversation.
+
+      :returns: POI dictionary objects.
+      :rtype: List
+
+
+   .. py:method:: get_bus_route(tracker: rasa_sdk.Tracker) -> List
+      :classmethod:
+
+
+   .. py:method:: fetch_match(category: Text, likes: List, dislikes: List, is_cheap: bool = False) -> Dict
+      :classmethod:
+
+      Retrieves POI match from database using POI results class.
+
+      :param category: POI Category
+      :param likes: Liked POI tags.
+      :param dislikes: Disliked POI tags.
+      :param is_cheap: Prioririzes cheap places if set to true.
+
+      :returns: POI dictionary object.
+      :rtype: Dict
+
+
+   .. py:method:: proper_tags_string(tags: List) -> Text
+      :classmethod:
+
+
+   .. py:method:: set_likes(tracker: rasa_sdk.Tracker) -> List
+      :classmethod:
+
+      Sets up the list of liked POI tags based on circumstances.
+
+      :param tracker: Class that maintains the state of a conversation.
+
+      :returns: List of liked POI tags.
+      :rtype: List
+
+
+   .. py:method:: set_dislikes(tracker: rasa_sdk.Tracker) -> List
+      :classmethod:
+
+      Sets up the list of disliked POI tags based on circumstances.
+
+      :param tracker: Class that maintains the state of a conversation.
+
+      :returns: List of disliked POI tags.
+      :rtype: List
+
+
+   .. py:method:: has_new_tags(tracker: rasa_sdk.Tracker) -> bool
+      :classmethod:
+
+      Checks if liked and disliked POI tags have changed since last
+      recommendation.
+
+      :param tracker: Class that maintains the state of a conversation.
+
+      :returns: True if there are new tags.
+      :rtype: bool
+
+
+   .. py:method:: has_new_category(tracker: rasa_sdk.Tracker) -> bool
+      :classmethod:
+
+      Checks if POI category has changed since last recommendation.
+
+      :param tracker: Class that maintains the state of a conversation.
+
+      :returns: True if category has changed.
+      :rtype: bool
+
+
+   .. py:method:: has_walking_distance(tracker: rasa_sdk.Tracker) -> bool
+      :classmethod:
+
+
+   .. py:method:: is_different_list(list1: List, list2: List) -> bool
+      :classmethod:
+
+      Checks if two list contain different items.
+
+      :param list1: First list.
+      :param list2: Second list.
+
+      :returns: True if they do not contain the same items.
+      :rtype: bool
+
+
+   .. py:method:: recommend_by_category(dispatcher: rasa_sdk.executor.CollectingDispatcher, match: Dict, response: Text) -> None
+      :classmethod:
+
+      Recommendes provided POI match with provided response utterance.
+      Uses fields: name, category.
+
+      :param dispatcher: Class responsible for sending messages back to user.
+      :param match: POI Dictionary object.
+      :param response: The utterance being called by the dispatcher.
+
+
+   .. py:method:: recommend_by_likes(dispatcher: rasa_sdk.executor.CollectingDispatcher, match: Dict, response: Text) -> None
+      :classmethod:
+
+      Recommendes provided POI match with provided response utterance.
+      Uses fields: name, category, likes.
+
+      :param dispatcher: Class responsible for sending messages back to user.
+      :param match: POI Dictionary object.
+      :param response: The utterance being called by the dispatcher.
+
+
+   .. py:method:: recommend_by_likes_and_dislikes(dispatcher: rasa_sdk.executor.CollectingDispatcher, match: Dict, response: Text) -> None
+      :classmethod:
+
+      Recommendes provided POI match with provided response utterance.
+      Uses fields: name, category, likes, dislikes.
+
+      :param dispatcher: Class responsible for sending messages back to user.
+      :param match: POI Dictionary object.
+      :param response: The utterance being called by the dispatcher.
+
+
+   .. py:method:: stringify_list(list: List, seperator: Text = 'and') -> Text
+      :classmethod:
+
+      Turns list into human readable form.
+
+      :param list: List to be converted.
+      :param seperator: 'and', 'or', 'nor' etc.
+
+      :returns: String with list items.
+      :rtype: Text
+
+
+   .. py:method:: random_first_index(idx_range: int) -> int
+      :classmethod:
+
+      Gives random value between 0 and 3 or 0 and idx_range.
+
+      :param idx_range: Maximun index allowed.
+
+      :returns: Random index number.
+      :rtype: int
+
+
+   .. py:method:: generate_poi_template(poi: Dict) -> Dict
+      :classmethod:
+
+      Template object to be passed to external screen.
+
+      :param poi: POI dictionary object.
+
+      :returns: Template dictionary object.
+      :rtype: Dict
+
+
+   .. py:method:: get_google_maps_img_url(poi: Dict) -> Text
+      :classmethod:
+
+      Gives URL to Google Maps static image based on POI data.
+
+      :param poi: POI entry used to generate URL.
+      :param match: POI entry being recommended.
+
+
+   .. py:method:: get_osm_iframe_url(poi: Dict) -> Text
+      :classmethod:
+
+      Gives URL to Open Street Map HTML file.
+
+      :param poi: POI entry used to generate URL.
+      :param match: POI entry being recommended.
+
+
+   .. py:method:: get_qr_code_url(url: Text) -> Text
+      :classmethod:
+
+      Gives URL to QR code generated from provided URL.
+
+      :param url: Website to generate QR code for.
+
+      :returns: URL to QR-code image.
+      :rtype: Text
+
+
+
+.. py:class:: ActionRecommendPOI
+
+   Bases: :py:obj:`rasa_sdk.Action`
+
+   .. py:method:: name() -> Text
+
+
+   .. py:method:: run(dispatcher: rasa_sdk.executor.CollectingDispatcher, tracker: rasa_sdk.Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]
+
+      Gives top rated POI match based on provided entities.
+
+      :param dispatcher: Class responsible for sending messages back to user.
+      :param tracker: Class that maintains the state of a conversation.
+      :param domain: Dictionary containing information stored in 'domain.yml'
+
+
+   .. py:method:: recommend_poi(dispatcher: rasa_sdk.executor.CollectingDispatcher, match: Dict) -> List[Dict[Text, Any]]
+
+      Utters recommendation based on highest rating.
+
+      :param dispatcher: Class responsible for sending messages back to user.
+      :param match: POI dictionary object.
+
+
+
+.. py:class:: ActionRecommendCheapPOI
+
+   Bases: :py:obj:`rasa_sdk.Action`
+
+   .. py:method:: name() -> Text
+
+
+   .. py:method:: run(dispatcher: rasa_sdk.executor.CollectingDispatcher, tracker: rasa_sdk.Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]
+
+      Gives cheap POI match based on provided entities.
+
+      :param dispatcher: Class responsible for sending messages back to user.
+      :param tracker: Class that maintains the state of a conversation.
+      :param domain: Dictionary containing information stored in 'domain.yml'
+
+
+   .. py:method:: recommend_poi(dispatcher: rasa_sdk.executor.CollectingDispatcher, match: Dict) -> None
+
+      Utters recommendation based on lowest price and highest rating
+
+      :param dispatcher: Class responsible for sending messages back to user.
+      :param match: POI dictionary object.
+
+
+
+.. py:class:: ActionDoesPOIHave
+
+   Bases: :py:obj:`rasa_sdk.Action`
+
+   .. py:method:: name() -> Text
+
+
+   .. py:method:: run(dispatcher: rasa_sdk.executor.CollectingDispatcher, tracker: rasa_sdk.Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]
+
+      Responds to question on whether a POI has wanted POI tag.
+
+      :param dispatcher: Class responsible for sending messages back to user.
+      :param tracker: Class that maintains the state of a conversation.
+      :param domain: Dictionary containing information stored in 'domain.yml'
+
+
+   .. py:method:: affirmative(dispatcher: rasa_sdk.executor.CollectingDispatcher, tracker: rasa_sdk.Tracker, recommended_poi: Dict) -> List[Dict[Text, Any]]
+
+      Utters confirmation that place has POI tag.
+
+      :param dispatcher: Class responsible for sending messages back to user.
+      :param tracker: Class that maintains the state of a conversation.
+      :param recommended_poi: The POI in question.
+
+
+   .. py:method:: negative(dispatcher: rasa_sdk.executor.CollectingDispatcher, tracker: rasa_sdk.Tracker, recommended_poi: Dict, new_match: Dict) -> List[Dict[Text, Any]]
+
+      Informs that the POI does not have the wanted POI tags.
+      Goes on to recommend another POI that does have it.
+
+      :param dispatcher: Class responsible for sending messages back to user.
+      :param tracker: Class that maintains the state of a conversation.
+      :param recommended_poi: The POI in question.
+      :param new_match: New POI being recommended.
+
+
+   .. py:method:: no_matches_found(dispatcher: rasa_sdk.executor.CollectingDispatcher, tracker: rasa_sdk.Tracker, recommended_poi: Dict) -> List[Dict[Text, Any]]
+
+      No POI has the user's wanted POI tags.
+
+      :param dispatcher: Class responsible for sending messages back to user.
+      :param tracker: Class that maintains the state of a conversation.
+      :param recommended_poi: The POI in question.
+
+
+
+.. py:class:: ActionRecommendPOITransport
+
+   Bases: :py:obj:`rasa_sdk.Action`
+
+   .. py:attribute:: CATEGORY_TO_UTTERANCE_MAP
+
+      
+
+   .. py:attribute:: RECOGNIZED_MODES_OF_TRANSPORT
+      :value: ['taxi', 'bus', 'walk']
+
+      
+
+   .. py:method:: name() -> Text
+
+
+   .. py:method:: run(dispatcher: rasa_sdk.executor.CollectingDispatcher, tracker: rasa_sdk.Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]
+
+      Responds to question on whether a POI has wanted POI tag.
+
+      :param dispatcher: Class responsible for sending messages back to user.
+      :param tracker: Class that maintains the state of a conversation.
+      :param domain: Dictionary containing information stored in 'domain.yml'
+
+
+   .. py:method:: recommend_transport_to_poi(dispatcher: rasa_sdk.executor.CollectingDispatcher, tracker: rasa_sdk.Tracker, preference: Text) -> List[Dict[Text, Any]]
+
+      Recommends transport to POI
+
+      :param dispatcher: Class responsible for sending messages back to user.
+      :param tracker: Class that maintains the state of a conversation.
+      :param preference: Transport preference.
+
+      :returns: Events to be sent to Rasa.
+      :rtype: List
+
+
+   .. py:method:: recommend_transport_by_walking(dispatcher: rasa_sdk.executor.CollectingDispatcher, tracker: rasa_sdk.Tracker) -> None
+
+      Utters walking distance to POI or recommends bus.
+
+      :param dispatcher: Class responsible for sending messages back to user.
+      :param tracker: Class that maintains the state of a conversation.
+
+
+   .. py:method:: recommend_transport_by_bus(dispatcher: rasa_sdk.executor.CollectingDispatcher, tracker: rasa_sdk.Tracker) -> None
+
+      Generates bus route recommendation to a POI.
+
+      :param dispatcher: Class responsible for sending messages back to user.
+      :param tracker: Class that maintains the state of a conversation.
+
+
+   .. py:method:: recommend_transport_in_general(dispatcher: rasa_sdk.executor.CollectingDispatcher, tracker: rasa_sdk.Tracker, preference: Text) -> List[Dict[Text, Any]]
+
+      Generates transport response not based on a specific POI
+
+      :param dispatcher: Class responsible for sending messages back to user.
+      :param tracker: Class that maintains the state of a conversation.
+      :param preference: Transport preference.
+
+      :returns: Events to be sent to Rasa.
+      :rtype: List
+
+
+

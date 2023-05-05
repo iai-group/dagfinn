@@ -1,0 +1,248 @@
+:py:mod:`actions.action_conf_sessions`
+======================================
+
+.. py:module:: actions.action_conf_sessions
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   actions.action_conf_sessions.ActionGiveSessionRecommendation
+   actions.action_conf_sessions.ValidateSessionRecommenderForm
+   actions.action_conf_sessions.ActionGiveSpeakerName
+   actions.action_conf_sessions.ActionInfoNextSession
+   actions.action_conf_sessions.ActionKeynoteSpeakers
+   actions.action_conf_sessions.ActionKeynoteInfo
+   actions.action_conf_sessions.ActionConferenceSchedule
+   actions.action_conf_sessions.ActionSessionInformation
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   actions.action_conf_sessions.check_day
+   actions.action_conf_sessions.get_session_information
+   actions.action_conf_sessions.recommend_session
+   actions.action_conf_sessions.get_current_date_and_time
+   actions.action_conf_sessions.check_session_number
+   actions.action_conf_sessions.format_timeslot
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   actions.action_conf_sessions.ENDDATE
+   actions.action_conf_sessions.DB_NAME
+
+
+.. py:data:: ENDDATE
+
+   
+
+.. py:data:: DB_NAME
+   :value: 'conference'
+
+   
+
+.. py:class:: ActionGiveSessionRecommendation
+
+   Bases: :py:obj:`rasa_sdk.Action`
+
+   .. py:method:: name() -> Text
+
+
+   .. py:method:: run(dispatcher: rasa_sdk.executor.CollectingDispatcher, tracker: rasa_sdk.Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]
+
+      Clears the slots after giving recommendation
+
+      :param dispatcher: Class responsible for sending messages back to user.
+      :param tracker: Class that maintains the state of a conversation.
+      :param domain: Dictionary containing information stored in 'domain.yml'.
+
+
+
+.. py:class:: ValidateSessionRecommenderForm
+
+   Bases: :py:obj:`rasa_sdk.FormValidationAction`
+
+   .. py:method:: name() -> Text
+
+
+   .. py:method:: validate_session_topic(slot_value: Any, dispatcher: rasa_sdk.executor.CollectingDispatcher, tracker: rasa_sdk.Tracker, domain: rasa_sdk.types.DomainDict, index=0) -> Dict[Text, Any]
+
+      Checks the session topic
+
+      :param slot_value: What the slot contains
+      :param dispatcher: Class responsible for sending messages back to user.
+      :param tracker: Class that maintains the state of a conversation.
+      :param domain: Dictionary containing information stored in 'domain.yml'.
+      :param index: Number to pick from the top 5 recommendations
+
+
+   .. py:method:: validate_session_new(slot_value: Any, dispatcher: rasa_sdk.executor.CollectingDispatcher, tracker: rasa_sdk.Tracker, domain: rasa_sdk.types.DomainDict) -> Dict[Text, Any]
+
+      Checks if user accepts or declines recommendation.
+
+
+
+.. py:class:: ActionGiveSpeakerName
+
+   Bases: :py:obj:`rasa_sdk.Action`
+
+   .. py:method:: name() -> Text
+
+
+   .. py:method:: run(dispatcher: rasa_sdk.executor.CollectingDispatcher, tracker: rasa_sdk.Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]
+
+      Finds information about a speaker.
+
+      :param dispatcher: Class responsible for sending messages back to user.
+      :param tracker: Class that maintains the state of a conversation.
+      :param domain: Dictionary containing information stored in 'domain.yml'.
+
+
+
+.. py:class:: ActionInfoNextSession
+
+   Bases: :py:obj:`rasa_sdk.Action`
+
+   .. py:method:: name() -> Text
+
+
+   .. py:method:: run(dispatcher: rasa_sdk.executor.CollectingDispatcher, tracker: rasa_sdk.Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]
+
+      Finds information about next session
+
+      :param dispatcher: Class responsible for sending messages back to user.
+      :param tracker: Class that maintains the state of a conversation.
+      :param domain: Dictionary containing information stored in 'domain.yml'.
+
+
+
+.. py:class:: ActionKeynoteSpeakers
+
+   Bases: :py:obj:`rasa_sdk.Action`
+
+   .. py:method:: name() -> Text
+
+
+   .. py:method:: run(dispatcher: rasa_sdk.executor.CollectingDispatcher, tracker: rasa_sdk.Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]
+
+      Gives information about the keynotes.
+
+      :param dispatcher: Class responsible for sending messages back to user.
+      :param tracker: Class that maintains the state of a conversation.
+      :param domain: Dictionary containing information stored in 'domain.yml'.
+
+
+
+.. py:class:: ActionKeynoteInfo
+
+   Bases: :py:obj:`rasa_sdk.Action`
+
+   .. py:method:: name() -> Text
+
+
+   .. py:method:: run(dispatcher: rasa_sdk.executor.CollectingDispatcher, tracker: rasa_sdk.Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]
+
+      Gives more information about keynotes.
+
+      :param dispatcher: Class responsible for sending messages back to user.
+      :param tracker: Class that maintains the state of a conversation.
+      :param domain: Dictionary containing information stored in 'domain.yml'.
+
+
+
+.. py:class:: ActionConferenceSchedule
+
+   Bases: :py:obj:`rasa_sdk.Action`
+
+   .. py:method:: name() -> Text
+
+
+   .. py:method:: run(dispatcher: rasa_sdk.executor.CollectingDispatcher, tracker: rasa_sdk.Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]
+
+      Gets the schedule for the conference.
+
+      :param dispatcher: Class responsible for sending messages back to user.
+      :param tracker: Class that maintains the state of a conversation.
+      :param domain: Dictionary containing information stored in 'domain.yml'.
+
+
+
+.. py:class:: ActionSessionInformation
+
+   Bases: :py:obj:`rasa_sdk.Action`
+
+   .. py:method:: name() -> Text
+
+
+   .. py:method:: run(dispatcher: rasa_sdk.executor.CollectingDispatcher, tracker: rasa_sdk.Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]
+
+      Gets information about a session.
+
+      :param dispatcher: Class responsible for sending messages back to user.
+      :param tracker: Class that maintains the state of a conversation.
+      :param domain: Dictionary containing information stored in 'domain.yml'.
+
+
+
+.. py:function:: check_day(day) -> str
+
+   Matches the name of a day to a date.
+
+   :param day: The day
+
+   :returns: The date.
+
+
+.. py:function:: get_session_information(db) -> list
+
+   Gets information about sessions.
+
+   :param db: The database it will use.
+
+   :returns: A list of sessions.
+
+
+.. py:function:: recommend_session(phrase) -> list
+
+   Matches entered phrase with keywords and recommends session.
+
+   :returns: A list with the 5 most relevant sessions.
+
+
+.. py:function:: get_current_date_and_time() -> datetime.datetime
+
+   Returns current date and time.
+
+
+.. py:function:: check_session_number(type) -> str
+
+   Matches words and numbers.
+
+   :param type: A session type.
+
+   :returns: A session type with appropriate number.
+
+
+.. py:function:: format_timeslot(timeslot: Tuple) -> str
+
+   Formats timeslot extracted from DB to text.
+
+   :param timeslot: DB entry.
+
+   :returns: Timeslot formatted in plain text.
+
+

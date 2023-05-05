@@ -1,0 +1,60 @@
+:py:mod:`actions.action_play_rps`
+=================================
+
+.. py:module:: actions.action_play_rps
+
+.. autoapi-nested-parse::
+
+   Custom action for playing rock-paper-scissors.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   actions.action_play_rps.ActionPlayRPS
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   actions.action_play_rps.CHOICES
+
+
+.. py:data:: CHOICES
+   :value: ['rock', 'paper', 'scissors']
+
+   
+
+.. py:class:: ActionPlayRPS
+
+   Bases: :py:obj:`rasa_sdk.Action`
+
+   .. py:method:: name() -> Text
+
+
+   .. py:method:: computer_choice() -> Text
+
+      Returns a random choice between 'rock', 'paper', and 'scissors'.
+
+
+   .. py:method:: run(dispatcher: rasa_sdk.executor.CollectingDispatcher, tracker: rasa_sdk.Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]
+
+      Plays a round of 'rock', 'paper', 'scissors' given user choice stored
+      in the 'choice' slot.
+
+      :param dispatcher: Class responsible for sending messages back to user.
+      :param tracker: Class that maintains the state of a conversation.
+      :param domain: Dictionary containing information stored in 'domain.yml'
+
+
+

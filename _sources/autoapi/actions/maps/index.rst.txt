@@ -1,0 +1,71 @@
+:py:mod:`actions.maps`
+======================
+
+.. py:module:: actions.maps
+
+.. autoapi-nested-parse::
+
+   Interface to retrieve itinerary.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   actions.maps.DirectionMap
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   actions.maps.MAPS_OUTPUT_HTML_FILE
+   actions.maps.MAPS_HTML_FILEPATH
+
+
+.. py:data:: MAPS_OUTPUT_HTML_FILE
+   :value: 'ui/furhat-screen/assets/map/route.html'
+
+   
+
+.. py:data:: MAPS_HTML_FILEPATH
+   :value: 'assets/map/route.html'
+
+   
+
+.. py:class:: DirectionMap(conference_city: str)
+
+   Class using Open Street Map to display directions between 2 points.
+
+   :param conference_city: Conference city.
+
+   .. py:method:: get_latlong(address: str) -> Tuple[float, float]
+
+      Retrieves latitude and longitude from an address.
+
+      :param address: Address to get coordinates from.
+
+      :returns: Latitude and longitude.
+
+
+   .. py:method:: get_route_map(origin: str, destination: str) -> str
+
+      Create HTML file with interative maps showing the route between 2
+      points.
+
+      :param origin: Origin address.
+      :param destination: Destination address.
+      :param output_file: Path to output HTML file.
+
+      :returns: Path to HTML file with the map.
+
+
+

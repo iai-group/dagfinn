@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>actions.action_conf_sessions &mdash; DAGFiNN 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            DAGFiNN
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../folder_structure.html">Folder Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">DAGFiNN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><code class="xref py py-mod docutils literal notranslate"><span class="pre">actions.action_conf_sessions</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/autoapi/actions/action_conf_sessions/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-actions.action_conf_sessions">
+<span id="actions-action-conf-sessions"></span><h1><a class="reference internal" href="#module-actions.action_conf_sessions" title="actions.action_conf_sessions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">actions.action_conf_sessions</span></code></a><a class="headerlink" href="#module-actions.action_conf_sessions" title="Permalink to this headline">¶</a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#actions.action_conf_sessions.ActionGiveSessionRecommendation" title="actions.action_conf_sessions.ActionGiveSessionRecommendation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActionGiveSessionRecommendation</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#actions.action_conf_sessions.ValidateSessionRecommenderForm" title="actions.action_conf_sessions.ValidateSessionRecommenderForm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValidateSessionRecommenderForm</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#actions.action_conf_sessions.ActionGiveSpeakerName" title="actions.action_conf_sessions.ActionGiveSpeakerName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActionGiveSpeakerName</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#actions.action_conf_sessions.ActionInfoNextSession" title="actions.action_conf_sessions.ActionInfoNextSession"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActionInfoNextSession</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#actions.action_conf_sessions.ActionKeynoteSpeakers" title="actions.action_conf_sessions.ActionKeynoteSpeakers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActionKeynoteSpeakers</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#actions.action_conf_sessions.ActionKeynoteInfo" title="actions.action_conf_sessions.ActionKeynoteInfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActionKeynoteInfo</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#actions.action_conf_sessions.ActionConferenceSchedule" title="actions.action_conf_sessions.ActionConferenceSchedule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActionConferenceSchedule</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#actions.action_conf_sessions.ActionSessionInformation" title="actions.action_conf_sessions.ActionSessionInformation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActionSessionInformation</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#actions.action_conf_sessions.check_day" title="actions.action_conf_sessions.check_day"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_day</span></code></a>(→ str)</p></td>
+<td><p>Matches the name of a day to a date.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#actions.action_conf_sessions.get_session_information" title="actions.action_conf_sessions.get_session_information"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_session_information</span></code></a>(→ list)</p></td>
+<td><p>Gets information about sessions.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#actions.action_conf_sessions.recommend_session" title="actions.action_conf_sessions.recommend_session"><code class="xref py py-obj docutils literal notranslate"><span class="pre">recommend_session</span></code></a>(→ list)</p></td>
+<td><p>Matches entered phrase with keywords and recommends session.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#actions.action_conf_sessions.get_current_date_and_time" title="actions.action_conf_sessions.get_current_date_and_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_current_date_and_time</span></code></a>(→ datetime.datetime)</p></td>
+<td><p>Returns current date and time.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#actions.action_conf_sessions.check_session_number" title="actions.action_conf_sessions.check_session_number"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_session_number</span></code></a>(→ str)</p></td>
+<td><p>Matches words and numbers.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#actions.action_conf_sessions.format_timeslot" title="actions.action_conf_sessions.format_timeslot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">format_timeslot</span></code></a>(→ str)</p></td>
+<td><p>Formats timeslot extracted from DB to text.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#actions.action_conf_sessions.ENDDATE" title="actions.action_conf_sessions.ENDDATE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ENDDATE</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#actions.action_conf_sessions.DB_NAME" title="actions.action_conf_sessions.DB_NAME"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DB_NAME</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.ENDDATE">
+<span class="sig-prename descclassname"><span class="pre">actions.action_conf_sessions.</span></span><span class="sig-name descname"><span class="pre">ENDDATE</span></span><a class="headerlink" href="#actions.action_conf_sessions.ENDDATE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.DB_NAME">
+<span class="sig-prename descclassname"><span class="pre">actions.action_conf_sessions.</span></span><span class="sig-name descname"><span class="pre">DB_NAME</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'conference'</span></em><a class="headerlink" href="#actions.action_conf_sessions.DB_NAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.ActionGiveSessionRecommendation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">actions.action_conf_sessions.</span></span><span class="sig-name descname"><span class="pre">ActionGiveSessionRecommendation</span></span><a class="headerlink" href="#actions.action_conf_sessions.ActionGiveSessionRecommendation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">rasa_sdk.Action</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.ActionGiveSessionRecommendation.name">
+<span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Text</span></span></span><a class="headerlink" href="#actions.action_conf_sessions.ActionGiveSessionRecommendation.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.ActionGiveSessionRecommendation.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.executor.CollectingDispatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#actions.action_conf_sessions.ActionGiveSessionRecommendation.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears the slots after giving recommendation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dispatcher</strong> – Class responsible for sending messages back to user.</p></li>
+<li><p><strong>tracker</strong> – Class that maintains the state of a conversation.</p></li>
+<li><p><strong>domain</strong> – Dictionary containing information stored in ‘domain.yml’.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.ValidateSessionRecommenderForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">actions.action_conf_sessions.</span></span><span class="sig-name descname"><span class="pre">ValidateSessionRecommenderForm</span></span><a class="headerlink" href="#actions.action_conf_sessions.ValidateSessionRecommenderForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">rasa_sdk.FormValidationAction</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.ValidateSessionRecommenderForm.name">
+<span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Text</span></span></span><a class="headerlink" href="#actions.action_conf_sessions.ValidateSessionRecommenderForm.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.ValidateSessionRecommenderForm.validate_session_topic">
+<span class="sig-name descname"><span class="pre">validate_session_topic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">slot_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.executor.CollectingDispatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.types.DomainDict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#actions.action_conf_sessions.ValidateSessionRecommenderForm.validate_session_topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks the session topic</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>slot_value</strong> – What the slot contains</p></li>
+<li><p><strong>dispatcher</strong> – Class responsible for sending messages back to user.</p></li>
+<li><p><strong>tracker</strong> – Class that maintains the state of a conversation.</p></li>
+<li><p><strong>domain</strong> – Dictionary containing information stored in ‘domain.yml’.</p></li>
+<li><p><strong>index</strong> – Number to pick from the top 5 recommendations</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.ValidateSessionRecommenderForm.validate_session_new">
+<span class="sig-name descname"><span class="pre">validate_session_new</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">slot_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.executor.CollectingDispatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.types.DomainDict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#actions.action_conf_sessions.ValidateSessionRecommenderForm.validate_session_new" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if user accepts or declines recommendation.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.ActionGiveSpeakerName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">actions.action_conf_sessions.</span></span><span class="sig-name descname"><span class="pre">ActionGiveSpeakerName</span></span><a class="headerlink" href="#actions.action_conf_sessions.ActionGiveSpeakerName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">rasa_sdk.Action</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.ActionGiveSpeakerName.name">
+<span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Text</span></span></span><a class="headerlink" href="#actions.action_conf_sessions.ActionGiveSpeakerName.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.ActionGiveSpeakerName.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.executor.CollectingDispatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#actions.action_conf_sessions.ActionGiveSpeakerName.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds information about a speaker.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dispatcher</strong> – Class responsible for sending messages back to user.</p></li>
+<li><p><strong>tracker</strong> – Class that maintains the state of a conversation.</p></li>
+<li><p><strong>domain</strong> – Dictionary containing information stored in ‘domain.yml’.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.ActionInfoNextSession">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">actions.action_conf_sessions.</span></span><span class="sig-name descname"><span class="pre">ActionInfoNextSession</span></span><a class="headerlink" href="#actions.action_conf_sessions.ActionInfoNextSession" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">rasa_sdk.Action</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.ActionInfoNextSession.name">
+<span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Text</span></span></span><a class="headerlink" href="#actions.action_conf_sessions.ActionInfoNextSession.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.ActionInfoNextSession.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.executor.CollectingDispatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#actions.action_conf_sessions.ActionInfoNextSession.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds information about next session</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dispatcher</strong> – Class responsible for sending messages back to user.</p></li>
+<li><p><strong>tracker</strong> – Class that maintains the state of a conversation.</p></li>
+<li><p><strong>domain</strong> – Dictionary containing information stored in ‘domain.yml’.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.ActionKeynoteSpeakers">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">actions.action_conf_sessions.</span></span><span class="sig-name descname"><span class="pre">ActionKeynoteSpeakers</span></span><a class="headerlink" href="#actions.action_conf_sessions.ActionKeynoteSpeakers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">rasa_sdk.Action</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.ActionKeynoteSpeakers.name">
+<span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Text</span></span></span><a class="headerlink" href="#actions.action_conf_sessions.ActionKeynoteSpeakers.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.ActionKeynoteSpeakers.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.executor.CollectingDispatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#actions.action_conf_sessions.ActionKeynoteSpeakers.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gives information about the keynotes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dispatcher</strong> – Class responsible for sending messages back to user.</p></li>
+<li><p><strong>tracker</strong> – Class that maintains the state of a conversation.</p></li>
+<li><p><strong>domain</strong> – Dictionary containing information stored in ‘domain.yml’.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.ActionKeynoteInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">actions.action_conf_sessions.</span></span><span class="sig-name descname"><span class="pre">ActionKeynoteInfo</span></span><a class="headerlink" href="#actions.action_conf_sessions.ActionKeynoteInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">rasa_sdk.Action</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.ActionKeynoteInfo.name">
+<span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Text</span></span></span><a class="headerlink" href="#actions.action_conf_sessions.ActionKeynoteInfo.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.ActionKeynoteInfo.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.executor.CollectingDispatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#actions.action_conf_sessions.ActionKeynoteInfo.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gives more information about keynotes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dispatcher</strong> – Class responsible for sending messages back to user.</p></li>
+<li><p><strong>tracker</strong> – Class that maintains the state of a conversation.</p></li>
+<li><p><strong>domain</strong> – Dictionary containing information stored in ‘domain.yml’.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.ActionConferenceSchedule">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">actions.action_conf_sessions.</span></span><span class="sig-name descname"><span class="pre">ActionConferenceSchedule</span></span><a class="headerlink" href="#actions.action_conf_sessions.ActionConferenceSchedule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">rasa_sdk.Action</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.ActionConferenceSchedule.name">
+<span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Text</span></span></span><a class="headerlink" href="#actions.action_conf_sessions.ActionConferenceSchedule.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.ActionConferenceSchedule.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.executor.CollectingDispatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#actions.action_conf_sessions.ActionConferenceSchedule.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the schedule for the conference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dispatcher</strong> – Class responsible for sending messages back to user.</p></li>
+<li><p><strong>tracker</strong> – Class that maintains the state of a conversation.</p></li>
+<li><p><strong>domain</strong> – Dictionary containing information stored in ‘domain.yml’.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.ActionSessionInformation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">actions.action_conf_sessions.</span></span><span class="sig-name descname"><span class="pre">ActionSessionInformation</span></span><a class="headerlink" href="#actions.action_conf_sessions.ActionSessionInformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">rasa_sdk.Action</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.ActionSessionInformation.name">
+<span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Text</span></span></span><a class="headerlink" href="#actions.action_conf_sessions.ActionSessionInformation.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.ActionSessionInformation.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.executor.CollectingDispatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#actions.action_conf_sessions.ActionSessionInformation.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets information about a session.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dispatcher</strong> – Class responsible for sending messages back to user.</p></li>
+<li><p><strong>tracker</strong> – Class that maintains the state of a conversation.</p></li>
+<li><p><strong>domain</strong> – Dictionary containing information stored in ‘domain.yml’.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.check_day">
+<span class="sig-prename descclassname"><span class="pre">actions.action_conf_sessions.</span></span><span class="sig-name descname"><span class="pre">check_day</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">day</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#actions.action_conf_sessions.check_day" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matches the name of a day to a date.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>day</strong> – The day</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The date.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.get_session_information">
+<span class="sig-prename descclassname"><span class="pre">actions.action_conf_sessions.</span></span><span class="sig-name descname"><span class="pre">get_session_information</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#actions.action_conf_sessions.get_session_information" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets information about sessions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>db</strong> – The database it will use.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of sessions.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.recommend_session">
+<span class="sig-prename descclassname"><span class="pre">actions.action_conf_sessions.</span></span><span class="sig-name descname"><span class="pre">recommend_session</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phrase</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#actions.action_conf_sessions.recommend_session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matches entered phrase with keywords and recommends session.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A list with the 5 most relevant sessions.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.get_current_date_and_time">
+<span class="sig-prename descclassname"><span class="pre">actions.action_conf_sessions.</span></span><span class="sig-name descname"><span class="pre">get_current_date_and_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">datetime.datetime</span></span></span><a class="headerlink" href="#actions.action_conf_sessions.get_current_date_and_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns current date and time.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.check_session_number">
+<span class="sig-prename descclassname"><span class="pre">actions.action_conf_sessions.</span></span><span class="sig-name descname"><span class="pre">check_session_number</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#actions.action_conf_sessions.check_session_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matches words and numbers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>type</strong> – A session type.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A session type with appropriate number.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="actions.action_conf_sessions.format_timeslot">
+<span class="sig-prename descclassname"><span class="pre">actions.action_conf_sessions.</span></span><span class="sig-name descname"><span class="pre">format_timeslot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeslot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#actions.action_conf_sessions.format_timeslot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Formats timeslot extracted from DB to text.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>timeslot</strong> – DB entry.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Timeslot formatted in plain text.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, IAI group, University of Stavanger.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

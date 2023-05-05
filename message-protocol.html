@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Message protocol &mdash; DAGFiNN 0.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            DAGFiNN
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="folder_structure.html">Folder Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autoapi/index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DAGFiNN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Message protocol</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/message-protocol.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="message-protocol">
+<h1>Message protocol<a class="headerlink" href="#message-protocol" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>Focus on making it work in webchat</p>
+</div></blockquote>
+<section id="webchat">
+<h2>Webchat<a class="headerlink" href="#webchat" title="Permalink to this headline">¶</a></h2>
+<section id="in-general">
+<h3>In general<a class="headerlink" href="#in-general" title="Permalink to this headline">¶</a></h3>
+<p>responses:
+utter_greet:</p>
+<ul class="simple">
+<li><p>text: “Hey, {name}. How are you?”</p></li>
+</ul>
+<p>{name}can be set programatically or can be taken from a slot.</p>
+<p>dispatcher.utter_message(
+template=”utter_greet”,
+name=”Sara”
+)</p>
+</section>
+</section>
+<section id="conditionals">
+<h2>Conditionals<a class="headerlink" href="#conditionals" title="Permalink to this headline">¶</a></h2>
+<p>To specify repsonses to only be sent to the furhat, and not webchat you can apply a conoditional: <br /> <code class="docutils literal notranslate"><span class="pre">channel:</span> <span class="pre">furhat</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">text</span><span class="p">:</span> <span class="n">Link</span> <span class="n">to</span> <span class="p">[</span><span class="n">Uis</span> <span class="n">Homepage</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">uis</span><span class="o">.</span><span class="n">no</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">text</span><span class="p">:</span> <span class="n">Visit</span> <span class="n">UIS</span> <span class="n">no</span>
+  <span class="n">channel</span><span class="p">:</span> <span class="n">furhat</span>
+</pre></div>
+</div>
+<p>If no <code class="docutils literal notranslate"><span class="pre">channel:</span> <span class="pre">furhat</span></code> is present, responses will still be sent to furhat to be uttered. So normally you don’t use this.
+Only use this if you need to distinguish between webchat and furhat \ spoken.</p>
+<section id="links">
+<h3>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">text</span><span class="p">:</span> <span class="n">Link</span> <span class="n">to</span> <span class="p">[</span><span class="n">Uis</span> <span class="n">Homepage</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">uis</span><span class="o">.</span><span class="n">no</span><span class="p">)</span> 
+</pre></div>
+</div>
+<p>Issue: Since this is text, furhat will try to speak out the link.</p>
+<p>To solve this you can use conditional statements:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">text</span><span class="p">:</span> <span class="n">Link</span> <span class="n">to</span> <span class="p">[</span><span class="n">Uis</span> <span class="n">Homepage</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">uis</span><span class="o">.</span><span class="n">no</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">text</span><span class="p">:</span> <span class="n">Visit</span> <span class="n">UIS</span> <span class="n">no</span>
+  <span class="n">channel</span><span class="p">:</span> <span class="n">furhat</span>
+</pre></div>
+</div>
+<p>This means the Visit UIS no will be spoken by the furhat, and appear at the furhatscreen, while the link will appear in the webchat.</p>
+</section>
+<section id="emojis">
+<h3>Emojis<a class="headerlink" href="#emojis" title="Permalink to this headline">¶</a></h3>
+<p>Most Emojis work everywhere that can display text.
+Check out this website to copy-paste some emojis.</p>
+<ul class="simple">
+<li><p>https://emojipedia.org/</p></li>
+</ul>
+</section>
+<section id="images">
+<h3>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">utter_cheer_up</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">text</span><span class="p">:</span> <span class="s2">&quot;Here is something to cheer you up:&quot;</span>
+    <span class="n">image</span><span class="p">:</span> <span class="s2">&quot;https://i.imgur.com/nGF1K8f.jpg&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="carousel">
+<h3>Carousel<a class="headerlink" href="#carousel" title="Permalink to this headline">¶</a></h3>
+<p>A carousel is a custom action that needs to be modified to your specific needs.
+There is a action_quiz carousel basic template.</p>
+<p>So you will need to copy the template, register it as a new action, and fill in the response as you need. This example returns the name <code class="docutils literal notranslate"><span class="pre">action_quiz</span></code>.
+Rename your new file, your class, and return name. The name returned, is the name you register in <code class="docutils literal notranslate"><span class="pre">domain.yml</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ActionQuiz</span><span class="p">(</span><span class="n">Action</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Text</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;action_quiz&quot;</span>    
+
+</pre></div>
+</div>
+<p>You should now be able to call this action, to serve a list. That works both for webchat and the furhatscreen.</p>
+<p>The carousel will behave differently on furhatscreen and the webchat.
+No interactivity on the furhatscreen, so no buttons.</p>
+</section>
+<section id="furhatscreen">
+<h3>Furhatscreen<a class="headerlink" href="#furhatscreen" title="Permalink to this headline">¶</a></h3>
+<p><img alt="Frontend_quiz" src="_images/frontend_quiz.png" /></p>
+</section>
+<section id="id1">
+<h3>Webchat<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p><img alt="Webchat_quiz" src="_images/webchat_quiz.png" /></p>
+</section>
+<section id="buttons">
+<h3>Buttons<a class="headerlink" href="#buttons" title="Permalink to this headline">¶</a></h3>
+<p>utter_greet:</p>
+<ul class="simple">
+<li><p>text: “Hey! How are you?”
+buttons:</p>
+<ul>
+<li><p>title: 😀
+payload: “mood_great”</p></li>
+<li><p>title: “super sad”
+payload: “mood_unhappy”</p></li>
+</ul>
+</li>
+</ul>
+<p>Both carousel and buttons examples use intents as payloads.
+See https://rasa.com/docs/rasa/responses/#buttons for info on other payloads such as /inform</p>
+<p>As with the carousel, no buttons are shown on the furhatscreen.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="furhat-screen">
+<h2>Furhat Screen<a class="headerlink" href="#furhat-screen" title="Permalink to this headline">¶</a></h2>
+<section id="maps">
+<h3>Maps<a class="headerlink" href="#maps" title="Permalink to this headline">¶</a></h3>
+<p>If maps are needed it should simply be an image. Any markers would be put on the map before saving the image.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="furhat">
+<h2>Furhat<a class="headerlink" href="#furhat" title="Permalink to this headline">¶</a></h2>
+<section id="id2">
+<h3>Emojis<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>If you use emojis in responses, the furhat <em>should</em> only allow alphanumerical values,
+e.g scrub any emojis from the text, and not try to pronounce emoji-names.</p>
+</section>
+<section id="facial-expressions">
+<h3>Facial expressions<a class="headerlink" href="#facial-expressions" title="Permalink to this headline">¶</a></h3>
+<p>Make the furhat show emotions.
+Currently the furhat will raise eyebrows and smile as a default response.</p>
+<p>Adding a custom data to the response with the following syntax will make the furhat show facial expressions.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">utter_goodbye</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">text</span><span class="p">:</span> <span class="s2">&quot;Bye&quot;</span>
+    <span class="n">custom</span><span class="p">:</span>
+      <span class="n">data</span><span class="p">:</span>
+        <span class="n">expression</span><span class="p">:</span>
+          <span class="n">expression_type</span><span class="p">:</span> <span class="s2">&quot;anger&quot;</span>
+</pre></div>
+</div>
+<p>These 5 facial expressions are currently supported.</p>
+<ul class="simple">
+<li><p>“anger” to Gestures.ExpressAnger,</p></li>
+<li><p>“shakehead” to Gestures.Shake,</p></li>
+<li><p>“nod” to Gestures.Nod,</p></li>
+<li><p>“wink” to Gestures.Wink,</p></li>
+<li><p>“surprise” to Gestures.Surprise</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, IAI group, University of Stavanger.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

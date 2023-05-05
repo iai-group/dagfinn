@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>actions.action_recommend_poi &mdash; DAGFiNN 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            DAGFiNN
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../folder_structure.html">Folder Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">DAGFiNN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><code class="xref py py-mod docutils literal notranslate"><span class="pre">actions.action_recommend_poi</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/autoapi/actions/action_recommend_poi/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-actions.action_recommend_poi">
+<span id="actions-action-recommend-poi"></span><h1><a class="reference internal" href="#module-actions.action_recommend_poi" title="actions.action_recommend_poi"><code class="xref py py-mod docutils literal notranslate"><span class="pre">actions.action_recommend_poi</span></code></a><a class="headerlink" href="#module-actions.action_recommend_poi" title="Permalink to this headline">¶</a></h1>
+<p>Custom actions related to point of interest recommendations.</p>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#actions.action_recommend_poi.POIResults" title="actions.action_recommend_poi.POIResults"><code class="xref py py-obj docutils literal notranslate"><span class="pre">POIResults</span></code></a></p></td>
+<td><p>Object for browsing POI-related things in database.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#actions.action_recommend_poi.POIFunctions" title="actions.action_recommend_poi.POIFunctions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">POIFunctions</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#actions.action_recommend_poi.ActionRecommendPOI" title="actions.action_recommend_poi.ActionRecommendPOI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActionRecommendPOI</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#actions.action_recommend_poi.ActionRecommendCheapPOI" title="actions.action_recommend_poi.ActionRecommendCheapPOI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActionRecommendCheapPOI</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#actions.action_recommend_poi.ActionDoesPOIHave" title="actions.action_recommend_poi.ActionDoesPOIHave"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActionDoesPOIHave</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#actions.action_recommend_poi.ActionRecommendPOITransport" title="actions.action_recommend_poi.ActionRecommendPOITransport"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActionRecommendPOITransport</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#actions.action_recommend_poi.DB_NAME" title="actions.action_recommend_poi.DB_NAME"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DB_NAME</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#actions.action_recommend_poi.CONFERENCE_ADDRESS" title="actions.action_recommend_poi.CONFERENCE_ADDRESS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CONFERENCE_ADDRESS</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#actions.action_recommend_poi.MAPS" title="actions.action_recommend_poi.MAPS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MAPS</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.DB_NAME">
+<span class="sig-prename descclassname"><span class="pre">actions.action_recommend_poi.</span></span><span class="sig-name descname"><span class="pre">DB_NAME</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'poi'</span></em><a class="headerlink" href="#actions.action_recommend_poi.DB_NAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.CONFERENCE_ADDRESS">
+<span class="sig-prename descclassname"><span class="pre">actions.action_recommend_poi.</span></span><span class="sig-name descname"><span class="pre">CONFERENCE_ADDRESS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Kristine</span> <span class="pre">Bonnevies</span> <span class="pre">vei</span> <span class="pre">22,</span> <span class="pre">4021</span> <span class="pre">Stavanger,</span> <span class="pre">Norway'</span></em><a class="headerlink" href="#actions.action_recommend_poi.CONFERENCE_ADDRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.MAPS">
+<span class="sig-prename descclassname"><span class="pre">actions.action_recommend_poi.</span></span><span class="sig-name descname"><span class="pre">MAPS</span></span><a class="headerlink" href="#actions.action_recommend_poi.MAPS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">actions.action_recommend_poi.</span></span><span class="sig-name descname"><span class="pre">POIResults</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Text</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">likes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dislikes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#actions.action_recommend_poi.POIResults" title="Permalink to this definition">¶</a></dt>
+<dd><p>Object for browsing POI-related things in database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>category</strong> – POI category. Defaults to “restaurant”.</p></li>
+<li><p><strong>likes</strong> – Liked POI tags. Defaults to [].</p></li>
+<li><p><strong>dislikes</strong> – Disliked POI tags. Defaults to [].</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.DISLIKE_TO_LIKE_REPLACEMENT_MAP">
+<span class="sig-name descname"><span class="pre">DISLIKE_TO_LIKE_REPLACEMENT_MAP</span></span><a class="headerlink" href="#actions.action_recommend_poi.POIResults.DISLIKE_TO_LIKE_REPLACEMENT_MAP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.BUS_STOPS_WITHIN_WALKING_DISTANCE">
+<span class="sig-name descname"><span class="pre">BUS_STOPS_WITHIN_WALKING_DISTANCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['Jernbaneveien',</span> <span class="pre">'Jorenholmen',</span> <span class="pre">'Kannik']</span></em><a class="headerlink" href="#actions.action_recommend_poi.POIResults.BUS_STOPS_WITHIN_WALKING_DISTANCE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.LAYOVER_TO_ORIGIN_MAP">
+<span class="sig-name descname"><span class="pre">LAYOVER_TO_ORIGIN_MAP</span></span><a class="headerlink" href="#actions.action_recommend_poi.POIResults.LAYOVER_TO_ORIGIN_MAP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.SELECT_POI_BY_PID">
+<span class="sig-name descname"><span class="pre">SELECT_POI_BY_PID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Multiline-String</span></em><a class="headerlink" href="#actions.action_recommend_poi.POIResults.SELECT_POI_BY_PID" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><details><summary>Show Value</summary><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            SELECT *</span>
+<span class="sd">            FROM POI</span>
+<span class="sd">            WHERE pid IN ({pids})</span>
+<span class="sd">            ORDER BY {order}</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</details></div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.SELECT_POI_BY_CATEGORY">
+<span class="sig-name descname"><span class="pre">SELECT_POI_BY_CATEGORY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Multiline-String</span></em><a class="headerlink" href="#actions.action_recommend_poi.POIResults.SELECT_POI_BY_CATEGORY" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><details><summary>Show Value</summary><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            SELECT *</span>
+<span class="sd">            FROM POI</span>
+<span class="sd">            WHERE LOWER(category) LIKE &#39;%{category}%&#39;</span>
+<span class="sd">            ORDER BY {order}</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</details></div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.SELECT_PID_BY_TAG">
+<span class="sig-name descname"><span class="pre">SELECT_PID_BY_TAG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Multiline-String</span></em><a class="headerlink" href="#actions.action_recommend_poi.POIResults.SELECT_PID_BY_TAG" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><details><summary>Show Value</summary><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            SELECT POI.pid</span>
+<span class="sd">            FROM POI</span>
+<span class="sd">            INNER JOIN POITag</span>
+<span class="sd">            ON POI.pid = POITag.pid</span>
+<span class="sd">            WHERE POITag.tag LIKE &#39;%{}%&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</details></div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.SELECT_PID_BY_CATEGORY_AND_NOT_PID">
+<span class="sig-name descname"><span class="pre">SELECT_PID_BY_CATEGORY_AND_NOT_PID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Multiline-String</span></em><a class="headerlink" href="#actions.action_recommend_poi.POIResults.SELECT_PID_BY_CATEGORY_AND_NOT_PID" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><details><summary>Show Value</summary><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            SELECT pid</span>
+<span class="sd">            FROM POI</span>
+<span class="sd">            WHERE LOWER(category) LIKE &#39;%{category}%&#39;</span>
+<span class="sd">            AND pid NOT IN ({pids})</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</details></div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.SELECT_TAG_BY_TAG">
+<span class="sig-name descname"><span class="pre">SELECT_TAG_BY_TAG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Multiline-String</span></em><a class="headerlink" href="#actions.action_recommend_poi.POIResults.SELECT_TAG_BY_TAG" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><details><summary>Show Value</summary><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            SELECT tag</span>
+<span class="sd">            FROM POITag</span>
+<span class="sd">            WHERE tag LIKE &#39;%{}%&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</details></div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.SELECT_BUS_ROUTE_BY_DESTINATION">
+<span class="sig-name descname"><span class="pre">SELECT_BUS_ROUTE_BY_DESTINATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Multiline-String</span></em><a class="headerlink" href="#actions.action_recommend_poi.POIResults.SELECT_BUS_ROUTE_BY_DESTINATION" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><details><summary>Show Value</summary><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            SELECT *</span>
+<span class="sd">            FROM busRoute</span>
+<span class="sd">            WHERE destination = &#39;{}&#39;</span>
+<span class="sd">            ORDER BY duration ASC</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</details></div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.initialization">
+<span class="sig-name descname"><span class="pre">initialization</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIResults.initialization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Further initialization of fields.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.swap_dislikes_with_likes">
+<span class="sig-name descname"><span class="pre">swap_dislikes_with_likes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIResults.swap_dislikes_with_likes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Swaps certain disliked POI tags with more appropriate liked ones.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.remove_duplicate_tags">
+<span class="sig-name descname"><span class="pre">remove_duplicate_tags</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIResults.remove_duplicate_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes duplicates from liked and disliked POI tags. If the same tag
+is found in both dislikes and likes it will be removed from dislikes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.get_poi_matches">
+<span class="sig-name descname"><span class="pre">get_poi_matches</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIResults.get_poi_matches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of POIs that matches likes, dislikes or category.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of POIs.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.get_cheap_poi_matches">
+<span class="sig-name descname"><span class="pre">get_cheap_poi_matches</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIResults.get_cheap_poi_matches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of POIs sorted by price that matches
+likes, dislikes or category.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of POIs.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.get_full_bus_route">
+<span class="sig-name descname"><span class="pre">get_full_bus_route</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">destination</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Text</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIResults.get_full_bus_route" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gives dictionary of bus routes to reach some final bus stop.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>destination</strong> – Name of bus top to be reached</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dictionary of bus route dictionary objects.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.fetch_bus_routes">
+<span class="sig-name descname"><span class="pre">fetch_bus_routes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">destination</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Text</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIResults.fetch_bus_routes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetches list of bus routes matching destination.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>destination</strong> – Destination bus stop.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of route dictionary objects to provided bus stops.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.fetch_pois_by_category">
+<span class="sig-name descname"><span class="pre">fetch_pois_by_category</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIResults.fetch_pois_by_category" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns list of matching POIs based on category.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of POI dictionary objects.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.fetch_pois_by_likes">
+<span class="sig-name descname"><span class="pre">fetch_pois_by_likes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIResults.fetch_pois_by_likes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gives list of POI objects based on likes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of POI dictionary objects.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.fetch_pids_by_likes">
+<span class="sig-name descname"><span class="pre">fetch_pids_by_likes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIResults.fetch_pids_by_likes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates list of POIs containing all liked tags.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of POI IDs.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.fetch_pids_by_dislikes">
+<span class="sig-name descname"><span class="pre">fetch_pids_by_dislikes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIResults.fetch_pids_by_dislikes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates list of POIs containing any of the disliked tags.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of POI IDs.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.fetch_pois_by_dislikes">
+<span class="sig-name descname"><span class="pre">fetch_pois_by_dislikes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIResults.fetch_pois_by_dislikes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gives list of POI objects without unwanted tags.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of POI dictionary objects.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.fetch_pois_by_likes_and_dislikes">
+<span class="sig-name descname"><span class="pre">fetch_pois_by_likes_and_dislikes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIResults.fetch_pois_by_likes_and_dislikes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates list of POI objects satisfying both likes and dislikes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of POI dictionary objects.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.fetch_proper_tags">
+<span class="sig-name descname"><span class="pre">fetch_proper_tags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tags</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIResults.fetch_proper_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetches list proper tag names from NLU generated ones.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tags</strong> – Tags extracted by NLU.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Proper tags from database.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.fetch_by_sql">
+<span class="sig-name descname"><span class="pre">fetch_by_sql</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sql</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIResults.fetch_by_sql" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetches list from database based on SQL statement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sql</strong> – SQL to be executed by SQLite.</p></li>
+<li><p><strong>list</strong> – List of arguments for SQL.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of items.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.fetch_pois_by_pids">
+<span class="sig-name descname"><span class="pre">fetch_pois_by_pids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIResults.fetch_pois_by_pids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given list of POI IDs, returns list of POI objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pids</strong> – List of POI IDs.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of POI dictonary objects.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.get_organized_poi_list">
+<span class="sig-name descname"><span class="pre">get_organized_poi_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cur</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIResults.get_organized_poi_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Organizes SQL data into a list of POI dictionaries.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cur</strong> – Result from SQL query.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of POI dictionary objects.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIResults.get_organized_bus_route_list">
+<span class="sig-name descname"><span class="pre">get_organized_bus_route_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cur</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIResults.get_organized_bus_route_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Organizes SQL data into a list of bus route dictionaries.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cur</strong> – Result from SQL query.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of bus route dictionary objects.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIFunctions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">actions.action_recommend_poi.</span></span><span class="sig-name descname"><span class="pre">POIFunctions</span></span><a class="headerlink" href="#actions.action_recommend_poi.POIFunctions" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIFunctions.get_match">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_cheap</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIFunctions.get_match" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves POI match based on slots and other preferences.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tracker</strong> – Class that maintains the state of a conversation.</p></li>
+<li><p><strong>is_cheap</strong> – Prioririzes cheap places if set to true.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>POI dictionary object.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIFunctions.get_matches_by_likes">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_matches_by_likes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIFunctions.get_matches_by_likes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetches all POI objects that has provided liked POI tags.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tracker</strong> – Class that maintains the state of a conversation.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>POI dictionary objects.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIFunctions.get_bus_route">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_bus_route</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIFunctions.get_bus_route" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIFunctions.fetch_match">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fetch_match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">likes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dislikes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_cheap</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIFunctions.fetch_match" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves POI match from database using POI results class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>category</strong> – POI Category</p></li>
+<li><p><strong>likes</strong> – Liked POI tags.</p></li>
+<li><p><strong>dislikes</strong> – Disliked POI tags.</p></li>
+<li><p><strong>is_cheap</strong> – Prioririzes cheap places if set to true.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>POI dictionary object.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIFunctions.proper_tags_string">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">proper_tags_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tags</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Text</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIFunctions.proper_tags_string" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIFunctions.set_likes">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_likes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIFunctions.set_likes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets up the list of liked POI tags based on circumstances.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tracker</strong> – Class that maintains the state of a conversation.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of liked POI tags.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIFunctions.set_dislikes">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_dislikes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIFunctions.set_dislikes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets up the list of disliked POI tags based on circumstances.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tracker</strong> – Class that maintains the state of a conversation.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of disliked POI tags.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIFunctions.has_new_tags">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_new_tags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIFunctions.has_new_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if liked and disliked POI tags have changed since last
+recommendation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tracker</strong> – Class that maintains the state of a conversation.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if there are new tags.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIFunctions.has_new_category">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_new_category</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIFunctions.has_new_category" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if POI category has changed since last recommendation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tracker</strong> – Class that maintains the state of a conversation.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if category has changed.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIFunctions.has_walking_distance">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_walking_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIFunctions.has_walking_distance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIFunctions.is_different_list">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_different_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIFunctions.is_different_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if two list contain different items.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>list1</strong> – First list.</p></li>
+<li><p><strong>list2</strong> – Second list.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if they do not contain the same items.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIFunctions.recommend_by_category">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">recommend_by_category</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.executor.CollectingDispatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">match</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Text</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIFunctions.recommend_by_category" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recommendes provided POI match with provided response utterance.
+Uses fields: name, category.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dispatcher</strong> – Class responsible for sending messages back to user.</p></li>
+<li><p><strong>match</strong> – POI Dictionary object.</p></li>
+<li><p><strong>response</strong> – The utterance being called by the dispatcher.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIFunctions.recommend_by_likes">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">recommend_by_likes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.executor.CollectingDispatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">match</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Text</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIFunctions.recommend_by_likes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recommendes provided POI match with provided response utterance.
+Uses fields: name, category, likes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dispatcher</strong> – Class responsible for sending messages back to user.</p></li>
+<li><p><strong>match</strong> – POI Dictionary object.</p></li>
+<li><p><strong>response</strong> – The utterance being called by the dispatcher.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIFunctions.recommend_by_likes_and_dislikes">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">recommend_by_likes_and_dislikes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.executor.CollectingDispatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">match</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Text</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIFunctions.recommend_by_likes_and_dislikes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recommendes provided POI match with provided response utterance.
+Uses fields: name, category, likes, dislikes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dispatcher</strong> – Class responsible for sending messages back to user.</p></li>
+<li><p><strong>match</strong> – POI Dictionary object.</p></li>
+<li><p><strong>response</strong> – The utterance being called by the dispatcher.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIFunctions.stringify_list">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stringify_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seperator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Text</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'and'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Text</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIFunctions.stringify_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turns list into human readable form.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>list</strong> – List to be converted.</p></li>
+<li><p><strong>seperator</strong> – ‘and’, ‘or’, ‘nor’ etc.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>String with list items.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Text</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIFunctions.random_first_index">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">random_first_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx_range</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIFunctions.random_first_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gives random value between 0 and 3 or 0 and idx_range.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>idx_range</strong> – Maximun index allowed.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Random index number.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIFunctions.generate_poi_template">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">generate_poi_template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">poi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIFunctions.generate_poi_template" title="Permalink to this definition">¶</a></dt>
+<dd><p>Template object to be passed to external screen.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>poi</strong> – POI dictionary object.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Template dictionary object.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIFunctions.get_google_maps_img_url">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_google_maps_img_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">poi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Text</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIFunctions.get_google_maps_img_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gives URL to Google Maps static image based on POI data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>poi</strong> – POI entry used to generate URL.</p></li>
+<li><p><strong>match</strong> – POI entry being recommended.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIFunctions.get_osm_iframe_url">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_osm_iframe_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">poi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Text</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIFunctions.get_osm_iframe_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gives URL to Open Street Map HTML file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>poi</strong> – POI entry used to generate URL.</p></li>
+<li><p><strong>match</strong> – POI entry being recommended.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.POIFunctions.get_qr_code_url">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_qr_code_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Text</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Text</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.POIFunctions.get_qr_code_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gives URL to QR code generated from provided URL.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>url</strong> – Website to generate QR code for.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>URL to QR-code image.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Text</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.ActionRecommendPOI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">actions.action_recommend_poi.</span></span><span class="sig-name descname"><span class="pre">ActionRecommendPOI</span></span><a class="headerlink" href="#actions.action_recommend_poi.ActionRecommendPOI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">rasa_sdk.Action</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.ActionRecommendPOI.name">
+<span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Text</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.ActionRecommendPOI.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.ActionRecommendPOI.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.executor.CollectingDispatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#actions.action_recommend_poi.ActionRecommendPOI.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gives top rated POI match based on provided entities.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dispatcher</strong> – Class responsible for sending messages back to user.</p></li>
+<li><p><strong>tracker</strong> – Class that maintains the state of a conversation.</p></li>
+<li><p><strong>domain</strong> – Dictionary containing information stored in ‘domain.yml’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.ActionRecommendPOI.recommend_poi">
+<span class="sig-name descname"><span class="pre">recommend_poi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.executor.CollectingDispatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">match</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#actions.action_recommend_poi.ActionRecommendPOI.recommend_poi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Utters recommendation based on highest rating.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dispatcher</strong> – Class responsible for sending messages back to user.</p></li>
+<li><p><strong>match</strong> – POI dictionary object.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.ActionRecommendCheapPOI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">actions.action_recommend_poi.</span></span><span class="sig-name descname"><span class="pre">ActionRecommendCheapPOI</span></span><a class="headerlink" href="#actions.action_recommend_poi.ActionRecommendCheapPOI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">rasa_sdk.Action</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.ActionRecommendCheapPOI.name">
+<span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Text</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.ActionRecommendCheapPOI.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.ActionRecommendCheapPOI.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.executor.CollectingDispatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#actions.action_recommend_poi.ActionRecommendCheapPOI.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gives cheap POI match based on provided entities.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dispatcher</strong> – Class responsible for sending messages back to user.</p></li>
+<li><p><strong>tracker</strong> – Class that maintains the state of a conversation.</p></li>
+<li><p><strong>domain</strong> – Dictionary containing information stored in ‘domain.yml’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.ActionRecommendCheapPOI.recommend_poi">
+<span class="sig-name descname"><span class="pre">recommend_poi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.executor.CollectingDispatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">match</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.ActionRecommendCheapPOI.recommend_poi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Utters recommendation based on lowest price and highest rating</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dispatcher</strong> – Class responsible for sending messages back to user.</p></li>
+<li><p><strong>match</strong> – POI dictionary object.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.ActionDoesPOIHave">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">actions.action_recommend_poi.</span></span><span class="sig-name descname"><span class="pre">ActionDoesPOIHave</span></span><a class="headerlink" href="#actions.action_recommend_poi.ActionDoesPOIHave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">rasa_sdk.Action</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.ActionDoesPOIHave.name">
+<span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Text</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.ActionDoesPOIHave.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.ActionDoesPOIHave.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.executor.CollectingDispatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#actions.action_recommend_poi.ActionDoesPOIHave.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Responds to question on whether a POI has wanted POI tag.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dispatcher</strong> – Class responsible for sending messages back to user.</p></li>
+<li><p><strong>tracker</strong> – Class that maintains the state of a conversation.</p></li>
+<li><p><strong>domain</strong> – Dictionary containing information stored in ‘domain.yml’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.ActionDoesPOIHave.affirmative">
+<span class="sig-name descname"><span class="pre">affirmative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.executor.CollectingDispatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recommended_poi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#actions.action_recommend_poi.ActionDoesPOIHave.affirmative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Utters confirmation that place has POI tag.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dispatcher</strong> – Class responsible for sending messages back to user.</p></li>
+<li><p><strong>tracker</strong> – Class that maintains the state of a conversation.</p></li>
+<li><p><strong>recommended_poi</strong> – The POI in question.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.ActionDoesPOIHave.negative">
+<span class="sig-name descname"><span class="pre">negative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.executor.CollectingDispatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recommended_poi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_match</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#actions.action_recommend_poi.ActionDoesPOIHave.negative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Informs that the POI does not have the wanted POI tags.
+Goes on to recommend another POI that does have it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dispatcher</strong> – Class responsible for sending messages back to user.</p></li>
+<li><p><strong>tracker</strong> – Class that maintains the state of a conversation.</p></li>
+<li><p><strong>recommended_poi</strong> – The POI in question.</p></li>
+<li><p><strong>new_match</strong> – New POI being recommended.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.ActionDoesPOIHave.no_matches_found">
+<span class="sig-name descname"><span class="pre">no_matches_found</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.executor.CollectingDispatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recommended_poi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#actions.action_recommend_poi.ActionDoesPOIHave.no_matches_found" title="Permalink to this definition">¶</a></dt>
+<dd><p>No POI has the user’s wanted POI tags.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dispatcher</strong> – Class responsible for sending messages back to user.</p></li>
+<li><p><strong>tracker</strong> – Class that maintains the state of a conversation.</p></li>
+<li><p><strong>recommended_poi</strong> – The POI in question.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.ActionRecommendPOITransport">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">actions.action_recommend_poi.</span></span><span class="sig-name descname"><span class="pre">ActionRecommendPOITransport</span></span><a class="headerlink" href="#actions.action_recommend_poi.ActionRecommendPOITransport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">rasa_sdk.Action</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.ActionRecommendPOITransport.CATEGORY_TO_UTTERANCE_MAP">
+<span class="sig-name descname"><span class="pre">CATEGORY_TO_UTTERANCE_MAP</span></span><a class="headerlink" href="#actions.action_recommend_poi.ActionRecommendPOITransport.CATEGORY_TO_UTTERANCE_MAP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.ActionRecommendPOITransport.RECOGNIZED_MODES_OF_TRANSPORT">
+<span class="sig-name descname"><span class="pre">RECOGNIZED_MODES_OF_TRANSPORT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['taxi',</span> <span class="pre">'bus',</span> <span class="pre">'walk']</span></em><a class="headerlink" href="#actions.action_recommend_poi.ActionRecommendPOITransport.RECOGNIZED_MODES_OF_TRANSPORT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.ActionRecommendPOITransport.name">
+<span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Text</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.ActionRecommendPOITransport.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.ActionRecommendPOITransport.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.executor.CollectingDispatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#actions.action_recommend_poi.ActionRecommendPOITransport.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Responds to question on whether a POI has wanted POI tag.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dispatcher</strong> – Class responsible for sending messages back to user.</p></li>
+<li><p><strong>tracker</strong> – Class that maintains the state of a conversation.</p></li>
+<li><p><strong>domain</strong> – Dictionary containing information stored in ‘domain.yml’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.ActionRecommendPOITransport.recommend_transport_to_poi">
+<span class="sig-name descname"><span class="pre">recommend_transport_to_poi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.executor.CollectingDispatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preference</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Text</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#actions.action_recommend_poi.ActionRecommendPOITransport.recommend_transport_to_poi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recommends transport to POI</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dispatcher</strong> – Class responsible for sending messages back to user.</p></li>
+<li><p><strong>tracker</strong> – Class that maintains the state of a conversation.</p></li>
+<li><p><strong>preference</strong> – Transport preference.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Events to be sent to Rasa.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.ActionRecommendPOITransport.recommend_transport_by_walking">
+<span class="sig-name descname"><span class="pre">recommend_transport_by_walking</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.executor.CollectingDispatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.ActionRecommendPOITransport.recommend_transport_by_walking" title="Permalink to this definition">¶</a></dt>
+<dd><p>Utters walking distance to POI or recommends bus.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dispatcher</strong> – Class responsible for sending messages back to user.</p></li>
+<li><p><strong>tracker</strong> – Class that maintains the state of a conversation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.ActionRecommendPOITransport.recommend_transport_by_bus">
+<span class="sig-name descname"><span class="pre">recommend_transport_by_bus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.executor.CollectingDispatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#actions.action_recommend_poi.ActionRecommendPOITransport.recommend_transport_by_bus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates bus route recommendation to a POI.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dispatcher</strong> – Class responsible for sending messages back to user.</p></li>
+<li><p><strong>tracker</strong> – Class that maintains the state of a conversation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="actions.action_recommend_poi.ActionRecommendPOITransport.recommend_transport_in_general">
+<span class="sig-name descname"><span class="pre">recommend_transport_in_general</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.executor.CollectingDispatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rasa_sdk.Tracker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preference</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Text</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Text</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#actions.action_recommend_poi.ActionRecommendPOITransport.recommend_transport_in_general" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates transport response not based on a specific POI</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dispatcher</strong> – Class responsible for sending messages back to user.</p></li>
+<li><p><strong>tracker</strong> – Class that maintains the state of a conversation.</p></li>
+<li><p><strong>preference</strong> – Transport preference.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Events to be sent to Rasa.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, IAI group, University of Stavanger.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

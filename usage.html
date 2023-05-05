@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Usage &mdash; DAGFiNN 0.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Folder Structure" href="folder_structure.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            DAGFiNN
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-the-ip-address-of-the-rasa-server">Setting the IP-address of the rasa-server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starting-rasa-server-s">Starting RASA server(s)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-virtual-furhat-furhatscreen">Running virtual furhat + furhatscreen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-physical-furhat-furhatscreen">Running physical furhat + furhatscreen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#guest-network">Guest network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wifi-hotspot">Wifi Hotspot</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#running-rasa-webchat">Running rasa webchat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-webservers">Running webservers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#making-changes-to-the-skill-kotlin-code">Making changes to the skill | kotlin code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="folder_structure.html">Folder Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autoapi/index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DAGFiNN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Usage</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/usage.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<section id="setting-the-ip-address-of-the-rasa-server">
+<h2>Setting the IP-address of the rasa-server<a class="headerlink" href="#setting-the-ip-address-of-the-rasa-server" title="Permalink to this headline">¶</a></h2>
+<p>Step 1 for everything is to enter the correct IP for the RASA server.
+Normally when testing, you will use ‘localhost’ as your address.
+If you are running over a different network, go to config-file and change IP</p>
+<p>You change IP at the top of the file in question.
+You change the IP in</p>
+<blockquote>
+<div><p>dagfinn\ui\furhatScreen.index.js</p>
+</div></blockquote>
+<p>and in</p>
+<blockquote>
+<div><p>dagfinn\ui\furhat-skills\rasa\src\main\kotlin\furhatos\app\rasa\flow.interaction.kt</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">IP</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span>
+<span class="n">const</span> <span class="n">PORT</span> <span class="o">=</span> <span class="s2">&quot;5005&quot;</span>
+</pre></div>
+</div>
+<p>Remember to recompile after changing IP in <code class="docutils literal notranslate"><span class="pre">interaction.kt</span></code></p>
+<p>See
+<span class="xref myst">Making changes to the skill \ kotlin code</span></p>
+</section>
+<section id="starting-rasa-server-s">
+<h2>Starting RASA server(s)<a class="headerlink" href="#starting-rasa-server-s" title="Permalink to this headline">¶</a></h2>
+<p>In every case run rasa servers first. Make sure you are standing in the base project folder.
+And that you are in the virtual environment (dagfinn)</p>
+<blockquote>
+<div><p>(dagfinn) dagfinn\</p>
+</div></blockquote>
+<p>Before starting the bot and after every change we need to retrain the bot. This can be done with the command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rasa</span> <span class="n">train</span>
+</pre></div>
+</div>
+<p>To run the chatbot you will need two terminals.
+The first one is for the <em>actions</em> server. You can start it by typing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rasa</span> <span class="n">run</span> <span class="n">actions</span>
+</pre></div>
+</div>
+<p>In the second terminal you can start the Rasa server with all defined channels:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rasa</span> <span class="n">run</span> <span class="o">--</span><span class="n">cors</span> <span class="s2">&quot;*&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="running-virtual-furhat-furhatscreen">
+<h2>Running virtual furhat + furhatscreen<a class="headerlink" href="#running-virtual-furhat-furhatscreen" title="Permalink to this headline">¶</a></h2>
+<p>In order to run the virtual furhat you need to have downloaded the furhat virtual launcher.
+Go to the following link, you need to LOGIN you access the site.</p>
+<blockquote>
+<div><p>https://furhat.io/downloads</p>
+</div></blockquote>
+<p>Choose the virtual launcher of your choice: Mac, linux, windows.</p>
+<p>Start the launcher and start the SDK. Then press start skill.
+The skill will be located in <code class="docutils literal notranslate"><span class="pre">ui\furhatscreen</span></code>
+The name of the skillfile is:</p>
+<blockquote>
+<div><p>rasa-all.skill</p>
+</div></blockquote>
+<p>Now to virtual furhat should be running and connected to rasa.</p>
+</section>
+<section id="running-physical-furhat-furhatscreen">
+<h2>Running physical furhat + furhatscreen<a class="headerlink" href="#running-physical-furhat-furhatscreen" title="Permalink to this headline">¶</a></h2>
+<p>Start the robot by pressing the on button, small button, not the big wheel button.
+In order to connect to the furhat, your laptop needs to be on the same network.</p>
+<section id="guest-network">
+<h3>Guest network<a class="headerlink" href="#guest-network" title="Permalink to this headline">¶</a></h3>
+<p>By default the furhat is on the guest-network on uis. Go to uis.no and get access to the guest network</p>
+<blockquote>
+<div><p>https://www.uis.no/en/student/wifi-network</p>
+</div></blockquote>
+<p>Make sure you are actually connected to the guest-network.
+Make sure that the config file points to the correct IP address. Are you running rasa on the laptop, the IP you enter in the config file is your laptop’s IP. Usually something like <code class="docutils literal notranslate"><span class="pre">10.168.200.5</span></code></p>
+</section>
+<section id="wifi-hotspot">
+<h3>Wifi Hotspot<a class="headerlink" href="#wifi-hotspot" title="Permalink to this headline">¶</a></h3>
+<p>You can connect the furhat you your laptops wifi hotspot. In order to connect to your hotspot you will need to connect a keyboard to the furhat in order to type the password to hotspot wifi.</p>
+</section>
+</section>
+<section id="running-rasa-webchat">
+<h2>Running rasa webchat<a class="headerlink" href="#running-rasa-webchat" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="running-webservers">
+<h2>Running webservers<a class="headerlink" href="#running-webservers" title="Permalink to this headline">¶</a></h2>
+<p>Open a new terminal. Change directory to</p>
+<blockquote>
+<div><p>dagfinn\ui\webchat</p>
+</div></blockquote>
+<p>or</p>
+<blockquote>
+<div><p>dagfinn\ui\furhatscreen</p>
+</div></blockquote>
+<p>run the command
+<code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">http.server</span> <span class="pre">&lt;port&gt;</span> </code>
+You can also omit portnumber and the server will default to port 8000
+<code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">http.server</span></code>
+or
+<code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">http.server</span> <span class="pre">9000</span> </code>
+in order to run the server on a different port. this can be necessary if you try to run multiple web servers.</p>
+</section>
+<section id="making-changes-to-the-skill-kotlin-code">
+<h2>Making changes to the skill | kotlin code<a class="headerlink" href="#making-changes-to-the-skill-kotlin-code" title="Permalink to this headline">¶</a></h2>
+<p>#recompile</p>
+<p>go to folder</p>
+<blockquote>
+<div><p>ui\furhat-skills\rasa\</p>
+</div></blockquote>
+<p>run</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gradlew</span> <span class="n">shadowJar</span>
+</pre></div>
+</div>
+<p>the furhat skill will be under</p>
+<blockquote>
+<div><p>ui\furhat-skills\rasa\build\libs</p>
+</div></blockquote>
+<p>and is named <code class="docutils literal notranslate"><span class="pre">rasa-all.skill</span></code></p>
+<p>If you make any changes to the kotlin code, you have to recompile with gradlew shadowJar.</p>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<p>Always Press Stop SDK, to make sure the SDK stops gracefully.
+View Console at the bottom of the screen to view the output from
+<img alt="Launcher UI" src="_images/furhat_launcher.png" /></p>
+<p>The furhat can’t find the rasa server, or is otherwise unable to reach the netowork.
+<img alt="Launcher UI connection error" src="_images/furhat_launcher_connection_error.png" /></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="folder_structure.html" class="btn btn-neutral float-right" title="Folder Structure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, IAI group, University of Stavanger.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

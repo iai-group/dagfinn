@@ -1,0 +1,30 @@
+:py:mod:`actions.action_quiz`
+=============================
+
+.. py:module:: actions.action_quiz
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   actions.action_quiz.ActionQuiz
+
+
+
+
+.. py:class:: ActionQuiz
+
+   Bases: :py:obj:`rasa_sdk.Action`
+
+   .. py:method:: name() -> Text
+
+
+   .. py:method:: run(dispatcher: rasa_sdk.executor.CollectingDispatcher, tracker: rasa_sdk.Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]
+
+
+
